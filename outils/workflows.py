@@ -175,7 +175,7 @@ WF_STATUT = {
                         "authentication": "genericCredentialType", "genericAuthType": "httpHeaderAuth", "options": {}},
          "id": "s2", "name": "Chercher la commande", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2,
          "position": [220, 0], "credentials": CRED},
-        {"parameters": {"jsCode": "const r = ($json.records || [])[0];\nif (!r) return [{ json: { trouve: false } }];\nconst f = r.fields;\nreturn [{ json: { trouve: true, id: r.id, numero: f.Numero, statut: f.Statut,\n  addition: { demandee: !!f['Addition demandee'], url: (f.Addition && f.Addition[0] && f.Addition[0].url) || null } } }];"},
+        {"parameters": {"jsCode": "const r = ($json.records || [])[0];\nif (!r) return [{ json: { trouve: false } }];\nconst f = r.fields;\nreturn [{ json: { trouve: true, id: r.id, numero: f.Numero, statut: (f.Statut === 'Terminee' ? 'Servi' : f.Statut),\n  addition: { demandee: !!f['Addition demandee'], url: (f.Addition && f.Addition[0] && f.Addition[0].url) || null } } }];"},
          "id": "s3", "name": "Mettre en forme", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [440, 0]},
         {"parameters": {"respondWith": "json", "responseBody": "={{ $json }}", "options": {}},
          "id": "s4", "name": "Repondre", "type": "n8n-nodes-base.respondToWebhook", "typeVersion": 1.1,
