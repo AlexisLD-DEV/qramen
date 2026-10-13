@@ -8,6 +8,7 @@ cuisine voit le ticket arriver, et le ticket part en PDF **tout seul**.
 - Menu (mobile) : <https://qramen.ledeunf.fr/menu.html?table=T05>
 - Écran cuisine : <https://qramen.ledeunf.fr/cuisine.html>
 - Planche des QR codes des 7 tables : [`docs/qr-tables.pdf`](docs/qr-tables.pdf)
+- Chevalets de table prêts à imprimer (A4, un QR par table) : [`public/assets/chevalets-tables.pdf`](public/assets/chevalets-tables.pdf)
 
 ## Comment ça marche
 
