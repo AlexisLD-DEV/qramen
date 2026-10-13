@@ -1,14 +1,24 @@
-# Le QRamen — commander à table en scannant un QR code
+# Commande à table par QR code — deux restaurants de démonstration
 
-Restaurant fictif (bar à ramen, Paris 11e) construit pour un exercice de formation — poussé bien
-au-delà de la consigne : le client scanne le QR code de sa table, commande depuis son téléphone, la
-cuisine voit le ticket arriver, et le ticket part en PDF **tout seul**.
+Deux restaurants fictifs construits pour un exercice de formation, poussés bien au-delà de la
+consigne : le client scanne le QR code de sa table, commande depuis son téléphone, la cuisine voit
+le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
 
-**En ligne**
-- Menu (mobile) : <https://qramen.ledeunf.fr/menu.html?table=T05>
-- Écran cuisine : <https://qramen.ledeunf.fr/cuisine.html>
+| Restaurant | Concept | En ligne |
+| --- | --- | --- |
+| **Le QRamen** | bar à ramen, Paris 11e | <https://qramen.ledeunf.fr/menu.html?table=T05> |
+| **QRoque Monsieur** | bistrot du croque, Rouen | <https://croq.ledeunf.fr/menu.html?table=T05> |
+
+Écran cuisine (le même pour les deux) : <https://qramen.ledeunf.fr/cuisine.html>
+
+**À imprimer**
+- Chevalets A5, un QR par table (QRoque Monsieur) : [`public/assets/chevalets-qroque-a5.pdf`](public/assets/chevalets-qroque-a5.pdf)
+- Cartes A6, 4 par feuille (QRoque Monsieur) : [`public/assets/cartes-qroque-a6.pdf`](public/assets/cartes-qroque-a6.pdf)
+- Carte comptoir A5, sans numéro de table : [`public/assets/carte-comptoir-qroque.pdf`](public/assets/carte-comptoir-qroque.pdf)
+- Chevalets Le QRamen : [`public/assets/chevalets-tables.pdf`](public/assets/chevalets-tables.pdf)
 - Planche des QR codes des 7 tables : [`docs/qr-tables.pdf`](docs/qr-tables.pdf)
-- Chevalets de table prêts à imprimer (A4, un QR par table) : [`public/assets/chevalets-tables.pdf`](public/assets/chevalets-tables.pdf)
+
+Tous les QR de ces fichiers sont testés : ils se décodent vers la bonne URL (`…/menu.html?table=T01`…`T07`).
 
 ## Comment ça marche
 
