@@ -1,0 +1,7 @@
+# interne (missions, workflows generes avec secrets)
+etat/
+AGENTS.md
+MISSION-*.md
+__pycache__/
+*.pyc
+.DS_Store
