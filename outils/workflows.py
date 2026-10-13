@@ -18,8 +18,8 @@ const concept = q.concept || 'QRamen';
 const infos = {
   QRamen: { nom: 'Le QRamen', baseline: 'Scannez. Commandez. Slurpez.', ville: 'Paris 11e',
             cuisine: 'Cuisine japonaise', devise: 'EUR' },
-  QRoque: { nom: 'Le QRoque-Monsieur', baseline: 'Le bistrot qui se scanne.', ville: 'Rouen',
-            cuisine: 'Brasserie francaise', devise: 'EUR' },
+  QRoque: { nom: 'QRoque Monsieur', baseline: 'Le bistrot du croque, qui se scanne.', ville: 'Rouen',
+            cuisine: 'Croques & bistrot', devise: 'EUR' },
 }[concept] || null;
 const categories = [
   { id: 'Entree', nom: 'Entrees' }, { id: 'Plat', nom: 'Plats' },

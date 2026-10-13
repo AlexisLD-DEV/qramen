@@ -1,0 +1,274 @@
+{
+ "type": "excalidraw",
+ "version": 2,
+ "source": "hermes-agent",
+ "elements": [
+  {
+   "type": "text",
+   "id": "titre2",
+   "x": 60,
+   "y": 40,
+   "text": "Le parcours du client, en 4 temps",
+   "fontSize": 30,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "originalText": "Le parcours du client, en 4 temps",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "s1",
+   "x": 60,
+   "y": 160,
+   "width": 260,
+   "height": 120,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_s1",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_s1",
+   "x": 70,
+   "y": 207.2,
+   "width": 240,
+   "height": 25.6,
+   "text": "1. Je m'installe\nle chevalet est\nsur la table",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "s1",
+   "originalText": "1. Je m'installe\nle chevalet est\nsur la table",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "s2",
+   "x": 360,
+   "y": 160,
+   "width": 260,
+   "height": 120,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_s2",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_s2",
+   "x": 370,
+   "y": 207.2,
+   "width": 240,
+   "height": 25.6,
+   "text": "2. Je scanne\nle menu s'ouvre\ndans le navigateur",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "s2",
+   "originalText": "2. Je scanne\nle menu s'ouvre\ndans le navigateur",
+   "autoResize": true
+  },
+  {
+   "type": "arrow",
+   "id": "fas2",
+   "x": 310,
+   "y": 220,
+   "width": 40,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     40,
+     0
+    ]
+   ],
+   "endArrowhead": "arrow",
+   "strokeStyle": "solid"
+  },
+  {
+   "type": "rectangle",
+   "id": "s3",
+   "x": 660,
+   "y": 160,
+   "width": 260,
+   "height": 120,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#d0bfff",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_s3",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_s3",
+   "x": 670,
+   "y": 207.2,
+   "width": 240,
+   "height": 25.6,
+   "text": "3. Je commande\npanier + envoi\nen un geste",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "s3",
+   "originalText": "3. Je commande\npanier + envoi\nen un geste",
+   "autoResize": true
+  },
+  {
+   "type": "arrow",
+   "id": "fas3",
+   "x": 610,
+   "y": 220,
+   "width": 40,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     40,
+     0
+    ]
+   ],
+   "endArrowhead": "arrow",
+   "strokeStyle": "solid"
+  },
+  {
+   "type": "rectangle",
+   "id": "s4",
+   "x": 960,
+   "y": 160,
+   "width": 260,
+   "height": 120,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_s4",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_s4",
+   "x": 970,
+   "y": 207.2,
+   "width": 240,
+   "height": 25.6,
+   "text": "4. On me sert\nla cuisine suit,\nl'addition en un clic",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "s4",
+   "originalText": "4. On me sert\nla cuisine suit,\nl'addition en un clic",
+   "autoResize": true
+  },
+  {
+   "type": "arrow",
+   "id": "fas4",
+   "x": 910,
+   "y": 220,
+   "width": 40,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     40,
+     0
+    ]
+   ],
+   "endArrowhead": "arrow",
+   "strokeStyle": "solid"
+  },
+  {
+   "type": "rectangle",
+   "id": "lien",
+   "x": 660,
+   "y": 360,
+   "width": 560,
+   "height": 80,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#c3fae8",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_lien",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_lien",
+   "x": 670,
+   "y": 387.2,
+   "width": 540,
+   "height": 25.6,
+   "text": "Le même outil sert la carte du midi et la carte brasserie (2 concepts, 1 moteur)",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "lien",
+   "originalText": "Le même outil sert la carte du midi et la carte brasserie (2 concepts, 1 moteur)",
+   "autoResize": true
+  },
+  {
+   "type": "text",
+   "id": "pied2",
+   "x": 60,
+   "y": 500,
+   "text": "Aucune application à installer · aucun compte client · données en direct",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#757575",
+   "originalText": "Aucune application à installer · aucun compte client · données en direct",
+   "autoResize": true
+  }
+ ],
+ "appState": {
+  "viewBackgroundColor": "#ffffff"
+ }
+}

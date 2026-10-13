@@ -1,0 +1,683 @@
+{
+ "type": "excalidraw",
+ "version": 2,
+ "source": "hermes-agent",
+ "elements": [
+  {
+   "type": "text",
+   "id": "titre",
+   "x": 80,
+   "y": 120,
+   "text": "QRoque Monsieur — commander à table par QR code",
+   "fontSize": 30,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "originalText": "QRoque Monsieur — commander à table par QR code",
+   "autoResize": true,
+   "width": 874,
+   "height": 39
+  },
+  {
+   "type": "text",
+   "id": "sous",
+   "x": 80,
+   "y": 168,
+   "text": "Un exercice de formation, poussé jusqu'au site en ligne",
+   "fontSize": 18,
+   "fontFamily": 1,
+   "strokeColor": "#757575",
+   "originalText": "Un exercice de formation, poussé jusqu'au site en ligne",
+   "autoResize": true,
+   "width": 613,
+   "height": 23
+  },
+  {
+   "type": "rectangle",
+   "id": "e1",
+   "x": 80,
+   "y": 240,
+   "width": 270,
+   "height": 80,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_e1",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_e1",
+   "x": 90,
+   "y": 268.1,
+   "width": 250,
+   "height": 22.1,
+   "text": "1. Je scanne",
+   "fontSize": 17,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "e1",
+   "originalText": "1. Je scanne",
+   "autoResize": true
+  },
+  {
+   "type": "text",
+   "id": "s_e1",
+   "x": 100,
+   "y": 330,
+   "text": "le QR posé sur la table",
+   "fontSize": 14,
+   "fontFamily": 1,
+   "strokeColor": "#757575",
+   "originalText": "le QR posé sur la table",
+   "autoResize": true,
+   "width": 199,
+   "height": 18
+  },
+  {
+   "type": "rectangle",
+   "id": "e2",
+   "x": 395,
+   "y": 240,
+   "width": 270,
+   "height": 80,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_e2",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_e2",
+   "x": 405,
+   "y": 268.1,
+   "width": 250,
+   "height": 22.1,
+   "text": "2. Le menu s'ouvre",
+   "fontSize": 17,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "e2",
+   "originalText": "2. Le menu s'ouvre",
+   "autoResize": true
+  },
+  {
+   "type": "text",
+   "id": "s_e2",
+   "x": 415,
+   "y": 330,
+   "text": "dans le navigateur, sans appli",
+   "fontSize": 14,
+   "fontFamily": 1,
+   "strokeColor": "#757575",
+   "originalText": "dans le navigateur, sans appli",
+   "autoResize": true,
+   "width": 260,
+   "height": 18
+  },
+  {
+   "type": "arrow",
+   "id": "fe2",
+   "x": 347,
+   "y": 280,
+   "width": 34,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     34,
+     0
+    ]
+   ],
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "rectangle",
+   "id": "e3",
+   "x": 710,
+   "y": 240,
+   "width": 270,
+   "height": 80,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#d0bfff",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_e3",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_e3",
+   "x": 720,
+   "y": 268.1,
+   "width": 250,
+   "height": 22.1,
+   "text": "3. J'envoie",
+   "fontSize": 17,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "e3",
+   "originalText": "3. J'envoie",
+   "autoResize": true
+  },
+  {
+   "type": "text",
+   "id": "s_e3",
+   "x": 730,
+   "y": 330,
+   "text": "le panier part en cuisine",
+   "fontSize": 14,
+   "fontFamily": 1,
+   "strokeColor": "#757575",
+   "originalText": "le panier part en cuisine",
+   "autoResize": true,
+   "width": 217,
+   "height": 18
+  },
+  {
+   "type": "arrow",
+   "id": "fe3",
+   "x": 662,
+   "y": 280,
+   "width": 34,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     34,
+     0
+    ]
+   ],
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "rectangle",
+   "id": "e4",
+   "x": 1025,
+   "y": 240,
+   "width": 270,
+   "height": 80,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_e4",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_e4",
+   "x": 1035,
+   "y": 268.1,
+   "width": 250,
+   "height": 22.1,
+   "text": "4. On me sert",
+   "fontSize": 17,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "e4",
+   "originalText": "4. On me sert",
+   "autoResize": true
+  },
+  {
+   "type": "text",
+   "id": "s_e4",
+   "x": 1045,
+   "y": 330,
+   "text": "l'addition arrive en un clic",
+   "fontSize": 14,
+   "fontFamily": 1,
+   "strokeColor": "#757575",
+   "originalText": "l'addition arrive en un clic",
+   "autoResize": true,
+   "width": 243,
+   "height": 18
+  },
+  {
+   "type": "arrow",
+   "id": "fe4",
+   "x": 977,
+   "y": 280,
+   "width": 34,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     34,
+     0
+    ]
+   ],
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "id": "lmeca",
+   "x": 80,
+   "y": 400,
+   "text": "Ce qui tourne derrière",
+   "fontSize": 22,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "originalText": "Ce qui tourne derrière",
+   "autoResize": true,
+   "width": 300,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "id": "m1",
+   "x": 80,
+   "y": 440,
+   "width": 220,
+   "height": 86,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#ffffff",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_m1",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_m1",
+   "x": 90,
+   "y": 472.5,
+   "width": 200,
+   "height": 39.0,
+   "text": "Page du site\nHTML·CSS·JS",
+   "fontSize": 15,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "m1",
+   "originalText": "Page du site\nHTML·CSS·JS",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "m2",
+   "x": 325,
+   "y": 440,
+   "width": 220,
+   "height": 86,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#d0bfff",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_m2",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_m2",
+   "x": 335,
+   "y": 472.5,
+   "width": 200,
+   "height": 39.0,
+   "text": "n8n auto-hébergé\nla logique",
+   "fontSize": 15,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "m2",
+   "originalText": "n8n auto-hébergé\nla logique",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "m3",
+   "x": 570,
+   "y": 440,
+   "width": 220,
+   "height": 86,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#c3fae8",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_m3",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_m3",
+   "x": 580,
+   "y": 472.5,
+   "width": 200,
+   "height": 39.0,
+   "text": "Airtable\nla base",
+   "fontSize": 15,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "m3",
+   "originalText": "Airtable\nla base",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "m4",
+   "x": 815,
+   "y": 440,
+   "width": 220,
+   "height": 86,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_m4",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_m4",
+   "x": 825,
+   "y": 472.5,
+   "width": 200,
+   "height": 39.0,
+   "text": "Chrome headless\nles PDF",
+   "fontSize": 15,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "m4",
+   "originalText": "Chrome headless\nles PDF",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "m5",
+   "x": 1060,
+   "y": 440,
+   "width": 220,
+   "height": 86,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#ffffff",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_m5",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_m5",
+   "x": 1070,
+   "y": 472.5,
+   "width": 200,
+   "height": 39.0,
+   "text": "Caddy + Cloudflare\nle domaine",
+   "fontSize": 15,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "m5",
+   "originalText": "Caddy + Cloudflare\nle domaine",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "r1",
+   "x": 80,
+   "y": 570,
+   "width": 1150,
+   "height": 84,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_r1",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_r1",
+   "x": 90,
+   "y": 600.1,
+   "width": 1130,
+   "height": 22.1,
+   "text": "EN LIGNE · qramen.ledeunf.fr/menu.html    CODE PUBLIC · github.com/AlexisLD-DEV/qramen",
+   "fontSize": 17,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "r1",
+   "originalText": "EN LIGNE · qramen.ledeunf.fr/menu.html    CODE PUBLIC · github.com/AlexisLD-DEV/qramen",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "c1",
+   "x": 80,
+   "y": 690,
+   "width": 270,
+   "height": 86,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_c1",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_c1",
+   "x": 90,
+   "y": 722.5,
+   "width": 250,
+   "height": 39.0,
+   "text": "2 cartes\nramen et croques",
+   "fontSize": 15,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "c1",
+   "originalText": "2 cartes\nramen et croques",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "c2",
+   "x": 375,
+   "y": 690,
+   "width": 270,
+   "height": 86,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_c2",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_c2",
+   "x": 385,
+   "y": 722.5,
+   "width": 250,
+   "height": 39.0,
+   "text": "7 tables\nune carte QR chacune",
+   "fontSize": 15,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "c2",
+   "originalText": "7 tables\nune carte QR chacune",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "c3",
+   "x": 670,
+   "y": 690,
+   "width": 270,
+   "height": 86,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#ffc9c9",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_c3",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_c3",
+   "x": 680,
+   "y": 722.5,
+   "width": 250,
+   "height": 39.0,
+   "text": "16 visuels\ngénérés pour les plats",
+   "fontSize": 15,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "c3",
+   "originalText": "16 visuels\ngénérés pour les plats",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "c4",
+   "x": 965,
+   "y": 690,
+   "width": 270,
+   "height": 86,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_c4",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_c4",
+   "x": 975,
+   "y": 722.5,
+   "width": 250,
+   "height": 39.0,
+   "text": "2 PDF\nticket et addition",
+   "fontSize": 15,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "c4",
+   "originalText": "2 PDF\nticket et addition",
+   "autoResize": true
+  },
+  {
+   "type": "text",
+   "id": "pied",
+   "x": 80,
+   "y": 810,
+   "text": "Le ticket cuisine et l'addition se génèrent en PDF et se rangent tout seuls dans la base.",
+   "fontSize": 15,
+   "fontFamily": 1,
+   "strokeColor": "#757575",
+   "originalText": "Le ticket cuisine et l'addition se génèrent en PDF et se rangent tout seuls dans la base.",
+   "autoResize": true,
+   "width": 827,
+   "height": 19
+  }
+ ],
+ "appState": {
+  "viewBackgroundColor": "#ffffff"
+ }
+}

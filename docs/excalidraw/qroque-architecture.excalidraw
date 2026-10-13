@@ -1,0 +1,538 @@
+{
+ "type": "excalidraw",
+ "version": 2,
+ "source": "hermes-agent",
+ "elements": [
+  {
+   "type": "text",
+   "id": "titre1",
+   "x": 60,
+   "y": 40,
+   "text": "QRoque Monsieur — comment ça marche",
+   "fontSize": 30,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "originalText": "QRoque Monsieur — comment ça marche",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "qr",
+   "x": 60,
+   "y": 140,
+   "width": 210,
+   "height": 90,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_qr",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_qr",
+   "x": 70,
+   "y": 172.2,
+   "width": 190,
+   "height": 25.6,
+   "text": "QR code sur la table\n(une carte par table)",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "qr",
+   "originalText": "QR code sur la table\n(une carte par table)",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "page",
+   "x": 330,
+   "y": 140,
+   "width": 230,
+   "height": 90,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_page",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_page",
+   "x": 340,
+   "y": 172.2,
+   "width": 210,
+   "height": 25.6,
+   "text": "Page du menu (téléphone)\nsans application",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "page",
+   "originalText": "Page du menu (téléphone)\nsans application",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "n8n",
+   "x": 620,
+   "y": 140,
+   "width": 230,
+   "height": 90,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#d0bfff",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_n8n",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_n8n",
+   "x": 630,
+   "y": 172.2,
+   "width": 210,
+   "height": 25.6,
+   "text": "n8n auto-hébergé\nmenu · commande · cuisine",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "n8n",
+   "originalText": "n8n auto-hébergé\nmenu · commande · cuisine",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "base",
+   "x": 910,
+   "y": 140,
+   "width": 230,
+   "height": 90,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#c3fae8",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_base",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_base",
+   "x": 920,
+   "y": 172.2,
+   "width": 210,
+   "height": 25.6,
+   "text": "Airtable\nTables · Plats · Commandes · Lignes",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "base",
+   "originalText": "Airtable\nTables · Plats · Commandes · Lignes",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "cuisine",
+   "x": 620,
+   "y": 320,
+   "width": 230,
+   "height": 90,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_cuisine",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_cuisine",
+   "x": 630,
+   "y": 352.2,
+   "width": 210,
+   "height": 25.6,
+   "text": "Écran cuisine\n3 colonnes, statut en un clic",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "cuisine",
+   "originalText": "Écran cuisine\n3 colonnes, statut en un clic",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "pdf",
+   "x": 910,
+   "y": 320,
+   "width": 230,
+   "height": 90,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_pdf",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_pdf",
+   "x": 920,
+   "y": 352.2,
+   "width": 210,
+   "height": 25.6,
+   "text": "Service PDF (Chrome)\nticket cuisine + addition",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "pdf",
+   "originalText": "Service PDF (Chrome)\nticket cuisine + addition",
+   "autoResize": true
+  },
+  {
+   "type": "rectangle",
+   "id": "joint",
+   "x": 620,
+   "y": 500,
+   "width": 520,
+   "height": 80,
+   "roundness": {
+    "type": 3
+   },
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_joint",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_joint",
+   "x": 630,
+   "y": 527.2,
+   "width": 500,
+   "height": 25.6,
+   "text": "Ticket et addition rangés en pièce jointe dans la commande",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "joint",
+   "originalText": "Ticket et addition rangés en pièce jointe dans la commande",
+   "autoResize": true
+  },
+  {
+   "type": "arrow",
+   "id": "f1",
+   "x": 270,
+   "y": 185,
+   "width": 60,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     60,
+     0
+    ]
+   ],
+   "endArrowhead": "arrow",
+   "strokeStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_f1",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_f1",
+   "x": 230.0,
+   "y": 159.0,
+   "width": 150,
+   "text": "on scanne",
+   "fontSize": 14,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "f1",
+   "originalText": "on scanne",
+   "autoResize": true
+  },
+  {
+   "type": "arrow",
+   "id": "f2",
+   "x": 560,
+   "y": 185,
+   "width": 60,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     60,
+     0
+    ]
+   ],
+   "endArrowhead": "arrow",
+   "strokeStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_f2",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_f2",
+   "x": 520.0,
+   "y": 159.0,
+   "width": 150,
+   "text": "la page lit le menu",
+   "fontSize": 14,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "f2",
+   "originalText": "la page lit le menu",
+   "autoResize": true
+  },
+  {
+   "type": "arrow",
+   "id": "f3",
+   "x": 850,
+   "y": 185,
+   "width": 60,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     60,
+     0
+    ]
+   ],
+   "endArrowhead": "arrow",
+   "strokeStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_f3",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_f3",
+   "x": 810.0,
+   "y": 159.0,
+   "width": 150,
+   "text": "la commande part",
+   "fontSize": 14,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "f3",
+   "originalText": "la commande part",
+   "autoResize": true
+  },
+  {
+   "type": "arrow",
+   "id": "f4",
+   "x": 735,
+   "y": 230,
+   "width": 0,
+   "height": 90,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     90
+    ]
+   ],
+   "endArrowhead": "arrow",
+   "strokeStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_f4",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_f4",
+   "x": 665.0,
+   "y": 249.0,
+   "width": 150,
+   "text": "le ticket arrive",
+   "fontSize": 14,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "f4",
+   "originalText": "le ticket arrive",
+   "autoResize": true
+  },
+  {
+   "type": "arrow",
+   "id": "f5",
+   "x": 850,
+   "y": 365,
+   "width": 60,
+   "height": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     60,
+     0
+    ]
+   ],
+   "endArrowhead": "arrow",
+   "strokeStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_f5",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_f5",
+   "x": 810.0,
+   "y": 339.0,
+   "width": 150,
+   "text": "on imprime",
+   "fontSize": 14,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "f5",
+   "originalText": "on imprime",
+   "autoResize": true
+  },
+  {
+   "type": "arrow",
+   "id": "f6",
+   "x": 795,
+   "y": 410,
+   "width": 0,
+   "height": 90,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     90
+    ]
+   ],
+   "endArrowhead": "arrow",
+   "strokeStyle": "solid",
+   "boundElements": [
+    {
+     "id": "t_f6",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "t_f6",
+   "x": 725.0,
+   "y": 429.0,
+   "width": 150,
+   "text": "PDF joint",
+   "fontSize": 14,
+   "fontFamily": 1,
+   "strokeColor": "#1e1e1e",
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "f6",
+   "originalText": "PDF joint",
+   "autoResize": true
+  },
+  {
+   "type": "text",
+   "id": "pied1",
+   "x": 60,
+   "y": 640,
+   "text": "Servi par Caddy + Cloudflare · dépôt public : github.com/AlexisLD-DEV/qramen",
+   "fontSize": 16,
+   "fontFamily": 1,
+   "strokeColor": "#757575",
+   "originalText": "Servi par Caddy + Cloudflare · dépôt public : github.com/AlexisLD-DEV/qramen",
+   "autoResize": true
+  }
+ ],
+ "appState": {
+  "viewBackgroundColor": "#ffffff"
+ }
+}
