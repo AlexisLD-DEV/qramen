@@ -53,6 +53,14 @@ workflows servent les deux restaurants. Tous les visuels de plats ont été gén
 |---|---|
 | ![Menu mobile](docs/screenshots/menu-mobile.png) | ![Écran cuisine](docs/screenshots/cuisine-desktop.png) |
 
+## Mockups « en situation »
+
+Le QR incrusté est un **vrai** QR code (il se décode vers la page du menu), pas une illustration.
+
+| Chevalet de table | Vitrine |
+| --- | --- |
+| ![Chevalet](docs/mockups/mockup-1-chevalet.jpg) | ![Vitrine](docs/mockups/mockup-2-vitrine.jpg) |
+
 ## Reproduire
 
 ```bash
