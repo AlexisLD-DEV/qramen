@@ -62,6 +62,12 @@ Le QR incrusté est un **vrai** QR code (il se décode vers la page du menu), pa
 | --- | --- |
 | ![Chevalet](docs/mockups/mockup-1-chevalet.jpg) | ![Vitrine](docs/mockups/mockup-2-vitrine.jpg) |
 
+Scènes complémentaires (QR incrusté + vraie page dans l'écran du téléphone) :
+
+| Comptoir du bar | Terrasse, version brasserie |
+| --- | --- |
+| ![Comptoir](docs/mockups/scene-1-comptoir-qr.jpg) | ![Terrasse](docs/mockups/scene-2-terrasse-qr.jpg) |
+
 ## Reproduire
 
 ```bash
