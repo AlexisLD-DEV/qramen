@@ -60,9 +60,17 @@ workflows servent les deux restaurants. Tous les visuels de plats ont été gén
 
 ## Captures
 
-| Menu (téléphone) | Écran cuisine |
+| Accueil QRamen | Accueil QRoque |
 |---|---|
-| ![Menu mobile](docs/screenshots/menu-mobile.png) | ![Écran cuisine](docs/screenshots/cuisine-desktop.png) |
+| ![Accueil QRamen](docs/captures/accueil-qramen.png) | ![Accueil QRoque](docs/captures/accueil-qroque.png) |
+
+| Carte QRamen | Carte QRoque |
+|---|---|
+| ![Carte QRamen](docs/captures/carte-qramen.png) | ![Carte QRoque](docs/captures/carte-qroque.png) |
+
+| Écran cuisine | QR des tables |
+|---|---|
+| ![Écran cuisine](docs/captures/ecran-cuisine.png) | ![QR des tables](docs/captures/qr-des-tables.png) |
 
 ## Mockups « en situation »
 
@@ -77,6 +85,12 @@ Scènes complémentaires (QR incrusté + vraie page dans l'écran du téléphone
 | Comptoir du bar | Terrasse, version brasserie |
 | --- | --- |
 | ![Comptoir](docs/mockups/scene-1-comptoir-qr.jpg) | ![Terrasse](docs/mockups/scene-2-terrasse-qr.jpg) |
+
+## Gérer les QR des tables
+
+Depuis l’accueil, le lien discret **QR des tables** ouvre `/qr.html`. La page liste les tables T01 à T07 par défaut et tente de les remplacer par les tables retournées par `/menu`. Elle produit les adresses `menu.html?table=TXX`, permet de télécharger un QR SVG ou PNG et d’imprimer un chevalet A6. Le générateur fonctionne côté navigateur avec la bibliothèque locale `public/assets/vendor/qrcode.js`, sans CDN ni service de QR externe. Les QR ciblent le domaine public propre au restaurant.
+
+Guide détaillé : [mode opératoire restaurateur](docs/mode-operatoire-restaurateur.md).
 
 ## Reproduire
 
