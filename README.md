@@ -4,7 +4,7 @@ Deux sites de démonstration pour un parcours de commande en restaurant : le cli
 
 ## Contexte
 
-Ce projet est un exercice réalisé dans le cadre de la formation « Product Builder » de DataSuits (No-Code & IA, avec la Sorbonne), donné par le formateur Rachid Lghachi. Les enseignes, les cartes, les prix et les commandes sont fictifs et servent de données de démonstration.
+Ce projet est un exercice réalisé dans le cadre de la formation « Product Builder » de DataSuits (No-Code & IA), donné par le formateur Rachid Lghachi. Les enseignes, les cartes, les prix et les commandes sont fictifs et servent de données de démonstration.
 
 **Sites :** [qramen.alexisld.fr](https://qramen.alexisld.fr) · [qroque.alexisld.fr](https://qroque.alexisld.fr) · [alexisld.fr](https://alexisld.fr)
 
@@ -91,7 +91,7 @@ Two demonstration websites for restaurant ordering: guests scan their table QR c
 
 ## About this exercise
 
-This project is an exercise completed as part of DataSuits’ “Product Builder” training (No-Code & AI, with the Sorbonne), assigned by trainer Rachid Lghachi. The restaurant brands, menus, prices and orders are fictional demonstration data.
+This project is an exercise completed as part of DataSuits’ “Product Builder” training (No-Code & AI), assigned by trainer Rachid Lghachi. The restaurant brands, menus, prices and orders are fictional demonstration data.
 
 **Websites:** [qramen.alexisld.fr](https://qramen.alexisld.fr) · [qroque.alexisld.fr](https://qroque.alexisld.fr) · [alexisld.fr](https://alexisld.fr)
 

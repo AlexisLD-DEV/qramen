@@ -4,6 +4,18 @@ AGENTS.md
 MISSION-*.md
 __pycache__/
 *.pyc
-.DS_Store
 worker/.dev.vars
 worker/.wrangler/
+
+# Outils et fichiers generes localement
+.wrangler/
+*.tmp
+*.bak
+*.log
+*~
+.DS_Store
+node_modules/
+dist/
+build/
+coverage/
+.cache/
