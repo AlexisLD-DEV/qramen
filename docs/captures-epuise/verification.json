@@ -1,0 +1,28 @@
+{
+  "dish": {
+    "id": "rec0w6q9Ucp71ATHw",
+    "nom": "Mochi glaces (3)",
+    "concept": "QRamen"
+  },
+  "menuAvantContientPlat": true,
+  "menuApresContientPlat": false,
+  "retourMenuApresRestauration": true,
+  "commandesActivesAvant": 0,
+  "commandesActivesApres": 0,
+  "commandesActivesFinal": 0,
+  "commandeAvecPlatEpuiseRefusee": true,
+  "etatFinal": "Disponible",
+  "captures": [
+    "carte-disponible-1440.png",
+    "carte-disponible-390.png",
+    "carte-epuise-1440.png",
+    "carte-epuise-390.png",
+    "menu-avant-1440.png",
+    "menu-avant-390.png",
+    "menu-apres-1440.png",
+    "menu-apres-390.png",
+    "carte-disponible-retour-1440.png",
+    "carte-disponible-retour-390.png"
+  ],
+  "commandeHTTP": 409
+}

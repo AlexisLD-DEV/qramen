@@ -51,14 +51,14 @@ async function menu(env, url) {
   const concept = url.searchParams.get("concept") || "QRamen";
   const records = await allRecords(env, TABLES.plats, { "filterByFormula": "{Disponible}=TRUE()" });
   const plats = records.map(r => ({ id: r.id, ...fields(r) }))
-    .filter(f => (f.Concept || "QRoque") === concept && f.Disponible !== false)
-    .map(f => ({ id: f.id, nom: f.Plat, description: f.Description || "", prix: f.Prix || 0, categorie: f.Categorie || "Plat", photo: "assets/img/" + (f.Photo || "default.webp"), disponible: f.Disponible !== false, allergenes: f.Allergenes || [], tags: [] }));
+    .filter(f => (f.Concept || "QRoque") === concept && f.Disponible === true)
+    .map(f => ({ id: f.id, nom: f.Plat, description: f.Description || "", prix: f.Prix || 0, categorie: f.Categorie || "Plat", photo: "assets/img/" + (f.Photo || "default.webp"), disponible: true, allergenes: f.Allergenes || [], tags: [] }));
   return { restaurant: RESTAURANTS[concept] || null, concept, categories: CATEGORIES, plats };
 }
 async function cuisineMenu(env, url) {
   const concept = url.searchParams.get("concept") || "QRamen";
   const records = await allRecords(env, TABLES.plats);
-  return { concept, plats: records.map(r => ({ id: r.id, nom: fields(r).Plat || "", categorie: fields(r).Categorie || "Plat", disponible: fields(r).Disponible !== false, concept: fields(r).Concept || "QRoque" })).filter(p => p.concept === concept) };
+  return { concept, plats: records.map(r => ({ id: r.id, nom: fields(r).Plat || "", categorie: fields(r).Categorie || "Plat", disponible: fields(r).Disponible === true, concept: fields(r).Concept || "QRoque" })).filter(p => p.concept === concept) };
 }
 async function orders(env) {
   const [cmds, tableRows, allLines] = await Promise.all([
@@ -118,7 +118,7 @@ async function generateDemo(env) {
   const selectedTables = ["T01", "T02", "T03", "T04", "T05", "T06", "T07"].map(name => tableByName.get(name)).filter(t => t && !activeTableIds.has(t.id)).slice(0, 4);
   if (selectedTables.length < 4) throw new Error("Il faut quatre tables libres (sans commande active) pour créer la démo. Aucune commande n’a été créée.");
   const pick = (name, concept) => {
-    const d = dishes.find(x => fields(x).Plat === name && fields(x).Concept === concept && fields(x).Disponible !== false);
+    const d = dishes.find(x => fields(x).Plat === name && fields(x).Concept === concept && fields(x).Disponible === true);
     if (!d) throw new Error(`Plat de démonstration indisponible : ${name}`);
     return d;
   };
@@ -216,6 +216,14 @@ async function route(request, env) {
     const lignes = b.lignes.map(l => ({ platId: l.platId, quantite: Number(l.quantite), note: String(l.note || "").slice(0,500), concept: l.concept }));
     if (!/^T0[1-7]$/.test(b.table || "") || !lignes.length) return fail("table T01–T07 et lignes sont obligatoires");
     if (lignes.some(l => !/^rec[A-Za-z0-9]+$/.test(l.platId || "") || !Number.isSafeInteger(l.quantite) || l.quantite < 1 || l.quantite > 999)) return fail("plat ou quantité invalide (1–999)");
+    const availableRecords = await Promise.all([...new Set(lignes.map(l => l.platId))].map(id => airtable(env, `${TABLES.plats}/${id}`)));
+    const byDishId = new Map(availableRecords.map(record => [record.id, fields(record)]));
+    for (const line of lignes) {
+      const dish = byDishId.get(line.platId);
+      if (!dish) return fail("Un plat de cette commande n’existe plus. Actualisez le menu.", 409);
+      if (dish.Disponible !== true) return fail(`« ${dish.Plat || "Ce plat"} » est épuisé. Actualisez le menu.`, 409);
+      if ((dish.Concept || "QRoque") !== (line.concept === "QRoque" ? "QRoque" : "QRamen")) return fail("Le menu a changé. Actualisez la page.", 409);
+    }
     const tables = await allRecords(env, TABLES.tables, { filterByFormula: `{Identifiant}="${String(b.table).replaceAll('"', '\\"')}"` });
     if (!tables[0]) return fail("table introuvable", 404);
     const created = await airtable(env, TABLES.commandes, { method: "POST", body: { fields: { Statut: "En attente", Table: [tables[0].id] } } });
