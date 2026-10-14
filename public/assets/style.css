@@ -462,3 +462,18 @@ button{display:inline-flex;align-items:center;justify-content:center;line-height
 .dark-mode .staff-switch a{color:#e8edf1}
 .dark-mode .staff-switch a[aria-current="page"]{background:#e5edf4;color:#111820}
 .dark-mode.qr-page .qr-list-heading .label{color:#c4cdd4}
+
+/* Single-action restaurant switch */
+.restaurant-switch-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;border:1px solid var(--color-017);border-radius:999px;background:var(--color-005);color:var(--color-051);font-size:11px;font-weight:700;white-space:nowrap}
+.restaurant-switch-button:hover{background:var(--ink);color:var(--pure-white)}
+.site-header>.restaurant-switch-button{margin:0 0 0 8px}
+.kitchen-tools>.restaurant-switch-button{margin:0 auto 0 0}
+.landing-card>.restaurant-switch-button{align-self:flex-end;margin:0 0 14px}
+.brand-mark img,.landing-top .brand-mark img{height:50px}
+.header-brand img{height:52px}
+@media(max-width:760px){.site-header>.restaurant-switch-button{margin:0}.restaurant-switch-button{padding-inline:9px;font-size:9px}}
+@media(max-width:430px){.site-header>.restaurant-switch-button{padding-inline:6px;font-size:8px}.site-header .header-brand img{height:45px}}
+@media(max-width:380px){.site-header>.restaurant-switch-button{padding-inline:5px;font-size:7px}}
+.qr-page .header-brand img{height:60px}
+@media(max-width:700px){.qr-page .header-brand img{height:36px}}
+@media(max-width:700px){.qr-page .site-header .header-brand img{height:36px}}
