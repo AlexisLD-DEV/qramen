@@ -15,51 +15,51 @@ le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
 
 ## Aperçu
 
-### **Chevalet de table**
+### Chevalet de table
 
-![Chevalet QRamen posé sur une table de restaurant](docs/mockups/mockup-1-chevalet.jpg)
+![Chevalet A6 QRoque avec QR code de commande](docs/captures-refonte/chevalet-a6.png)
 
-Le chevalet QRamen présente le code à scanner sur une table de restaurant.
+Le chevalet A6 présente le QR code à scanner depuis la table.
 
-### **Menu sur téléphone**
+### Menu sur téléphone
 
-![Menu QRamen affiché sur un téléphone](docs/captures/02-menu-telephone.png)
+![Menu QRamen sur téléphone avec les photos des plats](docs/captures-refonte/menu-qramen-390.png)
 
-La carte QRamen présente ses catégories et ses plats sur téléphone.
+La carte QRamen présente ses catégories et ses plats avec leurs vraies photos.
 
-### **Écran cuisine**
+### Écran cuisine
 
-![Tableau de cuisine avec les commandes](docs/captures/05-ecran-cuisine.png)
+![Écran cuisine avec les commandes en attente, en cours et servies](docs/captures-refonte/cuisine-1440.png)
 
 Le tableau regroupe les commandes en attente, en cours et servies.
 
-### **Ticket de cuisine**
+### Ticket de cuisine
 
-![Ticket de cuisine imprimé pour la commande numéro 42](docs/captures/01-bon-de-commande.png)
+![Ticket de cuisine imprimé pour la commande numéro 42](docs/captures-refonte/ticket-cuisine.png)
 
 Le bon imprimé indique la table, les plats commandés et leurs quantités.
 
-### **Accueil QRamen**
+### Accueil QRamen
 
-![Page d’accueil du restaurant QRamen](docs/captures/06-accueil-qramen.png)
+![Page d’accueil du restaurant QRamen](docs/captures-refonte/accueil-qramen-1440.png)
 
 La page d’accueil présente le restaurant Le QRamen.
 
-### **Accueil QRoque**
+### Accueil QRoque
 
-![Page d’accueil du restaurant QRoque Monsieur](docs/captures/07-accueil-qroque.png)
+![Page d’accueil du restaurant QRoque Monsieur](docs/captures-refonte/accueil-qroque-1440.png)
 
 La page d’accueil présente le restaurant QRoque Monsieur.
 
-### **QR des tables**
+### QR des tables
 
-![Page QR des tables sur téléphone](docs/captures/04-qr-des-tables.png)
+![Page QR des tables sur téléphone](docs/captures-refonte/qr-tables-390.png)
 
 La page `/qr.html` permet de générer et d’imprimer les QR codes des tables.
 
-### **Carte QRoque sur téléphone**
+### Carte QRoque sur téléphone
 
-![Menu QRoque Monsieur affiché sur un téléphone](docs/captures/08-carte-qroque.png)
+![Menu QRoque Monsieur affiché sur un téléphone avec les photos des croques](docs/captures-refonte/menu-qroque-390.png)
 
 La carte QRoque présente les croques et leurs photos sur téléphone.
 
@@ -156,3 +156,4 @@ ramen one, and the French brasserie one taken from the exercise brief.
 - Code sous licence [MIT](LICENSE).
 - Aucun secret dans le dépôt : le jeton Airtable reste dans n8n, la clé du service PDF dans
   `~/.hermes/.secrets/`. Voir [SECURITY.md](SECURITY.md).
+- Code open source, signature « alexisld.fr » présente en pied de page du site.
