@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M11 30c1-4 5-6 9-6h24c4 0 8 2 9 6l-3 18c-1 6-6 9-18 9s-17-3-18-9z" fill="#e85d43" stroke="#542c20" stroke-width="2.8" stroke-linejoin="round"/><path d="M11 30c2-7 9-10 21-10s19 3 21 10c-2 4-9 6-21 6s-19-2-21-6z" fill="#fff5db" stroke="#542c20" stroke-width="2.8"/><path d="M17 29c4-4 8 3 12-1s8 4 12 0 6 0 7 2" fill="none" stroke="#e8a52b" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="44" r="2.4" fill="#542c20"/><circle cx="40" cy="44" r="2.4" fill="#542c20"/><path d="M28 49q4 4 8 0" fill="none" stroke="#542c20" stroke-width="2.2" stroke-linecap="round"/><ellipse cx="19" cy="49" rx="3" ry="1.7" fill="#ffb1a2"/><ellipse cx="45" cy="49" rx="3" ry="1.7" fill="#ffb1a2"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mascotte bol de ramen">
+  <path d="M8 29c2-3 9-5 24-5s22 2 24 5l-4 17c-1 6-8 10-20 10S13 52 12 46z" fill="#e2543a" stroke="#542c20" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M10 29c2-7 10-11 22-11s20 4 22 11c-3 4-11 6-22 6s-19-2-22-6z" fill="#fff5db" stroke="#542c20" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M17 27c3-4 6 3 10-1s7 4 11 0 7 0 9 2" fill="none" stroke="#e8a52b" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="24" cy="43" r="2.5" fill="#542c20"/><circle cx="40" cy="43" r="2.5" fill="#542c20"/>
+  <path d="M28 48q4 4 8 0" fill="none" stroke="#542c20" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="18" cy="48" rx="3" ry="1.8" fill="#ffb1a2"/><ellipse cx="46" cy="48" rx="3" ry="1.8" fill="#ffb1a2"/>
+  <path d="M19 56h26" stroke="#542c20" stroke-width="3" stroke-linecap="round"/>
+</svg>
