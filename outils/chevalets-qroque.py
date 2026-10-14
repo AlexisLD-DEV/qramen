@@ -32,23 +32,21 @@ def carte(numero, format_):
 
 
 STYLE = '''@page{size:A4 portrait;margin:0}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#14161a}
-.page{position:relative;width:210mm;height:297mm;padding:10mm 5mm 5mm;display:flex;flex-wrap:wrap;gap:3mm;align-content:flex-start;page-break-after:always}
-.page:last-child{page-break-after:auto}.titre{position:absolute;top:3mm;left:5mm;font-size:2.8mm;font-weight:bold;letter-spacing:.3mm;color:#625d54}
+.page{position:relative;width:210mm;height:297mm;padding:5mm;display:flex;align-items:center;justify-content:center;page-break-after:always;background:#f7f2e9}
+.page:last-child{page-break-after:auto}.titre{position:absolute;top:7mm;left:8mm;font-size:2.8mm;font-weight:bold;letter-spacing:.3mm;color:#625d54}
 .carte{border:.35mm dashed #8a8277;border-radius:2mm;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.carte.a6{width:97mm;height:132mm;padding:4mm}.carte.a5{width:148mm;height:210mm;padding:7mm;margin:auto}
-.mascotte{width:24mm;height:24mm;object-fit:contain;margin-bottom:1mm;mix-blend-mode:multiply}.a5 .mascotte{width:33mm;height:33mm;margin-bottom:2mm}
-.qr{width:45mm;height:45mm;image-rendering:pixelated}.a5 .qr{width:62mm;height:62mm}
-.action{font-size:4mm;color:#7B2D26;font-weight:bold;margin-top:2mm}.a5 .action{font-size:5mm;margin-top:3mm}
-.pied{font-size:2.8mm;color:#625d54;line-height:1.35;margin-top:1.5mm}.a5 .pied{font-size:3.4mm;margin-top:2mm}'''
+.carte.a4{width:200mm;height:287mm;padding:12mm;background:#fffaf2;border:1mm solid #d8c9ae;border-radius:4mm}.carte.a5{width:148mm;height:210mm;padding:7mm;margin:auto;background:#fffaf2;border:1mm solid #d8c9ae;border-radius:4mm}
+.mascotte{width:48mm;height:48mm;object-fit:contain;margin-bottom:4mm}.a5 .mascotte{width:33mm;height:33mm;margin-bottom:2mm}
+.qr{width:80mm;height:80mm;image-rendering:pixelated}.a5 .qr{width:62mm;height:62mm}
+.action{font-size:7mm;color:#7B2D26;font-weight:bold;margin-top:7mm}.a5 .action{font-size:5mm;margin-top:3mm}
+.pied{font-size:5mm;color:#625d54;line-height:1.5;margin-top:5mm}.a5 .pied{font-size:3.4mm;margin-top:2mm}'''
 
 
 def page(cards, titre):
     return f'<section class="page"><div class="titre">{titre}</div>{"".join(cards)}</section>'
 
 
-pages = [page([carte(n, "a6") for n in range(start, min(start + 4, 8))],
-              "A4 · IMPRESSION MAISON · 4 CHEVALETS PAR FEUILLE · DÉCOUPER SUR LES POINTILLÉS")
-         for start in range(1, 8, 4)]
+pages = [page([carte(n, "a4")], "A4 · UNE TABLE PAR PAGE") for n in range(1, 8)]
 pages.extend(page([carte(n, "a5")], "COMPTOIR · FORMAT A5 · 1 CHEVALET PAR FEUILLE") for n in range(1, 8))
 html = '<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>' + STYLE + '</style></head><body>' + ''.join(pages) + '</body></html>'
 request = urllib.request.Request(

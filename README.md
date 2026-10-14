@@ -1,156 +1,161 @@
-# Commande à table par QR code — deux restaurants de démonstration
+# QRamen & QRoque — commande à table par QR code
 
-**14 rue du Gros-Horloge, 76000 Rouen** — ouvert tous les jours, 12h–14h30 et 19h–22h30. Un lieu, deux comptoirs : Le QRamen (bar a ramen) et QRoque Monsieur (croque-monsieur).
+Deux sites de démonstration pour un parcours de commande en restaurant : le client scanne le QR de sa table, consulte la carte et envoie sa commande; l’équipe la suit depuis les écrans cuisine et salle. Le projet a été réalisé dans le cadre d’un exercice de formation. Les restaurants et leur adresse sont fictifs.
 
-Deux restaurants fictifs construits pour un exercice de formation, poussés bien au-delà de la
-consigne : le client scanne le QR code de sa table, commande depuis son téléphone, la cuisine voit
-le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
-
-| Restaurant | Concept | En ligne |
-| --- | --- | --- |
-| **Le QRamen** | bar à ramen, Rouen | <https://qramen.alexisld.fr/menu.html?table=T05> |
-| **QRoque Monsieur** | bistrot du croque, Rouen | <https://qroque.alexisld.fr/menu.html?table=T05> |
-
-Écran cuisine (le même pour les deux) : <https://qramen.alexisld.fr/cuisine.html> · Vue salle : <https://qramen.alexisld.fr/salle.html>
+**Sites :** [qramen.alexisld.fr](https://qramen.alexisld.fr) · [qroque.alexisld.fr](https://qroque.alexisld.fr) · [alexisld.fr](https://alexisld.fr)
 
 ## Aperçu
 
-### Chevalet de table
+### Accueils
 
-![Chevalet A6 QRoque avec QR code de commande](docs/captures-refonte/chevalet-a6.png)
+| QRamen | QRoque Monsieur |
+| --- | --- |
+| ![Accueil du site QRamen](docs/captures-refonte/accueil-qramen-1440.png) | ![Accueil du site QRoque Monsieur](docs/captures-refonte/accueil-qroque-1440.png) |
 
-Le générateur propose le format A4 (quatre chevalets par feuille) et le format Comptoir (un chevalet A5 centré sur une feuille A4). Le QR mesure 45 mm en A4 et 62 mm au comptoir.
+### Chevalet A5 — table T05
 
-### Menu sur téléphone
+Exemple de page A5 centrée sur une feuille A4, générée depuis `/qr` pour la table T05. Le site était en thème sombre pendant la vérification; le PDF reste en thème clair.
 
-![Menu QRamen sur téléphone avec les photos des plats](docs/captures-refonte/menu-qramen-390.png)
+![Aperçu du chevalet A5 QRoque Monsieur pour la table T05](docs/preuves-github-pdf/qr-page-a5-t05-dark-mode.png)
 
-La carte QRamen présente ses catégories et ses plats avec leurs vraies photos.
+Les PDF complets comprennent une page A4 par table, puis une page A5 par table, de T01 à T07 : [QRamen](public/assets/chevalets-qramen.pdf) · [QRoque](public/assets/chevalets-qroque.pdf). Aperçus : [QRamen A4](docs/preuves-github-pdf/qramen-a4-t01.png) · [QRamen A5](docs/preuves-github-pdf/qramen-a5-t05.png) · [QRoque A4](docs/preuves-github-pdf/qroque-a4-t01.png) · [QRoque A5](docs/preuves-github-pdf/qroque-a5-t05.png). Le générateur `/qr` a aussi été imprimé en mode sombre : [A4 QRamen](docs/preuves-github-pdf/qr-page-a4-dark-mode.png) · [A5 QRoque T05](docs/preuves-github-pdf/qr-page-a5-t05-dark-mode.png).
 
-### Écran cuisine
+### Menus
 
-![Écran cuisine avec les commandes en attente, en cours et servies](docs/captures-refonte/cuisine-1440.png)
+| QRamen | QRoque Monsieur |
+| --- | --- |
+| ![Carte QRamen sur mobile](docs/captures-refonte/menu-qramen-390.png) | ![Carte QRoque Monsieur sur mobile](docs/captures-refonte/menu-qroque-390.png) |
 
-Le tableau regroupe les commandes en attente, en cours et servies.
+### Cuisine
 
-### Ticket de cuisine
+![Écran cuisine présentant les commandes](docs/audit-final/apres/qramen-cuisine-1440.png)
 
-![Ticket de cuisine imprimé pour la commande numéro 42](docs/captures-refonte/ticket-cuisine.png)
+### Salle
 
-Le bon imprimé indique la table, les plats commandés et leurs quantités.
-
-### Accueil QRamen
-
-![Page d’accueil du restaurant QRamen](docs/captures-refonte/accueil-qramen-1440.png)
-
-La page d’accueil présente le restaurant Le QRamen.
-
-### Accueil QRoque
-
-![Page d’accueil du restaurant QRoque Monsieur](docs/captures-refonte/accueil-qroque-1440.png)
-
-La page d’accueil présente le restaurant QRoque Monsieur.
+![Vue salle QRamen](docs/audit-final/apres/qramen-salle-1440.png)
 
 ### QR des tables
 
-![Page QR des tables sur téléphone](docs/captures-refonte/qr-tables-390.png)
+![Page de gestion et d’impression des QR de table](docs/captures-refonte/qr-tables-390.png)
 
-La page `/qr.html` permet de générer et d’imprimer les QR codes des tables.
+## Fonctionnalités
 
-### Carte QRoque sur téléphone
+- Deux cartes et deux parcours clients, adaptés au QRamen et à QRoque Monsieur.
+- Identification de la table dans l’URL du QR, panier et envoi de commande.
+- Écrans cuisine et salle pour consulter et suivre les commandes.
+- Génération dans le navigateur des QR de table et des chevalets PDF A4 ou A5.
+- Tickets de cuisine et additions produits sous forme de PDF par le service dédié.
 
-![Menu QRoque Monsieur affiché sur un téléphone avec les photos des croques](docs/captures-refonte/menu-qroque-390.png)
+## Stack et architecture
 
-La carte QRoque présente les croques et leurs photos sur téléphone.
+Les interfaces sont des pages HTML, CSS et JavaScript sans framework. **Cloudflare Pages** sert les sites statiques; un **Cloudflare Worker** fournit l’API du menu, des commandes et du suivi. Les workflows **n8n** assurent l’automatisation et peuvent servir de relais selon la route. **Airtable** stocke les tables, plats, commandes et lignes de commande. Un service local autour de Chrome headless produit les tickets et additions PDF.
 
-**À imprimer — un PDF combiné par restaurant**
-
-- Le QRamen, formats A4 et Comptoir : [`public/assets/chevalets-qramen.pdf`](public/assets/chevalets-qramen.pdf)
-- QRoque Monsieur, formats A4 et Comptoir : [`public/assets/chevalets-qroque.pdf`](public/assets/chevalets-qroque.pdf)
-
-Chaque PDF présente d’abord les feuilles A4 (quatre cartes par feuille, repères pointillés), puis les pages Comptoir A5. Le QR mesure 45 mm en A4 et 62 mm au Comptoir, avec une zone de silence conservée autour du code.
-
-## Comment ça marche
-
-```
-        scan du QR de la table
-Client ───────────────────────► page statique (HTML/CSS/JS, sans framework)
-   ▲                                   │
-   │                                   ▼
-   │                          API Worker Cloudflare
-                 (n8n en secours)
-   │                     /menu /commande /statut /cuisine
-   │                                   │
-   └────────── Airtable ◄──────────────┘
-        (Tables, Plats, Commandes, Lignes)
-                     │
-                     ▼
-        service PDF local (Chrome headless)
-        → ticket cuisine + addition, rangés dans Airtable
+```text
+Navigateur → Cloudflare Pages → Cloudflare Worker → Airtable
+                                  ↕
+                            workflows n8n
+                                  ↓
+                         service PDF local
 ```
 
-- **Cloudflare Worker** porte les routes du menu, des commandes, du suivi, de la cuisine et de la salle ; le site essaie n8n en secours. Les workflows n8n versionnés continuent notamment de porter les tâches PDF.
-- **Airtable** porte les données : 7 tables, 16 plats, commandes et lignes, avec les pièces jointes
-  (ticket, addition) et un statut.
-- **Le service PDF** (`outils/pdf-service.py`) transforme un HTML en PDF via Chrome headless ; il est
-  protégé par un jeton partagé et n'écoute que pour la machine.
-- **Cloudflare Pages** sert `qramen.alexisld.fr` et `qroque.alexisld.fr` ; les anciens hôtes redirigent en 301.
+## Installation et développement
 
-## Deux cartes, un seul moteur
-
-| Carte | Ce qu'elle sert |
-|---|---|
-| **Le QRamen** | 8 plats asiatiques (ramen tonkotsu, shoyu, végétarien, gyoza, donburi, bao, karaage, mochi) |
-| **Le QRoque-Monsieur** | les 8 plats **de l'énoncé** : soupe à l'oignon, salade de chèvre chaud, entrecôte frites, magret, risotto, crème brûlée, fondant, cidre |
-
-Un champ `Concept` dans la base suffit : `GET /menu?concept=QRamen` ou `?concept=QRoque`. Le champ multi-sélection `Allergenes` porte les 14 familles réglementaires ; les instructions de mise à jour figurent dans le [mode opératoire](docs/mode-operatoire-restaurateur.md). Les mêmes
-workflows servent les deux restaurants. Tous les visuels de plats ont été générés pour le projet
-(16 photos, style reportage, aucun texte incrusté).
-
-## Mockups « en situation »
-
-Le QR incrusté est un **vrai** QR code (il se décode vers la page du menu), pas une illustration.
-
-| Chevalet de table | Vitrine |
-| --- | --- |
-| ![Chevalet](docs/mockups/mockup-1-chevalet.jpg) | ![Vitrine](docs/mockups/mockup-2-vitrine.jpg) |
-
-Scènes complémentaires (QR incrusté + vraie page dans l'écran du téléphone) :
-
-| Comptoir du bar | Terrasse, version brasserie |
-| --- | --- |
-| ![Comptoir](docs/mockups/scene-1-comptoir-qr.jpg) | ![Terrasse](docs/mockups/scene-2-terrasse-qr.jpg) |
-
-## Gérer les QR des tables
-
-Depuis l’accueil, le lien discret **QR des tables** ouvre `/qr.html`. La page liste les tables disponibles, propose l’aperçu A4 ou Comptoir, puis imprime l’ensemble dans un PDF unique. Le générateur fonctionne côté navigateur avec la bibliothèque locale `public/assets/vendor/qrcode.js`, sans CDN ni service de QR externe. Les QR ciblent le domaine public propre au restaurant.
-
-Guide détaillé : [mode opératoire restaurateur](docs/mode-operatoire-restaurateur.md).
-
-## Reproduire
+Le dépôt contient les pages statiques, le Worker, les workflows générables et les scripts d’exploitation. Le déploiement complet dépend d’une base Airtable, d’un compte Cloudflare et d’une instance n8n configurés séparément.
 
 ```bash
-# base Airtable : tables Tables, Plats, Commandes, Lignes + champs Concept/Description/Photo/Allergenes/Etat
-python3 outils/workflows.py            # génère les workflows n8n (dans etat/, non versionné)
-bash outils/publier-workflows.sh       # importe, publie et redémarre n8n
-bash outils/mettre-en-ligne.sh         # service systemd + site Caddy
+# Préparer/générer les workflows n8n
+python3 outils/workflows.py
 
-# service PDF (jeton dans ~/.hermes/.secrets/qramen-pdf.key, jamais dans le dépôt)
-systemctl --user start qramen-pdf
+# Déployer le Worker depuis son dossier (après configuration locale)
+cd worker
+npx wrangler deploy
 ```
 
-## English summary
+Les scripts `outils/mettre-en-ligne.sh` et `outils/publier-workflows.sh` correspondent au déploiement auto-hébergé de l’environnement d’origine. Les identifiants et secrets sont à fournir dans la configuration locale; ils ne sont pas inclus dans ce dépôt. Les étapes destinées à l’équipe du restaurant sont décrites dans le [mode opératoire](docs/mode-operatoire-restaurateur.md).
 
-A fictional ramen bar (Rouen) built for a training exercise, taken far beyond the brief: scan the QR
-code on your table, order from your phone, the kitchen board updates live, and the kitchen ticket is
-generated as a PDF and attached to the order automatically. Automation runs on self-hosted **n8n**,
-data lives in **Airtable**, the pages are plain HTML/CSS/JS, and PDFs are rendered by a small local
-service around headless Chrome. A single `Concept` field lets the same engine serve two menus — the
-ramen one, and the French brasserie one taken from the exercise brief.
+## Licence et mentions
 
-## Licence & sécurité
+Le code est distribué sous licence [MIT](LICENSE). Les contenus de démonstration et les établissements représentés sont fictifs; les pages publiques servent de démonstration du projet. Les captures et images présentes dans ce dépôt sont versionnées avec le code. Aucun secret ou jeton d’accès n’est requis pour consulter le dépôt. Voir [SECURITY.md](SECURITY.md) pour le signalement de vulnérabilités.
 
-- Code sous licence [MIT](LICENSE).
-- Aucun secret dans le dépôt : le jeton Airtable reste dans n8n, la clé du service PDF dans
-  `~/.hermes/.secrets/`. Voir [SECURITY.md](SECURITY.md).
-- Code open source, signature « alexisld.fr » présente en pied de page du site.
+---
+
+## English
+
+# QRamen & QRoque — QR table ordering
+
+Two demonstration websites for restaurant ordering: guests scan their table QR code, browse the menu and submit an order; staff follow it on the kitchen and dining room screens. The project was built as a training exercise. The restaurants and their address are fictional.
+
+**Websites:** [qramen.alexisld.fr](https://qramen.alexisld.fr) · [qroque.alexisld.fr](https://qroque.alexisld.fr) · [alexisld.fr](https://alexisld.fr)
+
+## Overview
+
+### Home pages
+
+| QRamen | QRoque Monsieur |
+| --- | --- |
+| ![QRamen home page](docs/captures-refonte/accueil-qramen-1440.png) | ![QRoque Monsieur home page](docs/captures-refonte/accueil-qroque-1440.png) |
+
+### A5 table stand — table T05
+
+Example of an A5 page centred on A4 paper, generated from `/qr` for table T05. The website was in dark mode during verification; the PDF remains in light mode.
+
+![QRoque Monsieur A5 stand preview for table T05](docs/preuves-github-pdf/qr-page-a5-t05-dark-mode.png)
+
+The complete PDFs contain one A4 page per table, followed by one A5 page per table, from T01 to T07: [QRamen](public/assets/chevalets-qramen.pdf) · [QRoque](public/assets/chevalets-qroque.pdf). Previews: [QRamen A4](docs/preuves-github-pdf/qramen-a4-t01.png) · [QRamen A5](docs/preuves-github-pdf/qramen-a5-t05.png) · [QRoque A4](docs/preuves-github-pdf/qroque-a4-t01.png) · [QRoque A5](docs/preuves-github-pdf/qroque-a5-t05.png). The `/qr` generator was also printed in dark mode: [QRamen A4](docs/preuves-github-pdf/qr-page-a4-dark-mode.png) · [QRoque A5 T05](docs/preuves-github-pdf/qr-page-a5-t05-dark-mode.png).
+
+### Menus
+
+| QRamen | QRoque Monsieur |
+| --- | --- |
+| ![QRamen mobile menu](docs/captures-refonte/menu-qramen-390.png) | ![QRoque Monsieur mobile menu](docs/captures-refonte/menu-qroque-390.png) |
+
+### Kitchen
+
+![Kitchen screen showing incoming orders](docs/audit-final/apres/qramen-cuisine-1440.png)
+
+### Dining room
+
+![QRamen dining room view](docs/audit-final/apres/qramen-salle-1440.png)
+
+### Table QR codes
+
+![Table QR management and print page](docs/captures-refonte/qr-tables-390.png)
+
+## Features
+
+- Two menus and guest flows for QRamen and QRoque Monsieur.
+- Table identification in the QR URL, a cart and order submission.
+- Kitchen and dining room screens to view and track orders.
+- Browser-based table QR generation and A4 or A5 stand PDFs.
+- Kitchen tickets and bills generated as PDFs by a dedicated service.
+
+## Stack and architecture
+
+The interfaces are plain HTML, CSS and JavaScript, with no framework. **Cloudflare Pages** serves the static sites; a **Cloudflare Worker** provides the menu, order and tracking API. **n8n** workflows handle automation and can act as a fallback for selected routes. **Airtable** stores tables, dishes, orders and order lines. A local service built around headless Chrome generates PDF tickets and bills.
+
+```text
+Browser → Cloudflare Pages → Cloudflare Worker → Airtable
+                                  ↕
+                             n8n workflows
+                                  ↓
+                          local PDF service
+```
+
+## Setup and development
+
+The repository contains the static pages, Worker, generated workflow source and operations scripts. A full deployment requires a separately configured Airtable base, Cloudflare account and n8n instance.
+
+```bash
+# Prepare/generate n8n workflows
+python3 outils/workflows.py
+
+# Deploy the Worker from its directory (after local configuration)
+cd worker
+npx wrangler deploy
+```
+
+The `outils/mettre-en-ligne.sh` and `outils/publier-workflows.sh` scripts target the original self-hosted environment. Supply credentials and secrets through local configuration; they are not stored in this repository. Restaurant staff instructions are in the [operating guide](docs/mode-operatoire-restaurateur.md).
+
+## Licence and notices
+
+The code is distributed under the [MIT License](LICENSE). The demonstration content and venues are fictional; the public websites demonstrate the project. Screenshots and images are versioned in this repository. No secret or access token is required to view the repository. See [SECURITY.md](SECURITY.md) for vulnerability reporting.
