@@ -600,3 +600,4 @@ button.restaurant-switch-button span{min-width:0;text-align:center}
 .restaurant-filter button{display:inline-flex;align-items:center;justify-content:center;gap:7px}
 .restaurant-filter button img{width:22px;height:22px;object-fit:contain;flex:0 0 22px}
 @media(max-width:600px){.restaurant-filter button{gap:5px}.restaurant-filter button img{width:20px;height:20px;flex-basis:20px}}
+.table-order-lines{list-style:none;margin:10px 0 0;padding:0;border-top:1px solid #ded8cc}.table-order-lines li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 8px;padding:8px 0;border-bottom:1px solid #ded8cc;font-size:13px}.table-order-lines li b{white-space:nowrap}.table-order-lines li small{grid-column:1/-1;color:#746e64;font-size:10px;font-weight:700}.dark-mode .table-order-lines,.dark-mode .table-order-lines li{border-color:#43515d}.dark-mode .table-order-lines li small{color:#cbd2d7}
