@@ -81,7 +81,7 @@ async function room(env) {
     return ramen && croque ? "all" : ramen ? "QRamen" : croque ? "QRoque" : null;
   };
   return { tables: tables.map(t => {
-    const f = fields(t), linked = commandes.filter(c => (fields(c).Table || []).includes(t.id));
+    const f = fields(t), linked = commandes.filter(c => (fields(c).Table || []).includes(t.id)).sort((a,b) => Date.parse(fields(b)["Passee le"] || 0) - Date.parse(fields(a)["Passee le"] || 0));
     const active = linked.filter(c => !["Terminee", "Servi"].includes(fields(c).Statut)).sort((a,b) => Date.parse(fields(b)["Passee le"] || 0) - Date.parse(fields(a)["Passee le"] || 0))[0];
     const bill = linked.filter(c => fields(c)["Addition demandee"] && fields(c).Statut !== "Terminee").sort((a,b) => Date.parse(fields(b)["Passee le"] || 0) - Date.parse(fields(a)["Passee le"] || 0))[0];
     const latest = linked[0], cleared = ["Libre", "Servie"].includes(f.Etat), latestIsDemo = latest && (String(fields(latest).Numero || "").startsWith("DEMO") || lignes.some(l => (fields(l).Commande || []).includes(latest.id) && /\bDEMO\b/.test(String(fields(l).Ligne || "")))), order = cleared ? (latestIsDemo ? latest : null) : (bill || active || (latestIsDemo ? latest : null));
@@ -107,6 +107,51 @@ async function ticketData(env, numero) {
   if (tableId) { const tr = await airtable(env, `${TABLES.tables}/${tableId}`); table = fields(tr).Identifiant || fields(tr).Nom || ""; }
   return { id: cmd.id, numero: f.Numero, table, statut: f.Statut === "Terminee" ? "Servi" : f.Statut, total: f.Total || 0, lignes: labels, addition: { demandee: !!f["Addition demandee"], url: f.Addition?.[0]?.url || null }, ticket: !!f["Ticket cuisine"]?.length };
 }
+async function generateDemo(env) {
+  if (!env.RESET_DEMO_TOKEN) throw new Error("RESET_DEMO_TOKEN secret is not configured");
+  const [tables, commands, dishes] = await Promise.all([
+    allRecords(env, TABLES.tables), allRecords(env, TABLES.commandes),
+    allRecords(env, TABLES.plats, { "filterByFormula": "{Disponible}=TRUE()" }),
+  ]);
+  const tableByName = new Map(tables.map(t => [fields(t).Identifiant || fields(t).Nom, t]));
+  const activeTableIds = new Set(commands.filter(c => !["Terminee", "Servi"].includes(fields(c).Statut)).flatMap(c => fields(c).Table || []));
+  const selectedTables = ["T01", "T02", "T03", "T04", "T05", "T06", "T07"].map(name => tableByName.get(name)).filter(t => t && !activeTableIds.has(t.id)).slice(0, 4);
+  if (selectedTables.length < 4) throw new Error("Il faut quatre tables libres (sans commande active) pour créer la démo. Aucune commande n’a été créée.");
+  const pick = (name, concept) => {
+    const d = dishes.find(x => fields(x).Plat === name && fields(x).Concept === concept);
+    if (!d) throw new Error(`Plat de démonstration indisponible : ${name}`);
+    return d;
+  };
+  const specs = [
+    { status: "En attente", table: selectedTables[0], lines: [[pick("Ramen shoyu", "QRamen"), 2, "QRamen"], [pick("Gyoza (6 pieces)", "QRamen"), 1, "QRamen"]] },
+    { status: "En cours", table: selectedTables[1], lines: [[pick("Croque madame", "QRoque"), 1, "QRoque"], [pick("Croque apéro (6 pièces)", "QRoque"), 1, "QRoque"]] },
+    { status: "Terminee", table: selectedTables[2], lines: [[pick("Ramen tonkotsu", "QRamen"), 1, "QRamen"], [pick("Croque monsieur", "QRoque"), 1, "QRoque"]] },
+    { status: "En cours", table: selectedTables[3], bill: true, lines: [[pick("Croque raclette", "QRoque"), 1, "QRoque"], [pick("Cidre brut 50 cl", "QRoque"), 1, "QRoque"]] },
+  ];
+  // Fail before writing if any required menu/table value is missing.
+  if (specs.some(s => !s.lines.length)) throw new Error("Le menu ne permet pas de préparer la démo.");
+  const created = [], createdLines = [];
+  try {
+    for (const spec of specs) {
+      const response = await airtable(env, TABLES.commandes, { method: "POST", body: { fields: { Statut: spec.status, Table: [spec.table.id], ...(spec.bill ? { "Addition demandee": true } : {}) } } });
+      created.push(response);
+      const lineRecords = spec.lines.map(([dish, quantity, concept]) => ({ fields: { Ligne: `[${concept === "QRoque" ? "🥪 QRoque Monsieur" : "🍜 Le QRamen"}] DEMO`, Quantite: quantity, Plat: [dish.id], Commande: [response.id] } }));
+      const written = await airtable(env, TABLES.lignes, { method: "POST", body: { records: lineRecords } });
+      createdLines.push(...(written.records || []));
+      await airtable(env, `${TABLES.tables}/${spec.table.id}`, { method: "PATCH", body: { fields: { Etat: spec.status === "Terminee" ? "Servie" : "En cours" } } });
+    }
+    const verified = await Promise.all(created.map(c => airtable(env, `${TABLES.commandes}/${c.id}`)));
+    const verifiedLines = await Promise.all(createdLines.map(l => airtable(env, `${TABLES.lignes}/${l.id}`)));
+    const createdIds = new Set(created.map(c => c.id));
+    if (verified.length !== 4 || verifiedLines.length !== specs.reduce((n, s) => n + s.lines.length, 0) || verified.some((r, i) => fields(r).Statut !== specs[i].status || !(fields(r).Table || []).includes(specs[i].table.id) || (fields(r).Lignes || []).length !== specs[i].lines.length || (specs[i].bill && !fields(r)["Addition demandee"])) || verifiedLines.some(l => !/\bDEMO\b/.test(String(fields(l).Ligne || "")) || !(fields(l).Commande || []).some(id => createdIds.has(id)))) throw new Error("La vérification Airtable des commandes créées a échoué.");
+    const result = { ok: true, commandes: verified.map((r, i) => ({ id: r.id, numero: fields(r).Numero, statut: fields(r).Statut === "Terminee" ? "Servi" : fields(r).Statut, table: fields(specs[i].table).Identifiant || fields(specs[i].table).Nom, additionDemandee: !!fields(r)["Addition demandee"], lignes: (fields(r).Lignes || []).length })), lignesVerifiees: verifiedLines.length };
+    console.log(JSON.stringify({ event: "demo_generate", at: new Date().toISOString(), commandes: result.commandes.map(c => c.numero), lignes: result.lignesVerifiees }));
+    return result;
+  } catch (error) {
+    console.log(JSON.stringify({ event: "demo_generate_failed", at: new Date().toISOString(), commandesCreees: created.length, lignesCreees: createdLines.length, error: error.message }));
+    throw new Error(`Création incomplète : ${created.length} commande(s) ont été écrites. Vérifiez la vue avant de relancer. ${error.message}`);
+  }
+}
 async function resetDemo(env) {
   if (!env.RESET_DEMO_TOKEN) throw new Error("RESET_DEMO_TOKEN secret is not configured");
   const lines = await allRecords(env, TABLES.lignes);
@@ -130,6 +175,12 @@ async function route(request, env) {
     const b = await bodyOf(request);
     if (b.confirmation !== "REINITIALISER LA DEMO") return fail("confirmation explicite requise", 400);
     return json(await resetDemo(env));
+  }
+  if (path === "/webhook/qramen/demo/generate" && method === "POST") {
+    if (!env.RESET_DEMO_TOKEN || request.headers.get("authorization") !== `Bearer ${env.RESET_DEMO_TOKEN}`) return fail("non autorisé", 401);
+    const b = await bodyOf(request);
+    if (b.confirmation !== "GENERER LA DEMO") return fail("confirmation explicite requise", 400);
+    return json(await generateDemo(env));
   }
   if (path === "/webhook/qramen/menu" && method === "GET") return json(await menu(env, url));
   if (path === "/webhook/qramen/cuisine/carte" && method === "GET") return json(await cuisineMenu(env, url));

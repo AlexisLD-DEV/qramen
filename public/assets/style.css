@@ -370,7 +370,6 @@ button{display:inline-flex;align-items:center;justify-content:center;line-height
 
 
 .demo-reset{width:min(100% - 32px,760px);margin:24px auto;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--white);font-size:13px}.demo-reset h2{margin:0;font:700 16px var(--serif)}.demo-reset p{margin:6px 0 12px}.demo-reset button{min-height:42px;padding:8px 14px;border:1px solid var(--color-215);border-radius:8px;background:var(--color-005);color:var(--color-180);font:600 13px var(--sans)}.demo-reset button:disabled{opacity:.5}.reset-confirm{margin-top:14px;padding:14px;border:2px solid #a23c2c;border-radius:10px}.reset-confirm h3{margin:0 0 8px}.reset-confirm label{display:block;margin:12px 0 5px}.reset-confirm input{width:min(100%,360px);min-height:42px;padding:8px;border:1px solid #777;border-radius:6px}.reset-confirm>div{display:flex;gap:10px;margin-top:12px}
-
 /* Signature de pied : nom de marque à gauche, mascotte alignée à droite. */
 .site-footer .footer-brand-row,.landing footer .footer-brand-row{display:grid;grid-template-columns:minmax(0,1fr) 52px;align-items:center;gap:16px;width:100%;max-width:1160px;margin:0 auto 12px;text-align:left}
 .site-footer .footer-brand-name,.landing footer .footer-brand-name{display:block;align-self:center;font:800 18px/1.2 var(--serif);letter-spacing:-.04em;color:var(--ink)}
@@ -651,6 +650,8 @@ button.restaurant-switch-button span{min-width:0;text-align:center}
   .site-header>#cart-open .cart-count{flex:0 0 22px;width:22px;height:22px}
 }
 
+.demo-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.demo-actions button{margin:0}.generate-confirm{border-color:var(--color-215)}
+@media(max-width:480px){.demo-actions button{flex:1 1 100%}}
 .dish-note-label{display:block;margin-top:18px;font-size:12px;font-weight:800}.dish-dialog .note-input{box-sizing:border-box;max-width:100%;font:inherit}
 
 /* Le sélecteur du hero partage l’axe de la zone titre / accroche. */

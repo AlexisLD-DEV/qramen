@@ -17,6 +17,8 @@ Les méthodes et contrats des six exports présents dans `../etat/wf-qramen*.jso
 - `GET /webhook/qramen/salle?concept=…`
 - `POST /webhook/qramen/salle/statut` — `{id,etat}`
 - `GET /webhook/qramen/ping`
+- `POST /webhook/qramen/demo/generate` — crée 4 commandes sur quatre tables libres, vérifie les écritures Airtable et journalise le lot. Requiert `Authorization: Bearer <RESET_DEMO_TOKEN>` et `{confirmation:"GENERER LA DEMO"}`.
+- `POST /webhook/qramen/reset` — réinitialise les commandes et lignes de démo après confirmation explicite.
 - `GET|POST /webhook/qramen/test-pdf` — `numero` en query string ou dans le JSON POST
 
 Les exports locaux ne contiennent pas `ping` ni `test-pdf`; l'instance n8n n'était pas accessible par Docker. `ping` renvoie `{ok:true,service:"qramen-engine"}`. `test-pdf` renvoie les données JSON brutes du ticket (`type:"ticket-data"`, commande, table, lignes, total), sans produire de PDF. Le rendu et l'impression PDF restent au service du VPS jusqu'à décision contraire. `/addition` garde la réponse `{ok:true,numero}` et marque l'addition demandée, mais n'appelle ni le service PDF ni son stockage de pièce jointe.
