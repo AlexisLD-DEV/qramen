@@ -575,3 +575,17 @@ button.restaurant-switch-button.switch-variant-accent:hover{background:#f8e7c2;b
   .site-header>.header-brand{gap:2px;font-size:9px!important}
   .site-header>.header-brand img{height:18px;width:auto}
 }
+
+/* Le switch adopte la palette de la destination, quel que soit le thème local. */
+button.restaurant-switch-button.switch-to-qroque{background:#fff8ec;border-color:#c78b21;color:#35251f;box-shadow:0 3px 10px rgba(53,37,31,.16)}
+button.restaurant-switch-button.switch-to-qroque:hover{background:#f3e5cd;border-color:#a66b0d;color:#35251f}
+button.restaurant-switch-button.switch-to-qroque:focus-visible{outline-color:#a66b0d;box-shadow:0 0 0 5px rgba(166,107,13,.24)}
+button.restaurant-switch-button.switch-to-qramen{background:#14161a;border-color:#e2543a;color:#fffdf8;box-shadow:0 3px 10px rgba(0,0,0,.28)}
+button.restaurant-switch-button.switch-to-qramen:hover{background:#24282d;border-color:#e2543a;color:#fffdf8}
+button.restaurant-switch-button.switch-to-qramen:focus-visible{outline-color:#e2543a;box-shadow:0 0 0 5px rgba(226,84,58,.25)}
+/* Neutralise les surcharges historiques du mode sombre pour ce seul bouton. */
+.dark-mode button.restaurant-switch-button.switch-to-qroque,.dark-mode.landing button.restaurant-switch-button.switch-to-qroque{background:#fff8ec;border-color:#c78b21;color:#35251f;box-shadow:0 3px 10px rgba(53,37,31,.16)}
+.dark-mode button.restaurant-switch-button.switch-to-qroque:hover,.dark-mode.landing button.restaurant-switch-button.switch-to-qroque:hover{background:#f3e5cd;border-color:#a66b0d;color:#35251f}
+.dark-mode button.restaurant-switch-button.switch-to-qramen,.dark-mode.landing button.restaurant-switch-button.switch-to-qramen{background:#14161a;border-color:#e2543a;color:#fffdf8;box-shadow:0 3px 10px rgba(0,0,0,.28)}
+.dark-mode button.restaurant-switch-button.switch-to-qramen:hover,.dark-mode.landing button.restaurant-switch-button.switch-to-qramen:hover{background:#24282d;border-color:#e2543a;color:#fffdf8}
+@media(max-width:760px){.site-header>.restaurant-switch-button{align-self:center}.landing-top>.restaurant-switch-button{align-self:center}}

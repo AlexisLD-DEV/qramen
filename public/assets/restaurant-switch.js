@@ -16,6 +16,8 @@
       const img=document.createElement('img');img.src='assets/mascottes/'+mascot;img.alt='';img.setAttribute('aria-hidden','true');
       const text=document.createElement('span');text.textContent=label;
       button.append(img,text);button.setAttribute('aria-label',label);button.dataset.targetConcept=target;
+      button.classList.toggle('switch-to-qroque',target==='QRoque');
+      button.classList.toggle('switch-to-qramen',target==='QRamen');
     }
   }
   restaurantSelect?.addEventListener('change',()=>{concept=restaurantSelect.value;render()});
