@@ -1,0 +1,76 @@
+{
+  "avant": {
+    "captures": 90,
+    "debordements": 0,
+    "erreurs_javascript": 0,
+    "images_non_chargees": 0,
+    "largeurs_px": [
+      320,
+      360,
+      390,
+      414,
+      768,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "pages": [
+      "accueil",
+      "cuisine",
+      "menu",
+      "qr",
+      "salle"
+    ],
+    "enseignes": [
+      "qramen",
+      "qroque"
+    ]
+  },
+  "apres": {
+    "captures": 90,
+    "debordements": 0,
+    "erreurs_javascript": 0,
+    "images_non_chargees": 0,
+    "largeurs_px": [
+      320,
+      360,
+      390,
+      414,
+      768,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "pages": [
+      "accueil",
+      "cuisine",
+      "menu",
+      "qr",
+      "salle"
+    ],
+    "enseignes": [
+      "qramen",
+      "qroque"
+    ]
+  },
+  "tables_T01_T07": {
+    "enseignes": 2,
+    "tables_par_enseigne": 7,
+    "largeurs_par_table": [
+      320,
+      360,
+      390,
+      414,
+      768,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "debordements": 0,
+    "libelles_inattendus": 0,
+    "source": "vérification Playwright de menu.html?table=T01 à T07"
+  }
+}

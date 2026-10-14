@@ -1,0 +1,95 @@
+{
+  "base": "Chromium headless, largeur 390 px, 10 routes publiques, aucune requête POST autorisée",
+  "pages": [
+    {
+      "host": "https://qramen.alexisld.fr",
+      "path": "/",
+      "title": "Le QRamen — commande à table",
+      "images": 0,
+      "pageErrors": [],
+      "durationMs": 1434,
+      "scrollHorizontal_px": 0
+    },
+    {
+      "host": "https://qramen.alexisld.fr",
+      "path": "/menu.html?table=T01",
+      "title": "Carte — Le QRamen",
+      "images": 0,
+      "pageErrors": [],
+      "durationMs": 1597,
+      "scrollHorizontal_px": 0
+    },
+    {
+      "host": "https://qramen.alexisld.fr",
+      "path": "/cuisine.html",
+      "title": "Cuisine — Le QRamen",
+      "images": 0,
+      "pageErrors": [],
+      "durationMs": 1350,
+      "scrollHorizontal_px": 0
+    },
+    {
+      "host": "https://qramen.alexisld.fr",
+      "path": "/salle.html",
+      "title": "Vue salle — Le QRamen",
+      "images": 0,
+      "pageErrors": [],
+      "durationMs": 1573,
+      "scrollHorizontal_px": 0
+    },
+    {
+      "host": "https://qramen.alexisld.fr",
+      "path": "/qr.html",
+      "title": "QR des tables — Le QRamen",
+      "images": 0,
+      "pageErrors": [],
+      "durationMs": 1418,
+      "scrollHorizontal_px": 0
+    },
+    {
+      "host": "https://qroque.alexisld.fr",
+      "path": "/",
+      "title": "QRoque Monsieur — commande à table",
+      "images": 0,
+      "pageErrors": [],
+      "durationMs": 1209,
+      "scrollHorizontal_px": 0
+    },
+    {
+      "host": "https://qroque.alexisld.fr",
+      "path": "/menu.html?table=T01",
+      "title": "Carte — QRoque Monsieur",
+      "images": 0,
+      "pageErrors": [],
+      "durationMs": 1394,
+      "scrollHorizontal_px": 0
+    },
+    {
+      "host": "https://qroque.alexisld.fr",
+      "path": "/cuisine.html",
+      "title": "Cuisine — QRoque Monsieur",
+      "images": 0,
+      "pageErrors": [],
+      "durationMs": 1336,
+      "scrollHorizontal_px": 0
+    },
+    {
+      "host": "https://qroque.alexisld.fr",
+      "path": "/salle.html",
+      "title": "Vue salle — QRoque Monsieur",
+      "images": 0,
+      "pageErrors": [],
+      "durationMs": 1301,
+      "scrollHorizontal_px": 0
+    },
+    {
+      "host": "https://qroque.alexisld.fr",
+      "path": "/qr.html",
+      "title": "QR des tables — QRoque Monsieur",
+      "images": 0,
+      "pageErrors": [],
+      "durationMs": 1680,
+      "scrollHorizontal_px": 0
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "configuration": "Chromium headless · 390×844 · 4G simulé (150 ms RTT, 1.6 Mbps descendant, 750 Kbps montant)",
+  "mesures": [
+    {
+      "enseigne": "QRamen",
+      "page": "accueil",
+      "LCP_ms": 828,
+      "CLS": 0.00187,
+      "debordement_px": 0
+    },
+    {
+      "enseigne": "QRamen",
+      "page": "menu",
+      "LCP_ms": 972,
+      "CLS": 0.00164,
+      "debordement_px": 0
+    },
+    {
+      "enseigne": "QRoque",
+      "page": "accueil",
+      "LCP_ms": 956,
+      "CLS": 0.00216,
+      "debordement_px": 0
+    },
+    {
+      "enseigne": "QRoque",
+      "page": "menu",
+      "LCP_ms": 972,
+      "CLS": 0.00169,
+      "debordement_px": 0
+    }
+  ]
+}

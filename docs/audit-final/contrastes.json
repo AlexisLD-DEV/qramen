@@ -1,0 +1,51 @@
+[
+  {
+    "couple": "texte courant QRamen",
+    "texte": "#53514b",
+    "fond": "#f7f2e9",
+    "ratio": 7.12,
+    "niveau": "AAA"
+  },
+  {
+    "couple": "texte courant QRoque",
+    "texte": "#534c43",
+    "fond": "#f3ede1",
+    "ratio": 7.26,
+    "niveau": "AAA"
+  },
+  {
+    "couple": "texte de pied",
+    "texte": "#53514b",
+    "fond": "#fffdf8",
+    "ratio": 7.81,
+    "niveau": "AAA"
+  },
+  {
+    "couple": "bouton principal QRamen",
+    "texte": "#b63825",
+    "fond": "#ffffff",
+    "ratio": 5.86,
+    "niveau": "AA"
+  },
+  {
+    "couple": "bouton principal QRoque",
+    "texte": "#7b2d26",
+    "fond": "#ffffff",
+    "ratio": 9.35,
+    "niveau": "AAA"
+  },
+  {
+    "couple": "action verte",
+    "texte": "#547347",
+    "fond": "#ffffff",
+    "ratio": 5.36,
+    "niveau": "AA"
+  },
+  {
+    "couple": "prix QRamen",
+    "texte": "#765000",
+    "fond": "#fffdf8",
+    "ratio": 7.08,
+    "niveau": "AAA"
+  }
+]
