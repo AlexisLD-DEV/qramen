@@ -131,6 +131,29 @@ body{font-family:var(--sans);font-size:16px;line-height:1.5}.landing{background:
 @media(max-width:700px){.landing-copy{max-width:100%;padding:24px 0 34px}.landing-mascot{width:48%;right:1%;top:36%;opacity:.58}.landing h1{font-size:clamp(66px,16vw,112px)}.landing-bottom{gap:26px;z-index:1}.landing .landing-actions{position:relative;z-index:2}.menu-hero{padding:34px 18px 28px;margin:0 -2px 20px;border-radius:0 0 23px 23px}.dish-grid{gap:13px}}
 @media(max-width:430px){.landing{padding:10px}.landing-card{padding:22px 20px 18px;min-height:calc(100svh - 20px)}.landing-mascot{width:58%;top:31%;right:-5%;opacity:.42}.landing-copy{padding:30px 0 28px}.landing h1{font-size:68px}.landing-bottom{gap:16px}.landing-bottom p{font-size:13px}.dish-body p{font-size:13px}.qr-page .qr-actions{grid-column:1/-1}.qr-page .qr-action{min-height:42px;padding:0 9px;font-size:12px}.qr-page .qr-tools{grid-template-columns:1fr}.qr-page .qr-tools .qr-actions,.qr-page .qr-preview{grid-column:1}.qr-page .qr-preview p{font-size:12px}}
 @media(max-width:430px){.site-header .cart-trigger{font-size:0}}
+
+/* Ajustements de lisibilité menu mobile */
+@media(max-width:430px){
+  .site-header{height:auto;min-height:104px;padding:8px 12px;display:grid;grid-template-columns:minmax(0,1fr) auto auto;grid-template-areas:"brand switch switch" "table prefs cart";align-content:center;gap:7px 8px}
+  .site-header>.header-brand{grid-area:brand;min-width:0;font-size:17px!important}
+  .site-header>.restaurant-switch.compact{grid-area:switch;justify-self:end;margin:0;gap:3px;padding:3px}
+  .site-header>.restaurant-switch.compact a{min-height:44px;padding:0 10px;font-size:11px}
+  .site-header>#table-label{grid-area:table;justify-self:start;white-space:nowrap}
+  .site-header>.menu-preferences{grid-area:prefs;display:flex;align-items:center;justify-self:end;gap:5px}
+  .site-header>.menu-preferences button{width:44px;height:44px}
+  .site-header>#cart-open{grid-area:cart;justify-self:end;margin:0;width:auto;min-width:80px;height:44px;padding:0 10px;font-size:12px}
+  .site-header>#cart-open .cart-count{width:20px;height:20px}
+  .menu-legend-row{display:block}
+  .menu-legend-row .filters{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:4px 1px 12px;overscroll-behavior-x:contain}
+  .menu-legend-row .filter{flex:0 0 auto;min-height:44px;padding:0 15px;scroll-snap-align:start}
+  .allergen-open{min-height:44px;margin:0 0 4px}
+  .concept-toggle{position:fixed;right:12px;bottom:12px;z-index:30;min-height:40px;padding:0 11px;gap:7px;font-size:10px;box-shadow:0 4px 16px #0002}
+  .concept-toggle img{width:25px;height:25px}
+  .dish-grid{padding-bottom:96px}
+}
+@media(min-width:431px){.concept-toggle{position:fixed;right:22px;bottom:22px;z-index:30}}
+.site-footer .signature-links{display:inline-flex;align-items:center;gap:9px;margin-top:4px}
+.site-footer .signature-links a{font-size:inherit}
 @media print{.qr-print-sheet{padding-top:6mm!important;padding-bottom:6mm!important}.qr-print-sheet .print-logo{height:10mm;margin-bottom:1mm}.qr-print-sheet .print-mascot{height:18mm;width:18mm;margin-bottom:1mm}.qr-print-sheet h1{font-size:18pt;margin-bottom:.5mm}.qr-print-sheet .print-instruction{margin-bottom:2mm}.qr-print-sheet .print-qr-frame{width:55mm;height:55mm;padding:2mm}.qr-print-sheet .print-qr{width:51mm;height:51mm}.qr-print-sheet .print-table{margin-top:2mm}}
 @media(max-width:380px){.site-header .cart-trigger{margin-left:auto;font-size:12px!important;width:auto!important;min-width:40px;height:36px;padding:0 10px}}
 .landing-mascot{border-radius:50%;clip-path:circle(49% at 50% 50%)}
@@ -235,3 +258,5 @@ body{font-size:var(--font-body);line-height:1.5}
 .order-card .order-num,.order-card.watch .elapsed-time,.order-card.overdue .elapsed-time{color:var(--ink)}
 .order-card.watch .order-num{color:var(--ink)}
 .order-card.overdue .order-num{color:var(--ink)}
+@media(max-width:430px){.concept-toggle{position:fixed;right:12px;bottom:12px;z-index:30;width:42px;height:42px;min-height:42px;padding:3px;justify-content:center;gap:0;box-shadow:0 4px 16px #0002}.concept-toggle img{width:30px;height:30px}.concept-toggle span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}}
+@media(min-width:431px){.concept-toggle{position:fixed;right:18px;bottom:18px;z-index:30;width:48px;height:48px;min-height:48px;padding:4px;justify-content:center;gap:0}.concept-toggle img{width:34px;height:34px}.concept-toggle span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}}
