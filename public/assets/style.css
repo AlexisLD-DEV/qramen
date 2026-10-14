@@ -652,3 +652,8 @@ button.restaurant-switch-button span{min-width:0;text-align:center}
 }
 
 .dish-note-label{display:block;margin-top:18px;font-size:12px;font-weight:800}.dish-dialog .note-input{box-sizing:border-box;max-width:100%;font:inherit}
+
+/* Le sélecteur du hero partage l’axe de la zone titre / accroche. */
+.landing-copy>button.restaurant-switch-button{display:flex;align-self:center;margin:0 auto 12px;text-align:center}
+@media(max-width:700px){.landing-copy>button.restaurant-switch-button{max-width:100%;white-space:normal;font-size:clamp(9px,2.6vw,11px);line-height:1.15;padding:5px 7px;gap:4px}.landing-copy>button.restaurant-switch-button img{width:22px;height:22px;flex-basis:22px}}
+@media(max-width:350px){.landing-copy>button.restaurant-switch-button{font-size:9px;padding:4px 5px;gap:2px}.landing-copy>button.restaurant-switch-button img{width:18px;height:18px;flex-basis:18px}}
