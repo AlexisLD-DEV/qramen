@@ -745,3 +745,5 @@ button.restaurant-switch-button span{min-width:0;flex:0 1 auto;text-align:center
   .landing-top>.landing-preferences button{width:44px;height:44px;min-width:44px;min-height:44px}
   .landing-top>.restaurant-switch-button{grid-column:1/-1;grid-row:2;justify-self:center;width:max-content;max-width:100%;white-space:normal;text-align:center;font-size:clamp(9px,2.6vw,11px);line-height:1.15;padding:5px 7px;gap:4px}
 }
+
+.dark-mode .menu-hero .kicker{color:#c4d99b}
