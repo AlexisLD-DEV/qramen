@@ -13,6 +13,8 @@ CODE_CUISINE = """const cmds = ($json.records || []).map(r => ({
   table: (r.fields.Table || []).length ? 'Sur place' : 'A emporter',
   statut: (r.fields.Statut === 'Terminee' ? 'Servi' : (r.fields.Statut || 'En attente')),
   heure: r.fields['Passee le'],
+  passee: r.fields['Passee le'],
+  additionDemandee: !!r.fields['Addition demandee'],
   ticket: !!(r.fields['Ticket cuisine'] || []).length,
   liens: r.fields.Lignes || [],
 }));

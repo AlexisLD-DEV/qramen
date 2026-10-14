@@ -30,7 +30,7 @@ const plats = ($json.records || [])
   .filter(f => (f.Concept || 'QRoque') === concept && f.Disponible !== false)
   .map(f => ({ id: f.id, nom: f.Plat, description: f.Description || '', prix: f.Prix || 0,
                categorie: f.Categorie || 'Plat', photo: 'assets/img/' + (f.Photo || 'default.webp'),
-               disponible: f.Disponible !== false, tags: [] }));
+               disponible: f.Disponible !== false, allergenes: f.Allergenes || [], tags: [] }));
 return [{ json: { restaurant: infos, concept, categories, plats } }];"""
 
 

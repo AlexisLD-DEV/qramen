@@ -9,7 +9,7 @@ le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
 | **Le QRamen** | bar à ramen, Rouen | <https://qramen.ledeunf.fr/menu.html?table=T05> |
 | **QRoque Monsieur** | bistrot du croque, Rouen | <https://croq.ledeunf.fr/menu.html?table=T05> |
 
-Écran cuisine (le même pour les deux) : <https://qramen.ledeunf.fr/cuisine.html>
+Écran cuisine (le même pour les deux) : <https://qramen.ledeunf.fr/cuisine.html> · Vue salle : <https://qramen.ledeunf.fr/salle.html>
 
 ## Aperçu
 
@@ -66,7 +66,7 @@ Client ───────────────────────► 
 
 - **n8n** (auto-hébergé, gratuit) porte toute la logique : lecture du menu, création de la commande et
   de ses lignes, suivi du statut, écran cuisine, génération des PDF. Les workflows sont **écrits en
-  code** (`outils/workflows.py`) et versionnés ici.
+  code** (`outils/workflows.py`, `outils/workflow-cuisine.py` et `outils/workflow-salle.py`) et versionnés ici.
 - **Airtable** porte les données : 7 tables, 16 plats, commandes et lignes, avec les pièces jointes
   (ticket, addition) et un statut.
 - **Le service PDF** (`outils/pdf-service.py`) transforme un HTML en PDF via Chrome headless ; il est
@@ -80,7 +80,7 @@ Client ───────────────────────► 
 | **Le QRamen** | 8 plats asiatiques (ramen tonkotsu, shoyu, végétarien, gyoza, donburi, bao, karaage, mochi) |
 | **Le QRoque-Monsieur** | les 8 plats **de l'énoncé** : soupe à l'oignon, salade de chèvre chaud, entrecôte frites, magret, risotto, crème brûlée, fondant, cidre |
 
-Un champ `Concept` dans la base suffit : `GET /menu?concept=QRamen` ou `?concept=QRoque`. Les mêmes
+Un champ `Concept` dans la base suffit : `GET /menu?concept=QRamen` ou `?concept=QRoque`. Le champ multi-sélection `Allergenes` porte les 14 familles réglementaires ; les instructions de mise à jour figurent dans le [mode opératoire](docs/mode-operatoire-restaurateur.md). Les mêmes
 workflows servent les deux restaurants. Tous les visuels de plats ont été générés pour le projet
 (16 photos, style reportage, aucun texte incrusté).
 
@@ -107,7 +107,7 @@ Guide détaillé : [mode opératoire restaurateur](docs/mode-operatoire-restaura
 ## Reproduire
 
 ```bash
-# base Airtable : 4 tables (Tables, Plats, Commandes, Lignes) + champs Concept/Description/Photo
+# base Airtable : tables Tables, Plats, Commandes, Lignes + champs Concept/Description/Photo/Allergenes/Etat
 python3 outils/workflows.py            # génère les workflows n8n (dans etat/, non versionné)
 bash outils/publier-workflows.sh       # importe, publie et redémarre n8n
 bash outils/mettre-en-ligne.sh         # service systemd + site Caddy
