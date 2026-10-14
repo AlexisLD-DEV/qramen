@@ -491,3 +491,32 @@ button{display:inline-flex;align-items:center;justify-content:center;line-height
 @media(max-width:430px){.restaurant-switch-button{max-width:100%;gap:6px;padding:6px 9px;font-size:11px}.restaurant-switch-button img{width:24px;height:24px;flex-basis:24px}.site-header>.restaurant-switch-button{font-size:10px;padding-inline:8px}}
 @media(max-width:350px){.restaurant-switch-button{flex-direction:column;gap:2px;min-height:44px;padding:4px 8px;font-size:10px}.restaurant-switch-button img{width:22px;height:22px;flex-basis:22px}.site-header>.restaurant-switch-button{max-width:112px}}
 @media(prefers-reduced-motion:reduce){.restaurant-switch-button{transition:none}}
+
+/* Bascule entre enseignes : action visible avec mascotte de la destination. */
+button.restaurant-switch-button{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;width:max-content;max-width:100%;padding:7px 14px 7px 9px;margin:0;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);font:700 12px/1.25 var(--sans);text-align:left;white-space:nowrap;box-shadow:0 3px 10px rgba(36,29,22,.10);transition:background-color .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease,transform .18s ease}
+button.restaurant-switch-button img{display:block;width:26px;height:26px;flex:0 0 26px;object-fit:contain}
+button.restaurant-switch-button:hover{background:var(--color-005);border-color:var(--gold);color:var(--ink);box-shadow:0 6px 16px rgba(36,29,22,.16);transform:translateY(-1px)}
+button.restaurant-switch-button:active{transform:translateY(1px);box-shadow:0 1px 4px rgba(36,29,22,.14)}
+button.restaurant-switch-button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;box-shadow:0 0 0 5px color-mix(in srgb,var(--gold) 22%,transparent)}
+.dark-mode button.restaurant-switch-button{background:#272b2e;border-color:#55595c;color:#f4f0e8;box-shadow:0 3px 10px rgba(0,0,0,.28)}
+.dark-mode button.restaurant-switch-button:hover{background:#34393c;border-color:#d9a84f;color:#fff8e9}
+.theme-qroque button.restaurant-switch-button{border-color:color-mix(in srgb,var(--red) 42%,var(--line))}
+.theme-qroque button.restaurant-switch-button:hover{border-color:var(--red)}
+.kitchen-tools>button.restaurant-switch-button{margin-right:8px}
+.landing-card>button.restaurant-switch-button{align-self:flex-end;margin:0 0 14px}
+@media(max-width:760px){button.restaurant-switch-button{white-space:normal;text-align:center}.landing-card>button.restaurant-switch-button{align-self:center}}
+@media(max-width:430px){.site-header{height:auto;min-height:68px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}.site-header>button.restaurant-switch-button{order:5;flex:1 0 100%;margin:0 auto;max-width:100%}.site-header>button.restaurant-switch-button span{min-width:0}}
+@media(max-width:350px){button.restaurant-switch-button{flex-direction:column;gap:2px;min-height:54px;padding:5px 10px;font-size:11px}button.restaurant-switch-button img{width:24px;height:24px;flex-basis:24px}.site-header>button.restaurant-switch-button{max-width:100%}}
+@media(prefers-reduced-motion:reduce){button.restaurant-switch-button{transition:none}}
+/* Deux pistes visuelles pour la validation d’Alexis. */
+button.restaurant-switch-button.switch-variant-accent{background:var(--gold);border-color:color-mix(in srgb,var(--gold) 72%,var(--ink));color:var(--ink);box-shadow:0 5px 14px rgba(99,65,19,.2)}
+button.restaurant-switch-button.switch-variant-accent:hover{background:color-mix(in srgb,var(--gold) 78%,white);border-color:var(--gold)}
+.theme-qroque button.restaurant-switch-button.switch-variant-accent{background:var(--red);border-color:var(--red);color:#fff}
+.theme-qroque button.restaurant-switch-button.switch-variant-accent:hover{background:color-mix(in srgb,var(--red) 84%,white);color:#fff}
+.dark-mode.landing button.restaurant-switch-button{background:#272b2e;border-color:#55595c;color:#f4f0e8}
+.dark-mode.landing button.restaurant-switch-button.switch-variant-accent{background:var(--gold);border-color:color-mix(in srgb,var(--gold) 72%,var(--ink));color:var(--ink)}
+.dark-mode.theme-qroque button.restaurant-switch-button.switch-variant-accent{background:var(--red);border-color:var(--red);color:#fff}
+button.restaurant-switch-button.switch-variant-accent{background:#f2d49b;border-color:#b77b18;color:#35271d}
+button.restaurant-switch-button.switch-variant-accent:hover{background:#f8e7c2;border-color:#9a6900;color:#35271d}
+.dark-mode.landing button.restaurant-switch-button.switch-variant-accent{background:#f2d49b;border-color:#b77b18;color:#35271d}
+.theme-qroque button.restaurant-switch-button.switch-variant-accent,.dark-mode.theme-qroque button.restaurant-switch-button.switch-variant-accent{background:var(--red);border-color:var(--red);color:#fff}

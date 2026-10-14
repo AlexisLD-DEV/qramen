@@ -9,11 +9,4 @@
   }
   apply(saved==='dark'||saved==='light'?saved:fallback);
   button?.addEventListener('click',()=>{const theme=body.classList.contains('dark-mode')?'light':'dark';localStorage.setItem(key,theme);apply(theme)});
-  const current=new URLSearchParams(location.search).get('concept')||(location.hostname.includes('qroque')?'QRoque':'QRamen');
-  document.querySelectorAll('.restaurant-switch a[data-concept]').forEach(a=>{
-    const target=a.dataset.concept,otherHost=target==='QRoque'?'qroque.alexisld.fr':'qramen.alexisld.fr';
-    const u=new URL(location.pathname,location.protocol+'//'+otherHost);
-    for(const [k,v] of new URLSearchParams(location.search))if(k!=='concept')u.searchParams.append(k,v);
-    a.href=u.href;if(target===current)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
-  });
 })();
