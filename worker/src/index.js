@@ -61,21 +61,33 @@ async function cuisineMenu(env, url) {
   return { concept, plats: records.map(r => ({ id: r.id, nom: fields(r).Plat || "", categorie: fields(r).Categorie || "Plat", disponible: fields(r).Disponible !== false, concept: fields(r).Concept || "QRoque" })).filter(p => p.concept === concept) };
 }
 async function orders(env) {
-  const [cmds, tableRows] = await Promise.all([allRecords(env, TABLES.commandes, { "sort[0][field]": "Passee le", "sort[0][direction]": "desc" }), allRecords(env, TABLES.tables)]);
+  const [cmds, tableRows, allLines] = await Promise.all([
+    allRecords(env, TABLES.commandes, { "sort[0][field]": "Passee le", "sort[0][direction]": "desc" }),
+    allRecords(env, TABLES.tables), allRecords(env, TABLES.lignes),
+  ]);
   const tableNames = new Map(tableRows.map(t => [t.id, fields(t).Identifiant || fields(t).Nom]));
-  const live = cmds.filter(r => !["Terminee", "Servi"].includes(fields(r).Statut));
-  const ids = live.flatMap(r => fields(r).Lignes || []);
-  const lignes = ids.length ? await allRecords(env, TABLES.lignes, { filterByFormula: `OR(${ids.map(id => `RECORD_ID()='${escapeFormula(id)}'`).join(",")})` }) : [];
+  const demoClosed = new Set(allLines.filter(l => /\bDEMO\b/.test(String(fields(l).Ligne || ""))).flatMap(l => fields(l).Commande || []));
+  const live = cmds.filter(r => !["Terminee", "Servi"].includes(fields(r).Statut) || demoClosed.has(r.id));
+  const ids = new Set(live.flatMap(r => fields(r).Lignes || []));
+  const lignes = allLines.filter(l => ids.has(l.id));
   return live.map(r => ({ id: r.id, numero: fields(r).Numero, table: tableNames.get((fields(r).Table || [])[0]) || "A emporter", statut: fields(r).Statut === "Terminee" ? "Servi" : (fields(r).Statut || "En attente"), heure: fields(r)["Passee le"], passee: fields(r)["Passee le"], additionDemandee: !!fields(r)["Addition demandee"], ticket: !!(fields(r)["Ticket cuisine"] || []).length, ticketUrl: fields(r)["Ticket cuisine"]?.[0]?.url || null, liens: fields(r).Lignes || [], lignes: lignes.filter(l => (fields(l).Commande || [])[0] === r.id).map(l => ({ id: l.id, commande: (fields(l).Commande || [])[0], designation: lineLabel(fields(l).Ligne, fields(l).Designation), quantite: fields(l).Quantite || 1 })) }));
 }
 async function room(env) {
-  const [tables, commandes] = await Promise.all([allRecords(env, TABLES.tables), allRecords(env, TABLES.commandes, { "sort[0][field]": "Passee le", "sort[0][direction]": "desc" })]);
+  const [tables, commandes, lignes] = await Promise.all([allRecords(env, TABLES.tables), allRecords(env, TABLES.commandes, { "sort[0][field]": "Passee le", "sort[0][direction]": "desc" }), allRecords(env, TABLES.lignes)]);
+  const orderConcept = (order) => {
+    if (!order) return null;
+    const labels = lignes.filter(l => (fields(l).Commande || []).includes(order.id)).map(l => String(fields(l).Ligne || ""));
+    const ramen = labels.some(x => x.startsWith("[🍜 Le QRamen]")), croque = labels.some(x => x.startsWith("[🥪 QRoque Monsieur]"));
+    return ramen && croque ? "all" : ramen ? "QRamen" : croque ? "QRoque" : null;
+  };
   return { tables: tables.map(t => {
     const f = fields(t), linked = commandes.filter(c => (fields(c).Table || []).includes(t.id));
     const active = linked.filter(c => !["Terminee", "Servi"].includes(fields(c).Statut)).sort((a,b) => Date.parse(fields(b)["Passee le"] || 0) - Date.parse(fields(a)["Passee le"] || 0))[0];
     const bill = linked.filter(c => fields(c)["Addition demandee"] && fields(c).Statut !== "Terminee").sort((a,b) => Date.parse(fields(b)["Passee le"] || 0) - Date.parse(fields(a)["Passee le"] || 0))[0];
-    const cleared = ["Libre", "Servie"].includes(f.Etat), order = cleared ? null : (bill || active);
-    return { id: t.id, nom: f.Identifiant || f.Nom || "Table", etat: cleared ? f.Etat : bill ? "Addition demandée" : active ? "En cours" : (f.Etat || "Libre"), commande: order ? { id: order.id, numero: fields(order).Numero, statut: fields(order).Statut, passee: fields(order)["Passee le"] } : null };
+    const latest = linked[0], cleared = ["Libre", "Servie"].includes(f.Etat), order = cleared ? (latest && String(fields(latest).Numero || "").startsWith("DEMO") ? latest : null) : (bill || active || (latest && lignes.some(l => (fields(l).Commande || []).includes(latest.id) && /\bDEMO\b/.test(String(fields(l).Ligne || ""))) ? latest : null));
+    const orderLines = order ? lignes.filter(l => (fields(l).Commande || []).includes(order.id)) : [];
+    const demo = orderLines.some(l => /\bDEMO\b/.test(String(fields(l).Ligne || "")));
+    return { id: t.id, nom: f.Identifiant || f.Nom || "Table", concept: orderConcept(order || latest), etat: cleared ? f.Etat : bill ? "Addition demandée" : active ? "En cours" : (f.Etat || "Libre"), commande: order ? { id: order.id, numero: fields(order).Numero, statut: fields(order).Statut === "Terminee" ? "Servi" : fields(order).Statut, passee: fields(order)["Passee le"], demo } : null };
   }) };
 }
 async function ticketData(env, numero) {
