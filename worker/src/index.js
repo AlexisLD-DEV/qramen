@@ -111,14 +111,14 @@ async function generateDemo(env) {
   if (!env.RESET_DEMO_TOKEN) throw new Error("RESET_DEMO_TOKEN secret is not configured");
   const [tables, commands, dishes] = await Promise.all([
     allRecords(env, TABLES.tables), allRecords(env, TABLES.commandes),
-    allRecords(env, TABLES.plats, { "filterByFormula": "{Disponible}=TRUE()" }),
+    allRecords(env, TABLES.plats),
   ]);
   const tableByName = new Map(tables.map(t => [fields(t).Identifiant || fields(t).Nom, t]));
   const activeTableIds = new Set(commands.filter(c => !["Terminee", "Servi"].includes(fields(c).Statut)).flatMap(c => fields(c).Table || []));
   const selectedTables = ["T01", "T02", "T03", "T04", "T05", "T06", "T07"].map(name => tableByName.get(name)).filter(t => t && !activeTableIds.has(t.id)).slice(0, 4);
   if (selectedTables.length < 4) throw new Error("Il faut quatre tables libres (sans commande active) pour créer la démo. Aucune commande n’a été créée.");
   const pick = (name, concept) => {
-    const d = dishes.find(x => fields(x).Plat === name && fields(x).Concept === concept);
+    const d = dishes.find(x => fields(x).Plat === name && fields(x).Concept === concept && fields(x).Disponible !== false);
     if (!d) throw new Error(`Plat de démonstration indisponible : ${name}`);
     return d;
   };
@@ -153,25 +153,36 @@ async function generateDemo(env) {
   }
 }
 async function resetDemo(env) {
-  if (!env.RESET_DEMO_TOKEN) throw new Error("RESET_DEMO_TOKEN secret is not configured");
-  const lines = await allRecords(env, TABLES.lignes);
-  const commands = await allRecords(env, TABLES.commandes);
-  // Detach linked records before deleting commands; this also removes orphan lines.
-  for (let i = 0; i < lines.length; i += 10) {
-    await airtable(env, TABLES.lignes, { method: "DELETE", query: { "records[]": lines.slice(i, i + 10).map(r => r.id) } });
+  let lines = [], commands = [];
+  try {
+    lines = await allRecords(env, TABLES.lignes);
+    commands = await allRecords(env, TABLES.commandes);
+    // Detach linked records before deleting commands; this also removes orphan lines.
+    for (let i = 0; i < lines.length; i += 10) {
+      await airtable(env, TABLES.lignes, { method: "DELETE", query: { "records[]": lines.slice(i, i + 10).map(r => r.id) } });
+    }
+    for (let i = 0; i < commands.length; i += 10) {
+      await airtable(env, TABLES.commandes, { method: "DELETE", query: { "records[]": commands.slice(i, i + 10).map(r => r.id) } });
+    }
+    const tables = await allRecords(env, TABLES.tables);
+    for (const table of tables) await airtable(env, `${TABLES.tables}/${table.id}`, { method: "PATCH", body: { fields: { Etat: "Libre" } } });
+    const [remainingLines, remainingCommands, verifiedTables] = await Promise.all([
+      allRecords(env, TABLES.lignes), allRecords(env, TABLES.commandes), allRecords(env, TABLES.tables),
+    ]);
+    const busyTables = verifiedTables.filter(table => fields(table).Etat !== "Libre");
+    if (remainingLines.length || remainingCommands.length || busyTables.length) throw new Error(`Vérification du reset échouée : ${remainingCommands.length} commande(s), ${remainingLines.length} ligne(s) et ${busyTables.length} table(s) non libérée(s) restent présentes.`);
+    console.log(JSON.stringify({ event: "demo_reset", at: new Date().toISOString(), commands: commands.length, lines: lines.length, tablesLiberees: tables.length, ok: true }));
+    return { ok: true, commandesSupprimees: commands.length, lignesSupprimees: lines.length, tablesLiberees: tables.length, verification: "vide" };
+  } catch (error) {
+    console.log(JSON.stringify({ event: "demo_reset_failed", at: new Date().toISOString(), commandsSeen: commands.length, linesSeen: lines.length, error: error.message }));
+    throw error;
   }
-  for (let i = 0; i < commands.length; i += 10) {
-    await airtable(env, TABLES.commandes, { method: "DELETE", query: { "records[]": commands.slice(i, i + 10).map(r => r.id) } });
-  }
-  console.log(JSON.stringify({ event: "demo_reset", at: new Date().toISOString(), commands: commands.length, lines: lines.length }));
-  return { ok: true, commandesSupprimees: commands.length, lignesSupprimees: lines.length };
 }
 async function route(request, env) {
   const url = new URL(request.url), path = url.pathname.replace(/\/$/, ""), method = request.method;
   if (method === "OPTIONS") return new Response(null, { status: 204, headers: { "access-control-allow-origin": "*", "access-control-allow-methods": "GET,POST,OPTIONS", "access-control-allow-headers": "Content-Type, Authorization, X-Reset-Token" } });
   if (path === "/webhook/qramen/ping" && method === "GET") return json({ ok: true, service: "qramen-engine" });
   if (path === "/webhook/qramen/reset" && method === "POST") {
-    if (!env.RESET_DEMO_TOKEN || request.headers.get("authorization") !== `Bearer ${env.RESET_DEMO_TOKEN}`) return fail("non autorisé", 401);
     const b = await bodyOf(request);
     if (b.confirmation !== "REINITIALISER LA DEMO") return fail("confirmation explicite requise", 400);
     return json(await resetDemo(env));
