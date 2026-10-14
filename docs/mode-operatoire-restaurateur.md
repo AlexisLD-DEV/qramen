@@ -1,5 +1,8 @@
 # Mode opératoire restaurateur
 
+
+**14 rue du Gros-Horloge, 76000 Rouen** — ouvert tous les jours, 12h–14h30 et 19h–22h30. Un lieu, deux comptoirs : Le QRamen (bar a ramen) et QRoque Monsieur (croque-monsieur).
+
 ## Générer un QR de table
 
 1. Ouvrez `https://qramen.ledeunf.fr/qr.html` ou `https://croq.ledeunf.fr/qr.html`.

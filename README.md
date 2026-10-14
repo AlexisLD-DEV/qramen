@@ -1,5 +1,8 @@
 # Commande à table par QR code — deux restaurants de démonstration
 
+
+**14 rue du Gros-Horloge, 76000 Rouen** — ouvert tous les jours, 12h–14h30 et 19h–22h30. Un lieu, deux comptoirs : Le QRamen (bar a ramen) et QRoque Monsieur (croque-monsieur).
+
 Deux restaurants fictifs construits pour un exercice de formation, poussés bien au-delà de la
 consigne : le client scanne le QR code de sa table, commande depuis son téléphone, la cuisine voit
 le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
