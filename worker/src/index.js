@@ -14,7 +14,7 @@ const RESTAURANTS = {
 };
 
 function json(data, status = 200) {
-  return new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8", "access-control-allow-origin": "*", "access-control-allow-methods": "GET,POST,OPTIONS", "access-control-allow-headers": "Content-Type" } });
+  return new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8", "access-control-allow-origin": "*", "access-control-allow-methods": "GET,POST,OPTIONS", "access-control-allow-headers": "Content-Type, Authorization, X-Reset-Token" } });
 }
 function fail(message, status = 400) { return json({ error: message }, status); }
 async function bodyOf(request) { try { return await request.json(); } catch { return {}; } }
@@ -23,7 +23,10 @@ async function airtable(env, table, options = {}) {
   if (!env.AIRTABLE_PAT) throw new Error("AIRTABLE_PAT secret is not configured");
   const base = env.AIRTABLE_BASE_ID || "appBHi3MxCb0hW1yH";
   const url = new URL(`https://api.airtable.com/v0/${base}/${table}`);
-  for (const [key, value] of Object.entries(options.query || {})) if (value !== undefined) url.searchParams.set(key, value);
+  for (const [key, value] of Object.entries(options.query || {})) if (value !== undefined) {
+    if (Array.isArray(value)) value.forEach(item => url.searchParams.append(key, item));
+    else url.searchParams.set(key, value);
+  }
   const response = await fetch(url, { method: options.method || "GET", headers: { Authorization: `Bearer ${env.AIRTABLE_PAT}`, "content-type": "application/json" }, body: options.body ? JSON.stringify(options.body) : undefined });
   const data = await response.json().catch(() => ({}));
   if (!response.ok) throw new Error(`Airtable ${response.status}: ${data.error?.message || "request failed"}`);
@@ -92,10 +95,30 @@ async function ticketData(env, numero) {
   if (tableId) { const tr = await airtable(env, `${TABLES.tables}/${tableId}`); table = fields(tr).Identifiant || fields(tr).Nom || ""; }
   return { id: cmd.id, numero: f.Numero, table, statut: f.Statut === "Terminee" ? "Servi" : f.Statut, total: f.Total || 0, lignes: labels, addition: { demandee: !!f["Addition demandee"], url: f.Addition?.[0]?.url || null }, ticket: !!f["Ticket cuisine"]?.length };
 }
+async function resetDemo(env) {
+  if (!env.RESET_DEMO_TOKEN) throw new Error("RESET_DEMO_TOKEN secret is not configured");
+  const lines = await allRecords(env, TABLES.lignes);
+  const commands = await allRecords(env, TABLES.commandes);
+  // Detach linked records before deleting commands; this also removes orphan lines.
+  for (let i = 0; i < lines.length; i += 10) {
+    await airtable(env, TABLES.lignes, { method: "DELETE", query: { "records[]": lines.slice(i, i + 10).map(r => r.id) } });
+  }
+  for (let i = 0; i < commands.length; i += 10) {
+    await airtable(env, TABLES.commandes, { method: "DELETE", query: { "records[]": commands.slice(i, i + 10).map(r => r.id) } });
+  }
+  console.log(JSON.stringify({ event: "demo_reset", at: new Date().toISOString(), commands: commands.length, lines: lines.length }));
+  return { ok: true, commandesSupprimees: commands.length, lignesSupprimees: lines.length };
+}
 async function route(request, env) {
   const url = new URL(request.url), path = url.pathname.replace(/\/$/, ""), method = request.method;
-  if (method === "OPTIONS") return new Response(null, { status: 204, headers: { "access-control-allow-origin": "*", "access-control-allow-methods": "GET,POST,OPTIONS", "access-control-allow-headers": "Content-Type" } });
+  if (method === "OPTIONS") return new Response(null, { status: 204, headers: { "access-control-allow-origin": "*", "access-control-allow-methods": "GET,POST,OPTIONS", "access-control-allow-headers": "Content-Type, Authorization, X-Reset-Token" } });
   if (path === "/webhook/qramen/ping" && method === "GET") return json({ ok: true, service: "qramen-engine" });
+  if (path === "/webhook/qramen/reset" && method === "POST") {
+    if (!env.RESET_DEMO_TOKEN || request.headers.get("authorization") !== `Bearer ${env.RESET_DEMO_TOKEN}`) return fail("non autorisé", 401);
+    const b = await bodyOf(request);
+    if (b.confirmation !== "REINITIALISER LA DEMO") return fail("confirmation explicite requise", 400);
+    return json(await resetDemo(env));
+  }
   if (path === "/webhook/qramen/menu" && method === "GET") return json(await menu(env, url));
   if (path === "/webhook/qramen/cuisine/carte" && method === "GET") return json(await cuisineMenu(env, url));
   if (path === "/webhook/qramen/cuisine" && method === "GET") return json({ commandes: await orders(env) });
