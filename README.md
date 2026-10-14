@@ -19,7 +19,7 @@ le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
 
 ![Chevalet A6 QRoque avec QR code de commande](docs/captures-refonte/chevalet-a6.png)
 
-Le chevalet A6 présente le QR code à scanner depuis la table.
+Le générateur propose le format A4 (quatre chevalets par feuille) et le format Comptoir (un chevalet A5 centré sur une feuille A4). Le QR mesure 45 mm en A4 et 62 mm au comptoir.
 
 ### Menu sur téléphone
 
@@ -63,14 +63,12 @@ La page `/qr.html` permet de générer et d’imprimer les QR codes des tables.
 
 La carte QRoque présente les croques et leurs photos sur téléphone.
 
-**À imprimer**
-- Chevalets A5, un QR par table (QRoque Monsieur) : [`public/assets/chevalets-qroque-a5.pdf`](public/assets/chevalets-qroque-a5.pdf)
-- Cartes A6, 4 par feuille (QRoque Monsieur) : [`public/assets/cartes-qroque-a6.pdf`](public/assets/cartes-qroque-a6.pdf)
-- Carte comptoir A5, sans numéro de table : [`public/assets/carte-comptoir-qroque.pdf`](public/assets/carte-comptoir-qroque.pdf)
-- Chevalets Le QRamen : [`public/assets/chevalets-tables.pdf`](public/assets/chevalets-tables.pdf)
-- Planche des QR codes des 7 tables : [`docs/qr-tables.pdf`](docs/qr-tables.pdf)
+**À imprimer — un PDF combiné par restaurant**
 
-Tous les QR de ces fichiers sont testés : ils se décodent vers la bonne URL (`…/menu.html?table=T01`…`T07`).
+- Le QRamen, formats A4 et Comptoir : [`public/assets/chevalets-qramen.pdf`](public/assets/chevalets-qramen.pdf)
+- QRoque Monsieur, formats A4 et Comptoir : [`public/assets/chevalets-qroque.pdf`](public/assets/chevalets-qroque.pdf)
+
+Chaque PDF présente d’abord les feuilles A4 (quatre cartes par feuille, repères pointillés), puis les pages Comptoir A5. Le QR mesure 45 mm en A4 et 62 mm au Comptoir, avec une zone de silence conservée autour du code.
 
 ## Comment ça marche
 
@@ -125,7 +123,7 @@ Scènes complémentaires (QR incrusté + vraie page dans l'écran du téléphone
 
 ## Gérer les QR des tables
 
-Depuis l’accueil, le lien discret **QR des tables** ouvre `/qr.html`. La page liste les tables T01 à T07 par défaut et tente de les remplacer par les tables retournées par `/menu`. Elle produit les adresses `menu.html?table=TXX`, permet de télécharger un QR SVG ou PNG et d’imprimer un chevalet A6. Le générateur fonctionne côté navigateur avec la bibliothèque locale `public/assets/vendor/qrcode.js`, sans CDN ni service de QR externe. Les QR ciblent le domaine public propre au restaurant.
+Depuis l’accueil, le lien discret **QR des tables** ouvre `/qr.html`. La page liste les tables disponibles, propose l’aperçu A4 ou Comptoir, puis imprime l’ensemble dans un PDF unique. Le générateur fonctionne côté navigateur avec la bibliothèque locale `public/assets/vendor/qrcode.js`, sans CDN ni service de QR externe. Les QR ciblent le domaine public propre au restaurant.
 
 Guide détaillé : [mode opératoire restaurateur](docs/mode-operatoire-restaurateur.md).
 

@@ -11,7 +11,7 @@
 - Les pieds de page de l’accueil, de la carte, de la page QR et de l’écran cuisine ne conservent que le lien cliquable `https://github.com/AlexisLD-DEV/qramen` comme signature.
 - Les chevalets et additions affichent le lien du dépôt en petit. Les générateurs QR affichent également l’adresse physique, pour conserver les informations d’adresse demandées.
 - Les générateurs de tickets et additions dans `outils/workflows.py` et `outils/workflow-addition.py` intègrent un SVG de mascotte adapté au concept. Pour une addition, le workflow identifie le concept à partir des plats réellement associés à la commande.
-- Le PDF de chevalets QRamen a maintenant un générateur source (`outils/chevalets-qramen.py`) et a été régénéré. Les PDFs QRoque (chevalets A5, cartes A6, carte comptoir) ont été régénérés depuis `outils/chevalets-qroque.py`. Le service PDF reste générique : les SVG sont inclus dans le HTML transmis, sans dépendance à un fichier image externe.
+- Les chevalets sont maintenant livrés dans un PDF combiné par enseigne : A4 (quatre cartes par feuille) puis Comptoir A5. Les générateurs sont `outils/chevalets-qramen.py` et `outils/chevalets-qroque.py`.
 
 ## Vérification des tickets
 

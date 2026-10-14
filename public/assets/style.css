@@ -309,3 +309,34 @@ button,select,input,textarea,.button,.filter,.restaurant-switch a,.staff-link,.q
 .cart-count{background:#f2d48d;color:#35251f}
 .ticket-print{min-height:44px;padding:8px 12px;border:1px solid #66564b;border-radius:8px;background:#fffaf1;color:#35251f;font:inherit;cursor:pointer}
  .dark-mode .demo-note{color:#ddd8cd}
+
+/* Chevalets : choix du format et impression groupée en un PDF. */
+.qr-format{border:0;padding:0;margin:0;display:grid;gap:8px}.qr-format legend{font-size:11px;font-weight:700;margin-bottom:7px}.qr-format label{display:flex;align-items:center;gap:7px;font-size:13px}.qr-format label span{font-size:11px;color:var(--muted)}.qr-page .qr-format input{height:auto;width:auto;accent-color:var(--ink)}
+.print-preview{display:flex;align-items:center;gap:14px;grid-column:1/-1;padding:12px;border-top:1px solid var(--line)}.print-preview p{font-size:12px;color:var(--muted);line-height:1.5}.mini-sheet{width:64px;height:78px;border:1px solid var(--line);padding:5px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px;background:#fff}.mini-sheet i{border:1px dashed #a93627;border-radius:2px}.print-preview.comptoir .mini-sheet{width:43px;height:60px;display:block;padding:8px 9px}.print-preview.comptoir .mini-sheet i{width:100%;height:100%}
+.qr-print-sheet{display:none}
+@page comptoir {size:A4 portrait;margin:0}
+@media print{
+  @page{size:A4 portrait;margin:0}
+  body.qr-page{background:#fff!important;color:#14161a!important}
+  .qr-page>*:not(.qr-print-sheet){display:none!important}
+  .qr-page .qr-print-sheet{display:block!important;width:auto;height:auto;margin:0;padding:0!important;background:#fff;color:#14161a;page-break-after:auto}
+  .qr-print-sheet .print-page{position:relative;width:210mm;height:297mm;padding:10mm 5mm 5mm;display:flex;flex-wrap:wrap;gap:3mm;align-content:flex-start;page-break-after:auto;break-after:page;background:#fff}
+  .qr-print-sheet .print-page:last-child{page-break-after:auto;break-after:auto}
+  .qr-print-sheet.comptoir .print-page{page:comptoir;width:210mm;height:297mm;padding:10mm 5mm 5mm;display:flex;align-items:center;justify-content:center}
+  .qr-print-sheet .print-page-title{position:absolute;top:3mm;left:5mm;font:700 2.8mm Arial,sans-serif;letter-spacing:.3mm;color:#625d54}
+  .qr-print-sheet.comptoir .print-page-title{top:2mm;left:0;width:100%;text-align:center;font-size:2.4mm}
+  .qr-print-sheet .print-card{width:97mm;height:132mm;padding:4mm;border:.35mm dashed #8a8277;border-radius:2mm;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;font-family:Arial,sans-serif;break-inside:avoid}
+  .qr-print-sheet.comptoir .print-card{width:148mm;height:210mm;padding:7mm}
+  .qr-print-sheet .print-mascot{width:24mm;height:24mm;object-fit:contain;margin:0 0 1mm;mix-blend-mode:multiply}
+  .qr-print-sheet.comptoir .print-mascot{width:33mm;height:33mm;margin-bottom:2mm}
+  .qr-print-sheet .print-card h2{font:700 13pt/1.05 Georgia,serif;margin:0 0 1mm;color:#14161a}
+  .qr-print-sheet.comptoir .print-card h2{font-size:20pt;margin-bottom:2mm}
+  .qr-print-sheet .print-card p{font:700 4mm Arial,sans-serif;color:#a93627;margin:2mm 0}
+  .qr-print-sheet.comptoir .print-card p{font-size:5mm;margin:3mm 0}
+  .qr-page .qr-print-sheet .print-qr{width:45mm;height:45mm;image-rendering:pixelated}
+  .qr-page .qr-print-sheet.comptoir .print-qr{width:62mm;height:62mm}
+  .qr-print-sheet .print-card strong{font:700 3mm Arial,sans-serif;letter-spacing:.3mm;margin-top:2mm}
+  .qr-print-sheet.comptoir .print-card strong{font-size:4mm;margin-top:3mm}
+  .qr-page .qr-print-sheet .print-card footer{position:static;bottom:auto;font:2.8mm/1.4 Arial,sans-serif;color:#625d54;margin-top:1.5mm}
+  .qr-print-sheet.comptoir .print-card footer{font-size:3.4mm;margin-top:2mm}
+}
