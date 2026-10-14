@@ -16,5 +16,33 @@
 /* Theme brasserie : meme gabarit, palette bistrot */
 .theme-qroque{--ink:#1F201B;--paper:#F3EDE1;--red:#7B2D26;--green:#2F4A3A;--gold:#C9A227;--white:#FFFCF5;--muted:#6F6A5F;--line:#DED5C4}
 .theme-qroque .kicker{letter-spacing:.2em}
-.theme-qroque .dish-price,.theme-qroque .cart-trigger{color:var(--red)}
+.theme-qroque .dish-price{color:var(--red)}
 .theme-qroque .header-brand{font-size:17px}
+.theme-qroque .menu-hero:after{content:'CROQUE';writing-mode:vertical-rl;color:#e6dac6;font-size:13px;letter-spacing:.12em}
+
+/* Sélecteur de maison partagé par l’accueil et la carte */
+.restaurant-switch{display:flex;align-items:center;gap:3px;padding:4px;border:1px solid #ded7ca;border-radius:99px;background:#fffdf8;width:max-content;margin-bottom:24px}
+.restaurant-switch a{display:grid;place-items:center;min-height:38px;padding:0 13px;border-radius:99px;color:#635f57;font-size:11px;font-weight:700;white-space:nowrap}
+.restaurant-switch a[aria-current="page"]{background:var(--ink);color:white}
+.restaurant-switch.compact{margin:0 auto 0 8px;padding:3px}
+.restaurant-switch.compact a{min-height:36px;padding:0 10px;font-size:10px}
+.theme-qroque .restaurant-switch a[aria-current="page"]{background:var(--red)}
+.landing-card .restaurant-switch{align-self:flex-end;margin:0 0 14px}
+.landing-card.landing-qroque{background:var(--paper)}
+.landing-qroque .brand-mark span{color:var(--red)}
+.landing-qroque .landing-jp{font-size:13px;letter-spacing:.12em}
+.opening-screen{position:fixed;inset:0;z-index:100;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;transition:opacity .32s,visibility .32s;color:var(--ink)}
+.opening-screen.dismissed{opacity:0;visibility:hidden;pointer-events:none}
+.opening-mark{font:800 52px var(--serif);letter-spacing:-.08em;color:var(--red);animation:mark-breathe 1.3s ease-in-out infinite}
+.opening-mark span{color:var(--gold)}
+.opening-screen strong{font:700 25px var(--serif)}
+.opening-screen>span:last-child{font-size:12px;color:var(--muted)}
+@keyframes mark-breathe{50%{transform:translateY(-4px) scale(1.035)}}
+.loading-skeleton{padding-top:4px}
+.skeleton-card{height:330px;border-radius:20px;background:linear-gradient(100deg,#ece7dd 20%,#f8f5ee 42%,#ece7dd 64%);background-size:220% 100%;animation:skeleton-shimmer 1.2s linear infinite;box-shadow:var(--shadow)}
+@keyframes skeleton-shimmer{to{background-position-x:-220%}}
+@media(max-width:760px){.landing-card .restaurant-switch{align-self:center;margin-bottom:14px}.restaurant-switch{gap:1px}.restaurant-switch a{min-height:40px;padding:0 11px;font-size:10px}.restaurant-switch.compact{margin:0 auto 0 0}.restaurant-switch.compact a{min-height:38px;padding:0 8px;font-size:9px}.site-header{gap:7px}.header-brand{font-size:16px!important}.table-pill{white-space:nowrap}.skeleton-card{height:282px}}
+@media(max-width:380px){.restaurant-switch a{padding:0 9px;font-size:9px}.restaurant-switch.compact a{padding:0 6px;font-size:8px}.site-header{padding:0 8px}.table-pill{padding:6px 7px}.cart-trigger{gap:6px;padding:0 8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+.restaurant-switch a:focus-visible,.button:focus-visible,.cart-trigger:focus-visible,.add-button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
