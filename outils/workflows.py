@@ -51,7 +51,7 @@ td{padding:1.6mm 0;border-bottom:1px dashed #999}
 <h1>Ticket cuisine</h1>
 <div class="meta"><b>Commande #${numero}</b><br>Table ${body.table}<br>${new Date().toLocaleString('fr-FR')}</div>
 <table>${lignes.map(l => `<tr><td>${l.nom}</td><td class="q">x${l.q}</td></tr>`).join('')}</table>
-<div class="pied">Le QRamen - bar a ramen - Paris 11e<br>Ticket genere automatiquement (n8n + Chrome headless)</div>
+<div class="pied">14 rue du Gros-Horloge, 76000 Rouen<br>alexisld.fr</div>
 </body></html>`;
 return [{ json: { html, id: cmd.id, numero } }];"""
 
