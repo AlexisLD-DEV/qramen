@@ -18,10 +18,6 @@ const out=tables.map(t=>{
  return {id:t.id,nom:t.fields.Identifiant||t.fields.Nom||'Table',etat:cleared?t.fields.Etat:bill?'Addition demandée':(active?'En cours':(t.fields.Etat||'Libre')),commande:order?{id:order.id,numero:order.fields.Numero,statut:order.fields.Statut,passee:order.fields['Passee le']}:null};
 });
 return [{json:{tables:out}}];"""
-CODE_BODY="""const b=$('Webhook état salle').first().json.body||{};
-const etat={free:'Libre',served:'Servie',busy:'En cours'}[b.action];
-if(!b.id||!etat)throw new Error('id et action valides requis');
-return [{json:{id:b.id,etat}}];"""
 WF={'id':'qramenSalle01','name':'QRamen — salle','active':False,'nodes':[
  n('s1','Webhook salle','webhook',2,[0,0],{'httpMethod':'GET','path':'qramen/salle','responseMode':'responseNode','options':{'allowedOrigins':'*'}},{'webhookId':'qramen-salle'}),
  n('s2','Tables Airtable','httpRequest',4.2,[220,0],{'url':AT+'/'+TABLES+'?pageSize=100','authentication':'genericCredentialType','genericAuthType':'httpHeaderAuth','options':{}},{'credentials':CRED}),
@@ -29,7 +25,7 @@ WF={'id':'qramenSalle01','name':'QRamen — salle','active':False,'nodes':[
  n('s4','Assembler la salle','code',2,[660,0],{'jsCode':CODE}),
  n('s5','Répondre salle','respondToWebhook',1.1,[880,0],{'respondWith':'json','responseBody':'={{ $json }}','options':{}}),
  n('s6','Webhook état salle','webhook',2,[0,240],{'httpMethod':'POST','path':'qramen/salle/statut','responseMode':'responseNode','options':{'allowedOrigins':'*'}},{'webhookId':'qramen-salle-statut'}),
- n('s7','Écrire état Airtable','httpRequest',4.2,[220,240],{'method':'PATCH','url':"={{ '"+AT+'/'+TABLES+"/' + $json.body.id }}",'sendBody':True,'specifyBody':'json','jsonBody':"={{ JSON.stringify({fields:{Etat:$json.body.action === 'free' ? 'Libre' : ($json.body.action === 'served' ? 'Servie' : 'En cours')}}) }}",'authentication':'genericCredentialType','genericAuthType':'httpHeaderAuth','options':{}},{'credentials':CRED}),
+ n('s7','Écrire état Airtable','httpRequest',4.2,[220,240],{'method':'PATCH','url':"={{ '"+AT+'/'+TABLES+"/' + $json.body.id }}",'sendBody':True,'specifyBody':'json','jsonBody':"={{ JSON.stringify({ fields: { Etat: $json.body.etat } }) }}",'authentication':'genericCredentialType','genericAuthType':'httpHeaderAuth','options':{}},{'credentials':CRED}),
  n('s8','Répondre état','respondToWebhook',1.1,[440,240],{'respondWith':'json','responseBody':'{"ok":true}','options':{}})],
  'connections':{'Webhook salle':{'main':[[{'node':'Tables Airtable','type':'main','index':0}]]},'Tables Airtable':{'main':[[{'node':'Commandes Airtable','type':'main','index':0}]]},'Commandes Airtable':{'main':[[{'node':'Assembler la salle','type':'main','index':0}]]},'Assembler la salle':{'main':[[{'node':'Répondre salle','type':'main','index':0}]]},'Webhook état salle':{'main':[[{'node':'Écrire état Airtable','type':'main','index':0}]]},'Écrire état Airtable':{'main':[[{'node':'Répondre état','type':'main','index':0}]]}},'settings':{'executionOrder':'v1'}}
 out=pathlib.Path(__file__).resolve().parent.parent/'etat/wf-qramenSalle01.json';out.write_text(json.dumps(WF,ensure_ascii=False,indent=1));print(out)
