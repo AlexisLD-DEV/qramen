@@ -1,0 +1,101 @@
+[
+  {
+    "viewport": 320,
+    "headerHeight": 121,
+    "table": {
+      "x": 8,
+      "y": 69,
+      "w": 50,
+      "h": 32,
+      "text": "Table 05"
+    },
+    "switch": {
+      "x": 125.63,
+      "y": 58,
+      "w": 133.38,
+      "h": 54,
+      "text": "Vous préférez un croque ?"
+    },
+    "cart": {
+      "x": 268,
+      "y": 63,
+      "w": 44,
+      "h": 44,
+      "text": "Panier\n0"
+    },
+    "gaps": {
+      "tableSwitch": 67.63,
+      "switchCart": 8.99
+    },
+    "headerLines": "\"brand prefs prefs\" \"table switch cart\"",
+    "scrollWidth": 320,
+    "status": 200,
+    "url": "https://qramen.alexisld.fr/menu?table=T05&switch-mobile2=1792014510325"
+  },
+  {
+    "viewport": 390,
+    "headerHeight": 111,
+    "table": {
+      "x": 10,
+      "y": 64,
+      "w": 50,
+      "h": 32,
+      "text": "Table 05"
+    },
+    "switch": {
+      "x": 140.89,
+      "y": 58,
+      "w": 186.11,
+      "h": 44,
+      "text": "Vous préférez un croque ?"
+    },
+    "cart": {
+      "x": 336,
+      "y": 58,
+      "w": 44,
+      "h": 44,
+      "text": "Panier\n0"
+    },
+    "gaps": {
+      "tableSwitch": 80.89,
+      "switchCart": 9
+    },
+    "headerLines": "\"brand prefs prefs\" \"table switch cart\"",
+    "scrollWidth": 390,
+    "status": 200,
+    "url": "https://qramen.alexisld.fr/menu?table=T05&switch-mobile2=1792014512824"
+  },
+  {
+    "viewport": 1440,
+    "headerHeight": 76,
+    "table": {
+      "x": 757.73,
+      "y": 21.03,
+      "w": 79,
+      "h": 32.94,
+      "text": "Table 05"
+    },
+    "switch": {
+      "x": 430.09,
+      "y": 15.5,
+      "w": 189,
+      "h": 44,
+      "text": "Vous préférez un croque ?"
+    },
+    "cart": {
+      "x": 1195,
+      "y": 15.5,
+      "w": 105,
+      "h": 44,
+      "text": "Panier\n0"
+    },
+    "gaps": {
+      "tableSwitch": -406.64,
+      "switchCart": 575.91
+    },
+    "headerLines": "none",
+    "scrollWidth": 1440,
+    "status": 200,
+    "url": "https://qramen.alexisld.fr/menu?table=T05&switch-mobile2=1792014515148"
+  }
+]
