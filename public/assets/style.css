@@ -367,33 +367,8 @@ button{display:inline-flex;align-items:center;justify-content:center;line-height
 .restaurant-filter button:focus-visible{outline:3px solid var(--color-182);outline-offset:3px}
 .restaurant-badge{display:inline-flex;align-items:center;min-height:28px;margin-top:5px;padding:3px 9px;border:1px solid var(--color-215);border-radius:99px;background:var(--color-005);color:var(--color-180);font-size:11px;font-weight:800;white-space:nowrap}
 @media(max-width:600px){.staff-audience{width:calc(100% - 28px);margin-top:-5px;font-size:11px}.kitchen-filter{align-items:flex-start;flex-direction:column;gap:6px;width:100%}.restaurant-filter{width:100%;gap:6px}.restaurant-filter button{flex:1 1 auto;padding:0 10px!important;font-size:12px!important}.kitchen-tools{gap:10px}}
-@media(prefers-color-scheme:dark){
-  .kitchen-page,.staff-page{background:#111820;color:#f4f2ec}
-  .kitchen-header{background:#090e13;color:#f5f5f1;border-color:#35414c}
-  .kitchen-header .header-brand,.kitchen-title{color:#f5f5f1}
-  .staff-audience{color:#c2cbd1}
-  .kitchen-tools{color:#e2e7eb}
-  .kitchen-tools>button,.kitchen-tools select{background:#202b35!important;color:#f5f5f1!important;border-color:#52606b!important}
-  .restaurant-filter button{background:#202b35!important;color:#e8edf1!important;border-color:#52606b!important}
-  .restaurant-filter button[aria-pressed="true"]{background:#e5edf4!important;color:#111820!important;border-color:#e5edf4!important}
-  .restaurant-filter button:focus-visible{outline-color:#ffd166}
-  .restaurant-badge{background:#202b35;color:#f5f5f1;border-color:#52606b}
-  .kitchen-column,.kitchen-menu{background:#18222b;color:#f8f7f2;border-color:#34424e}
-  .column-head h2,.kitchen-menu h2{color:#f7f5ef}
-  .column-count{background:#34424e;color:#f5f5f1}
-  .order-card,.kitchen-dish{background:#202c36;color:#f8f7f2;border-color:#43515d}
-  .order-table{color:#f5f5f1}
-  .order-time,.order-lines,.elapsed-time,.kitchen-dish small{color:#e2e8ed}
-  .kitchen-dish strong{color:#f8f7f2}
-  .kitchen-empty{color:#c5d0d7;border-color:#50606c}
-  .qr-page{background:#171a1e;color:#f3f0e7}
-  .qr-page .qr-intro h1,.qr-page .qr-intro p,.qr-page .qr-audience{color:#f3f0e7}
-}
-@media(prefers-color-scheme:dark){
-  .order-card.watch,.order-card.overdue{background:#202c36;color:#f8f7f2;border-color:#43515d}
-  .order-card.watch .order-num,.order-card.overdue .order-num,.order-card.watch .order-time,.order-card.overdue .order-time,.order-card.watch .order-lines,.order-card.overdue .order-lines{color:#e2e8ed}
-  .order-card.watch .elapsed-time{color:#ffcb75}.order-card.overdue .elapsed-time{color:#ff9292}
-}
+
+
 .demo-reset{width:min(100% - 32px,760px);margin:24px auto;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--white);font-size:13px}.demo-reset h2{margin:0;font:700 16px var(--serif)}.demo-reset p{margin:6px 0 12px}.demo-reset button{min-height:42px;padding:8px 14px;border:1px solid var(--color-215);border-radius:8px;background:var(--color-005);color:var(--color-180);font:600 13px var(--sans)}.demo-reset button:disabled{opacity:.5}.reset-confirm{margin-top:14px;padding:14px;border:2px solid #a23c2c;border-radius:10px}.reset-confirm h3{margin:0 0 8px}.reset-confirm label{display:block;margin:12px 0 5px}.reset-confirm input{width:min(100%,360px);min-height:42px;padding:8px;border:1px solid #777;border-radius:6px}.reset-confirm>div{display:flex;gap:10px;margin-top:12px}
 
 /* Signature de pied : nom de marque à gauche, mascotte alignée à droite. */
@@ -405,3 +380,85 @@ button{display:inline-flex;align-items:center;justify-content:center;line-height
 .landing footer.mascot-signature .footer-brand-name{font-size:18px}
 .site-footer .signature-links,.landing footer .signature-links{display:inline-flex;align-items:center;gap:9px;margin-top:4px}
 @media(max-width:520px){.site-footer .footer-mascot,.landing footer .footer-mascot{width:48px;height:48px}.site-footer .footer-brand-row,.landing footer .footer-brand-row{grid-template-columns:minmax(0,1fr) 48px;gap:12px}}
+
+/* Thèmes explicites pour écrans de service, générateur QR et page d’accueil. */
+.theme-toggle{flex:none;width:40px;height:40px;min-height:40px;border:1px solid #c9c1b4;border-radius:50%;background:#fffaf2;color:#242321;font-size:17px;font-weight:800;cursor:pointer}
+.kitchen-top .theme-toggle{position:static;margin-left:8px}
+.dark-mode.landing{background:#111820;background-image:radial-gradient(circle at 10% 15%,#323a40 0 2px,transparent 3px)}
+.dark-mode .landing-card{background:linear-gradient(145deg,#24282c,#171a1e);border-color:#43464a;box-shadow:0 24px 80px #0009;color:#f4f0e8}
+.dark-mode .landing h1,.dark-mode .landing .baseline,.dark-mode .landing-bottom p,.dark-mode .landing footer .footer-brand-name{color:#f4f0e8}
+.dark-mode .landing .restaurant-switch{background:#202428;border-color:#47494c}
+.dark-mode .landing .restaurant-switch a{color:#ddd8cd}
+.dark-mode .landing .restaurant-switch a[aria-current=page]{background:#f0e7d5;color:#202124}
+.dark-mode .landing .theme-toggle{background:#303438;color:#f4f0e8;border-color:#62666a}
+.dark-mode .landing-bottom{border-color:#505156}
+.dark-mode .landing .button-primary{background:#e8dfce;color:#202124}
+.dark-mode .landing .button-primary:hover{background:#fff3dc}
+.dark-mode .landing .button-quiet{background:#292d31;border-color:#56595d;color:#f4f0e8}
+.kitchen-page,.staff-page,.qr-page{background:#fffaf2;color:#262522}
+.kitchen-header{background:#fffdf8;color:#262522;border-color:#ded8cc}
+.kitchen-header .header-brand,.kitchen-title,.order-table{color:#262522}
+.staff-audience,.kitchen-tools,.kitchen-error,.salle-status{color:#514d45}
+.kitchen-tools>button,.kitchen-tools select,.mobile-stage-select button{background:#fff;color:#262522;border-color:#c9c1b4}
+.restaurant-filter button{background:#fffaf2!important;color:#38352f!important;border-color:#bdb4a5!important}
+.restaurant-filter button[aria-pressed="true"]{background:#33312d!important;color:#fff!important;border-color:#33312d!important}
+.restaurant-badge{background:#fff;color:#38352f;border-color:#c9c1b4}
+.kitchen-column,.kitchen-menu{background:#fffdf8;color:#262522;border-color:#ddd6ca}
+.column-head h2,.kitchen-menu h2{color:#262522}.column-count{background:#68645c;color:#fff}
+.order-card,.kitchen-dish{background:#fff;color:#262522;border-color:#ded8cc}.next-status{background:#34312b;color:#fff}.ticket-print{background:#fffaf1;color:#35251f}.ticket-link{background:#fff;color:#34312b}
+.order-time,.order-lines,.elapsed-time,.kitchen-dish small,.table-order{color:#555149}
+.kitchen-dish strong{color:#262522}.kitchen-empty{color:#5b564e;border-color:#c9c1b4}
+.order-card.watch{background:#fff8e8;border-color:#d7b96e}.order-card.overdue{background:#fff0ed;border-color:#d9a19a}
+.table-card{background:#fff;color:#262522;border-color:#ded8cc}.table-card.bill{background:#fff8e8}.table-actions button{background:#34312b;color:#fff;border-color:#625b50}
+.qr-page .qr-intro h1,.qr-page .qr-intro p,.qr-page .qr-audience{color:#262522}
+.qr-page .qr-tools,.qr-page .qr-table-card{background:#fffdf8;border-color:#ded8cc}
+.qr-page .qr-field input,.qr-page .qr-field select{background:#fff;color:#262522;border-color:#c9c1b4}
+.qr-page .qr-action{background:#fff;color:#38352f;border-color:#c9c1b4}.qr-page .qr-action.primary{background:#34312b;color:#fff;border-color:#34312b}
+.qr-page .qr-preview,.qr-page .print-preview{border-color:#ded8cc}.qr-page .qr-preview p,.qr-page .print-preview p{color:#555149}
+.dark-mode.kitchen-page,.dark-mode.staff-page,.dark-mode.qr-page{background:#111820;color:#f4f2ec}
+.dark-mode .kitchen-header{background:#090e13;color:#f5f5f1;border-color:#35414c}
+.dark-mode .kitchen-header .header-brand,.dark-mode .kitchen-title,.dark-mode .order-table{color:#f5f5f1}
+.dark-mode .staff-audience,.dark-mode .kitchen-tools,.dark-mode .kitchen-error,.dark-mode .salle-status{color:#cbd2d7}
+.dark-mode .kitchen-tools>button,.dark-mode .kitchen-tools select,.dark-mode .mobile-stage-select button{background:#202b35;color:#f5f5f1;border-color:#52606b}
+.dark-mode .restaurant-filter button{background:#202b35!important;color:#e8edf1!important;border-color:#52606b!important}
+.dark-mode .restaurant-filter button[aria-pressed="true"]{background:#e5edf4!important;color:#111820!important;border-color:#e5edf4!important}
+.dark-mode .restaurant-badge{background:#202b35;color:#f5f5f1;border-color:#52606b}
+.dark-mode .kitchen-column,.dark-mode .kitchen-menu{background:#18222b;color:#f8f7f2;border-color:#34424e}
+.dark-mode .column-head h2,.dark-mode .kitchen-menu h2{color:#f7f5ef}.dark-mode .column-count{background:#34424e;color:#f5f5f1}
+.dark-mode .order-card,.dark-mode .kitchen-dish{background:#202c36;color:#f8f7f2;border-color:#43515d}.dark-mode .next-status{background:#e5edf4;color:#111820}.dark-mode .ticket-print{background:#2b333a;color:#f4f2ec;border-color:#687782}.dark-mode .ticket-link{background:#202b35;color:#f4f2ec;border-color:#52606b}.dark-mode .availability-toggle{background:#263b32;color:#dcf5e8;border-color:#426852}
+.dark-mode .order-time,.dark-mode .order-lines,.dark-mode .elapsed-time,.dark-mode .kitchen-dish small,.dark-mode .table-order{color:#e2e8ed}
+.dark-mode .kitchen-dish strong{color:#f8f7f2}.dark-mode .kitchen-empty{color:#c5d0d7;border-color:#50606c}
+.dark-mode .order-card.watch{background:#30291c;border-color:#79673f}.dark-mode .order-card.overdue{background:#35201f;border-color:#87504b}
+.dark-mode .order-card.watch .elapsed-time{color:#ffcb75}.dark-mode .order-card.overdue .elapsed-time{color:#ff9292}
+.dark-mode .table-card{background:#202c36;color:#f8f7f2;border-color:#43515d}.dark-mode .table-card.bill{background:#30291c}.dark-mode .table-actions button{background:#111820;color:#f5f5f1;border-color:#52606b}
+.dark-mode.qr-page .qr-intro h1,.dark-mode.qr-page .qr-intro p,.dark-mode.qr-page .qr-audience{color:#f3f0e7}
+.dark-mode.qr-page .qr-tools,.dark-mode.qr-page .qr-table-card{background:#1b2229;color:#f3f0e7;border-color:#3a4650}
+.dark-mode.qr-page .qr-field input,.dark-mode.qr-page .qr-field select{background:#111820;color:#f3f0e7;border-color:#52606b}
+.dark-mode.qr-page .qr-action{background:#202b35;color:#f3f0e7;border-color:#52606b}.dark-mode.qr-page .qr-action.primary{background:#e5edf4;color:#111820;border-color:#e5edf4}
+.dark-mode.qr-page .qr-preview,.dark-mode.qr-page .print-preview{border-color:#3a4650}.dark-mode.qr-page .qr-preview p,.dark-mode.qr-page .print-preview p{color:#cbd2d7}
+@media(max-width:600px){.kitchen-top{gap:6px}.kitchen-top .theme-toggle{width:36px;height:36px;margin-left:0}.kitchen-title{font-size:clamp(19px,5vw,26px)}}
+
+.dark-mode .landing .eyebrow,.dark-mode .landing .kicker,.dark-mode .landing-bottom .label,.dark-mode .landing .landing-jp{color:#d1c8b8}
+.dark-mode .landing .demo-note,.dark-mode .landing footer,.dark-mode .landing .signature-links a{color:#c5c0b6}
+.qr-page:not(.dark-mode){background:#fffaf2}
+.dark-mode.qr-page .qr-table-card p,.dark-mode.qr-page .qr-status,.dark-mode.qr-page .qr-intro>p:last-child{color:#c4cdd4}
+.dark-mode.landing .restaurant-switch{background:#202428;border-color:#47494c}
+.dark-mode.landing .restaurant-switch a{color:#ddd8cd}
+.dark-mode.landing .restaurant-switch a[aria-current=page]{background:#f0e7d5;color:#202124}
+.dark-mode.landing .theme-toggle{background:#303438;color:#f4f0e8;border-color:#62666a}
+.dark-mode.landing .button-primary{background:#e8dfce;color:#202124}
+.dark-mode.landing .button-primary:hover{background:#fff3dc}
+.dark-mode.landing .button-quiet{background:#292d31;border-color:#56595d;color:#f4f0e8}
+.dark-mode.landing .eyebrow,.dark-mode.landing .kicker,.dark-mode.landing .landing-bottom .label,.dark-mode.landing .landing-jp{color:#d1c8b8}
+.dark-mode.landing .baseline,.dark-mode.landing .landing-bottom p,.dark-mode.landing footer .footer-brand-name{color:#f4f0e8}
+.dark-mode.landing .demo-note,.dark-mode.landing footer,.dark-mode.landing .signature-links a{color:#c5c0b6}
+
+.staff-switch{margin:0 auto 0 0!important}.staff-switch a{min-height:38px!important}
+@media(max-width:600px){.staff-switch{width:max-content}.staff-switch a{min-height:40px!important;padding-inline:12px!important;font-size:10px!important}}
+.dark-mode .restaurant-switch{background:#202428;border-color:#47494c}
+.dark-mode .restaurant-switch a{color:#ddd8cd}
+.dark-mode .restaurant-switch a[aria-current="page"]{background:#f0e7d5;color:#202124}
+.dark-mode .staff-switch{background:#202b35;border-color:#52606b}
+.dark-mode .staff-switch a{color:#e8edf1}
+.dark-mode .staff-switch a[aria-current="page"]{background:#e5edf4;color:#111820}
+.dark-mode.qr-page .qr-list-heading .label{color:#c4cdd4}

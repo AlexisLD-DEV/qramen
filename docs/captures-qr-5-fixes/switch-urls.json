@@ -1,0 +1,14 @@
+[
+  {
+    "brand": "QRamen",
+    "before": "http://127.0.0.1:9087/menu.html?table=T0X&concept=QRamen",
+    "after": "https://qroque.alexisld.fr/menu.html?table=T0X&panier=W10",
+    "table": "T0X"
+  },
+  {
+    "brand": "QRoque",
+    "before": "http://127.0.0.1:9087/menu.html?table=T0X&concept=QRoque",
+    "after": "https://qramen.alexisld.fr/menu.html?table=T0X&panier=W10",
+    "table": "T0X"
+  }
+]

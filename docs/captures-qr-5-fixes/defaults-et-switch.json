@@ -1,0 +1,127 @@
+{
+  "defaults": [
+    {
+      "brand": "QRamen",
+      "page": "accueil",
+      "dark": true
+    },
+    {
+      "brand": "QRamen",
+      "page": "menu",
+      "dark": true
+    },
+    {
+      "brand": "QRamen",
+      "page": "cuisine",
+      "dark": false
+    },
+    {
+      "brand": "QRamen",
+      "page": "salle",
+      "dark": false
+    },
+    {
+      "brand": "QRamen",
+      "page": "qr",
+      "dark": false
+    },
+    {
+      "brand": "QRoque",
+      "page": "accueil",
+      "dark": false
+    },
+    {
+      "brand": "QRoque",
+      "page": "menu",
+      "dark": false
+    },
+    {
+      "brand": "QRoque",
+      "page": "cuisine",
+      "dark": false
+    },
+    {
+      "brand": "QRoque",
+      "page": "salle",
+      "dark": false
+    },
+    {
+      "brand": "QRoque",
+      "page": "qr",
+      "dark": false
+    }
+  ],
+  "switches": [
+    {
+      "brand": "QRamen",
+      "page": "accueil",
+      "before": "http://127.0.0.1:9087/?concept=QRamen",
+      "after": "http://qroque.alexisld.fr/",
+      "table": null
+    },
+    {
+      "brand": "QRamen",
+      "page": "menu",
+      "before": "http://127.0.0.1:9087/menu.html?table=T0X&concept=QRamen",
+      "after": "https://qroque.alexisld.fr/menu.html?table=T0X&panier=W10",
+      "table": "T0X"
+    },
+    {
+      "brand": "QRamen",
+      "page": "cuisine",
+      "before": "http://127.0.0.1:9087/cuisine.html?table=T0X&concept=QRamen",
+      "after": "http://qroque.alexisld.fr/cuisine.html?table=T0X",
+      "table": "T0X"
+    },
+    {
+      "brand": "QRamen",
+      "page": "salle",
+      "before": "http://127.0.0.1:9087/salle.html?table=T0X&concept=QRamen",
+      "after": "http://qroque.alexisld.fr/salle.html?table=T0X",
+      "table": "T0X"
+    },
+    {
+      "brand": "QRamen",
+      "page": "qr",
+      "before": "http://127.0.0.1:9087/qr.html?table=T0X&concept=QRamen",
+      "after": "http://qroque.alexisld.fr/qr.html?table=T0X",
+      "table": "T0X"
+    },
+    {
+      "brand": "QRoque",
+      "page": "accueil",
+      "before": "http://127.0.0.1:9087/?concept=QRoque",
+      "after": "http://qramen.alexisld.fr/",
+      "table": null
+    },
+    {
+      "brand": "QRoque",
+      "page": "menu",
+      "before": "http://127.0.0.1:9087/menu.html?table=T0X&concept=QRoque",
+      "after": "https://qramen.alexisld.fr/menu.html?table=T0X&panier=W10",
+      "table": "T0X"
+    },
+    {
+      "brand": "QRoque",
+      "page": "cuisine",
+      "before": "http://127.0.0.1:9087/cuisine.html?table=T0X&concept=QRoque",
+      "after": "http://qramen.alexisld.fr/cuisine.html?table=T0X",
+      "table": "T0X"
+    },
+    {
+      "brand": "QRoque",
+      "page": "salle",
+      "before": "http://127.0.0.1:9087/salle.html?table=T0X&concept=QRoque",
+      "after": "http://qramen.alexisld.fr/salle.html?table=T0X",
+      "table": "T0X"
+    },
+    {
+      "brand": "QRoque",
+      "page": "qr",
+      "before": "http://127.0.0.1:9087/qr.html?table=T0X&concept=QRoque",
+      "after": "http://qramen.alexisld.fr/qr.html?table=T0X",
+      "table": "T0X"
+    }
+  ],
+  "errors": []
+}
