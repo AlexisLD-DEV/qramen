@@ -1,6 +1,5 @@
 # Commande à table par QR code — deux restaurants de démonstration
 
-
 **14 rue du Gros-Horloge, 76000 Rouen** — ouvert tous les jours, 12h–14h30 et 19h–22h30. Un lieu, deux comptoirs : Le QRamen (bar a ramen) et QRoque Monsieur (croque-monsieur).
 
 Deux restaurants fictifs construits pour un exercice de formation, poussés bien au-delà de la
@@ -16,29 +15,53 @@ le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
 
 ## Aperçu
 
-![Bon de cuisine imprimé à la réception de la commande](docs/captures/01-bon-de-commande.png)
-Le bon imprimé en cuisine à la réception indique la table et les plats commandés, avec leurs quantités et la note de préparation.
+### **Chevalet de table**
 
-![Menu QRamen sur téléphone](docs/captures/02-menu-telephone.png)
-La carte QRamen sur un écran de téléphone, avec ses catégories et ses plats.
+![Chevalet QRamen posé sur une table de restaurant](docs/mockups/mockup-1-chevalet.jpg)
 
-![Chevalet QR de table A6](docs/captures/03-chevalet-table.png)
-Le chevalet QRoque Monsieur au format A6, dans son rendu destiné à l’impression.
+Le chevalet QRamen présente le code à scanner sur une table de restaurant.
 
-![Page QR des tables](docs/captures/04-qr-des-tables.png)
+### **Menu sur téléphone**
+
+![Menu QRamen affiché sur un téléphone](docs/captures/02-menu-telephone.png)
+
+La carte QRamen présente ses catégories et ses plats sur téléphone.
+
+### **Écran cuisine**
+
+![Tableau de cuisine avec les commandes](docs/captures/05-ecran-cuisine.png)
+
+Le tableau regroupe les commandes en attente, en cours et servies.
+
+### **Ticket de cuisine**
+
+![Ticket de cuisine imprimé pour la commande numéro 42](docs/captures/01-bon-de-commande.png)
+
+Le bon imprimé indique la table, les plats commandés et leurs quantités.
+
+### **Accueil QRamen**
+
+![Page d’accueil du restaurant QRamen](docs/captures/06-accueil-qramen.png)
+
+La page d’accueil présente le restaurant Le QRamen.
+
+### **Accueil QRoque**
+
+![Page d’accueil du restaurant QRoque Monsieur](docs/captures/07-accueil-qroque.png)
+
+La page d’accueil présente le restaurant QRoque Monsieur.
+
+### **QR des tables**
+
+![Page QR des tables sur téléphone](docs/captures/04-qr-des-tables.png)
+
 La page `/qr.html` permet de générer et d’imprimer les QR codes des tables.
 
-![Écran cuisine](docs/captures/05-ecran-cuisine.png)
-Le tableau cuisine regroupe les commandes en attente, en cours et servies.
+### **Carte QRoque sur téléphone**
 
-![Accueil QRamen](docs/captures/06-accueil-qramen.png)
-La page d’accueil du restaurant Le QRamen.
+![Menu QRoque Monsieur affiché sur un téléphone](docs/captures/08-carte-qroque.png)
 
-![Accueil QRoque Monsieur](docs/captures/07-accueil-qroque.png)
-La page d’accueil du restaurant QRoque Monsieur.
-
-![Carte QRoque Monsieur sur téléphone](docs/captures/08-carte-qroque.png)
-La carte QRoque Monsieur sur téléphone, avec les croques et leurs photos.
+La carte QRoque présente les croques et leurs photos sur téléphone.
 
 **À imprimer**
 - Chevalets A5, un QR par table (QRoque Monsieur) : [`public/assets/chevalets-qroque-a5.pdf`](public/assets/chevalets-qroque-a5.pdf)
