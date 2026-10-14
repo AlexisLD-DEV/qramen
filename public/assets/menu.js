@@ -2,14 +2,14 @@
   const API='https://n8n.ledeunf.fr/webhook/qramen';
   const demoCategories=[{id:'ramen',nom:'Ramen'},{id:'entrees',nom:'Entrées'},{id:'donburi',nom:'Donburi'},{id:'desserts',nom:'Desserts'},{id:'boissons',nom:'Boissons'}];
   const demoDishes=[
-    {id:'demo-tonkotsu',nom:'Ramen tonkotsu',description:'Bouillon crémeux mijoté 18 h, chashu fondant, œuf mariné.',prix:15.5,categorie:'ramen',tags:['porc','œuf'],art:'🍜'},
-    {id:'demo-shoyu',nom:'Ramen shoyu',description:'Bouillon ambré, bambou, nori et œuf mollet mariné.',prix:14,categorie:'ramen',tags:['sésame'],art:'🍜'},
-    {id:'demo-vege',nom:'Ramen végétarien',description:'Shiitaké, tofu grillé, pousses de soja et coriandre fraîche.',prix:14.5,categorie:'ramen',tags:['végétarien'],art:'🍜'},
-    {id:'demo-gyoza',nom:'Gyoza · 6 pièces',description:'Raviolis dorés à la poêle, servis avec leur sauce maison.',prix:7.5,categorie:'entrees',tags:[],art:'🥟'},
-    {id:'demo-donburi',nom:'Donburi teriyaki',description:'Riz japonais, poulet laqué, sésame et oignon nouveau.',prix:15,categorie:'donburi',tags:['poulet'],art:'🍚'},
-    {id:'demo-bao',nom:'Bao buns · 2 pièces',description:'Pains vapeur, porc effiloché, coriandre et cacahuètes.',prix:9,tags:['cacahuète'],categorie:'entrees',art:'🥟'},
-    {id:'demo-karaage',nom:'Karaage',description:'Poulet frit croustillant, citron et mayo japonaise.',prix:8.5,categorie:'entrees',tags:['épicé'],art:'🍗'},
-    {id:'demo-mochi',nom:'Mochi glacés · 3 pièces',description:'Mangue, matcha et sésame noir, tout en douceur.',prix:6.5,categorie:'desserts',tags:['végétarien'],art:'🍡'}
+    {id:'demo-tonkotsu',photo:'assets/img/ramen-tonkotsu.webp',nom:'Ramen tonkotsu',description:'Bouillon crémeux mijoté 18 h, chashu fondant, œuf mariné.',prix:15.5,categorie:'ramen',tags:['porc','œuf'],art:'🍜'},
+    {id:'demo-shoyu',photo:'assets/img/ramen-shoyu.webp',nom:'Ramen shoyu',description:'Bouillon ambré, bambou, nori et œuf mollet mariné.',prix:14,categorie:'ramen',tags:['sésame'],art:'🍜'},
+    {id:'demo-vege',photo:'assets/img/ramen-veggie.webp',nom:'Ramen végétarien',description:'Shiitaké, tofu grillé, pousses de soja et coriandre fraîche.',prix:14.5,categorie:'ramen',tags:['végétarien'],art:'🍜'},
+    {id:'demo-gyoza',photo:'assets/img/gyoza.webp',nom:'Gyoza · 6 pièces',description:'Raviolis dorés à la poêle, servis avec leur sauce maison.',prix:7.5,categorie:'entrees',tags:[],art:'🥟'},
+    {id:'demo-donburi',photo:'assets/img/donburi-teriyaki.webp',nom:'Donburi teriyaki',description:'Riz japonais, poulet laqué, sésame et oignon nouveau.',prix:15,categorie:'donburi',tags:['poulet'],art:'🍚'},
+    {id:'demo-bao',photo:'assets/img/bao.webp',nom:'Bao buns · 2 pièces',description:'Pains vapeur, porc effiloché, coriandre et cacahuètes.',prix:9,tags:['cacahuète'],categorie:'entrees',art:'🥟'},
+    {id:'demo-karaage',photo:'assets/img/karaage.webp',nom:'Karaage',description:'Poulet frit croustillant, citron et mayo japonaise.',prix:8.5,categorie:'entrees',tags:['épicé'],art:'🍗'},
+    {id:'demo-mochi',photo:'assets/img/mochi.webp',nom:'Mochi glacés · 3 pièces',description:'Mangue, matcha et sésame noir, tout en douceur.',prix:6.5,categorie:'desserts',tags:['végétarien'],art:'🍡'}
   ];
   const qroqueCategories=[{id:'entrees',nom:'Entrées'},{id:'plats',nom:'Nos croques'},{id:'plats-chauds',nom:'Plats chauds'},{id:'desserts',nom:'Desserts'},{id:'boissons',nom:'Boissons'}];
   const qroqueDishes=[
@@ -46,10 +46,10 @@
     const ordre=['Entree','Plat','Dessert','Boisson'];list.sort((a,b)=>ordre.indexOf(a.categorie)-ordre.indexOf(b.categorie)||a.nom.localeCompare(b.nom));
     list.forEach((d,i)=>{
       const card=document.createElement('article');card.className='dish-card';
-      const known=demoDishes.find(x=>x.id===d.id),emoji=known?.art||(isQroque?(/dessert|café|mochi/i.test(d.categorie+' '+d.nom)?'🍰':/boisson|cidre|café/i.test(d.categorie+' '+d.nom)?'🥤':'🥪'):['🍜','🥟','🍚','🍡'][i%4]);
-      const art=document.createElement('div');art.className='dish-art dish-art--photo';
-      if(d.photo){const im=document.createElement('img');im.src=d.photo;im.alt=d.nom;im.loading=i===0?'eager':'lazy';im.decoding='async';im.onerror=()=>{art.classList.remove('dish-art--photo');art.dataset.art=emoji;art.style.background='var(--sable)'};art.append(im)}else{art.dataset.art=emoji;art.className=`dish-art tone-${(i%8)+1}`;}
-      if((d.tags||[]).some(t=>/épic|piment/i.test(t)))art.innerHTML='<span class="dish-label">'+(language==='en'?'MILDLY SPICY':'UN PEU PIQUANT')+'</span>';
+      const known=demoDishes.find(x=>x.id===d.id),art=document.createElement('div');art.className='dish-art dish-art--photo';
+      const photo=d.photo||known?.photo;
+      if(photo){const im=document.createElement('img');im.src=photo;im.alt=d.nom;im.loading=i===0?'eager':'lazy';im.decoding='async';im.onerror=()=>{im.hidden=true};art.append(im)}
+      if((d.tags||[]).some(t=>/épic|piment/i.test(t))){const label=document.createElement('span');label.className='dish-label';label.textContent=language==='en'?'MILDLY SPICY':'UN PEU PIQUANT';art.append(label)}
       const body=document.createElement('div');body.className='dish-body';const heading=document.createElement('div');heading.className='dish-heading';const title=document.createElement('h3');title.textContent=d.nom;const price=document.createElement('span');price.className='dish-price';price.textContent=money(d.prix);heading.append(title,price);
       const desc=document.createElement('p');desc.textContent=language==='en'?(englishDescriptions[d.nom]||d.description||''):(d.description||'');
       const selected=(d.allergenes||d.Allergenes||defaultAllergens[d.nom]||[]).map(v=>String(typeof v==='object'?v.name:v).toLowerCase());const names=selected.map(v=>allergens.find(a=>a[1]===v||a[2].toLowerCase()===v)?.[2]).filter(Boolean);

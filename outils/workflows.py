@@ -46,12 +46,12 @@ h1{font-size:19pt;margin:0 0 2mm}
 table{width:100%;border-collapse:collapse;font-size:12pt}
 td{padding:1.6mm 0;border-bottom:1px dashed #999}
 .q{text-align:right;font-weight:bold}
-.pied{margin-top:5mm;font-size:9pt;color:#555}
+.pied{margin-top:5mm;font-size:8pt;color:#333}.pied a{color:#111;text-decoration:underline}
 </style></head><body>
 <h1>Ticket cuisine</h1>
 <div class="meta"><b>Commande #${numero}</b><br>Table ${body.table}<br>${new Date().toLocaleString('fr-FR')}</div>
 <table>${lignes.map(l => `<tr><td>${l.nom}</td><td class="q">x${l.q}</td></tr>`).join('')}</table>
-<div class="pied">14 rue du Gros-Horloge, 76000 Rouen<br>alexisld.fr</div>
+<div class="pied">14 rue du Gros-Horloge, 76000 Rouen<br><a href="https://alexisld.fr">alexisld.fr</a> - code open source : github.com/AlexisLD-DEV/qramen</div>
 </body></html>`;
 return [{ json: { html, id: cmd.id, numero } }];"""
 

@@ -18,7 +18,7 @@ def qr_data(url, taille=1200):
 def carte(numero, image, format_="a5"):
     pied = (f"Table {numero:02d} · commandez depuis votre téléphone,<br>on apporte tout à table."
             if numero else "Commandez depuis votre téléphone,<br>on apporte tout à table.")
-    pied += "<br>14 rue du Gros-Horloge, 76000 Rouen<br>alexisld.fr"
+    pied += "<br>14 rue du Gros-Horloge, 76000 Rouen<br>alexisld.fr - code open source : github.com/AlexisLD-DEV/qramen"
     return f"""
 <div class="carte {format_}">
   <div class="marque"><b>QR</b>oque Monsieur</div>
