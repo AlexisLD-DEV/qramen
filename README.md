@@ -11,6 +11,32 @@ le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
 
 Écran cuisine (le même pour les deux) : <https://qramen.ledeunf.fr/cuisine.html>
 
+## Aperçu
+
+![Bon de commande — confirmation client](docs/captures/01-bon-de-commande.png)
+La confirmation client affiche le numéro de commande et son suivi en cuisine.
+
+![Menu QRamen sur téléphone](docs/captures/02-menu-telephone.png)
+La carte QRamen sur un écran de téléphone, avec ses catégories et ses plats.
+
+![Chevalet QR de table A6](docs/captures/03-chevalet-table.png)
+Le chevalet QRoque Monsieur au format A6, dans son rendu destiné à l’impression.
+
+![Page QR des tables](docs/captures/04-qr-des-tables.png)
+La page `/qr.html` permet de générer et d’imprimer les QR codes des tables.
+
+![Écran cuisine](docs/captures/05-ecran-cuisine.png)
+Le tableau cuisine regroupe les commandes en attente, en cours et servies.
+
+![Accueil QRamen](docs/captures/06-accueil-qramen.png)
+La page d’accueil du restaurant Le QRamen.
+
+![Accueil QRoque Monsieur](docs/captures/07-accueil-qroque.png)
+La page d’accueil du restaurant QRoque Monsieur.
+
+![Carte QRoque Monsieur sur téléphone](docs/captures/08-carte-qroque.png)
+La carte QRoque Monsieur sur téléphone, avec les croques et leurs photos.
+
 **À imprimer**
 - Chevalets A5, un QR par table (QRoque Monsieur) : [`public/assets/chevalets-qroque-a5.pdf`](public/assets/chevalets-qroque-a5.pdf)
 - Cartes A6, 4 par feuille (QRoque Monsieur) : [`public/assets/cartes-qroque-a6.pdf`](public/assets/cartes-qroque-a6.pdf)
@@ -57,20 +83,6 @@ Client ───────────────────────► 
 Un champ `Concept` dans la base suffit : `GET /menu?concept=QRamen` ou `?concept=QRoque`. Les mêmes
 workflows servent les deux restaurants. Tous les visuels de plats ont été générés pour le projet
 (16 photos, style reportage, aucun texte incrusté).
-
-## Captures
-
-| Accueil QRamen | Accueil QRoque |
-|---|---|
-| ![Accueil QRamen](docs/captures/accueil-qramen.png) | ![Accueil QRoque](docs/captures/accueil-qroque.png) |
-
-| Carte QRamen | Carte QRoque |
-|---|---|
-| ![Carte QRamen](docs/captures/carte-qramen.png) | ![Carte QRoque](docs/captures/carte-qroque.png) |
-
-| Écran cuisine | QR des tables |
-|---|---|
-| ![Écran cuisine](docs/captures/ecran-cuisine.png) | ![QR des tables](docs/captures/qr-des-tables.png) |
 
 ## Mockups « en situation »
 
