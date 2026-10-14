@@ -340,3 +340,11 @@ button,select,input,textarea,.button,.filter,.restaurant-switch a,.staff-link,.q
   .qr-page .qr-print-sheet .print-card footer{position:static;bottom:auto;font:2.8mm/1.4 Arial,sans-serif;color:#625d54;margin-top:1.5mm}
   .qr-print-sheet.comptoir .print-card footer{font-size:3.4mm;margin-top:2mm}
 }
+
+/* Boutons et pastille de table : centre optique et géométrique uniformes. */
+button{display:inline-flex;align-items:center;justify-content:center;line-height:1.2;text-align:center}
+.table-pill{display:inline-flex;align-items:center;justify-content:center;line-height:1.15;text-align:center}
+.dark-mode .filter{background:#252a2f;color:#ddd8cd;border-color:#666158}
+.dark-mode .filter.active{background:#f0e7d5;color:#202124;border-color:#f0e7d5}
+.opening-mascot{height:78px}.opening-mascot img{width:68px;height:68px}
+#landing-mascot{-webkit-clip-path:circle(45% at 50% 50%)!important;clip-path:circle(45% at 50% 50%)!important;filter:none;mix-blend-mode:darken}
