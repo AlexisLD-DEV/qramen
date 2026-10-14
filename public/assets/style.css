@@ -604,6 +604,29 @@ button.restaurant-switch-button.switch-to-qramen:focus-visible{outline-color:#e2
 }
 .dark-mode button.restaurant-switch-button.switch-to-qramen:hover,.dark-mode.landing button.restaurant-switch-button.switch-to-qramen:hover{background:#24282d;border-color:#e2543a;color:#fffdf8}
 @media(max-width:760px){.site-header>.restaurant-switch-button{align-self:center}.landing-top>.restaurant-switch-button{align-self:center}}
+/* Menu mobile en deux lignes : marque + préférences, puis table + switch + panier. */
+@media(max-width:430px){
+  .site-header{height:auto;min-height:0;display:grid;grid-template-columns:max-content minmax(0,1fr) 44px;grid-template-areas:"brand prefs prefs" "table switch cart";align-content:center;gap:6px 5px;padding:8px 10px}
+  .site-header>.header-brand{grid-area:brand;justify-self:start;min-width:0;max-width:100%;margin:0;gap:5px;white-space:nowrap;font-size:17px!important}
+  .site-header>.header-brand img{height:38px;width:auto;flex:none}
+  .site-header>.menu-preferences{grid-area:prefs;display:flex;align-items:center;justify-self:end;gap:4px}
+  .site-header>.menu-preferences button{width:44px;height:44px;min-width:44px;min-height:44px;padding:0}
+  .site-header>#table-label{grid-area:table;justify-self:start;align-self:center;min-width:0;max-width:100%;padding:6px 8px;overflow:hidden;text-overflow:ellipsis}
+  .site-header>.restaurant-switch.compact{grid-area:switch;justify-self:stretch;align-self:center;min-width:0;width:100%;max-width:none;margin:0;padding:4px 6px;gap:4px}
+  .site-header>.restaurant-switch.compact img{width:24px;height:24px;flex:0 0 24px}
+  .site-header>.restaurant-switch.compact span{font-size:clamp(9px,2.8vw,11px);line-height:1.15;overflow-wrap:anywhere}
+  .site-header>#cart-open{grid-area:cart;justify-self:end;align-self:center;margin:0;width:44px!important;min-width:44px;height:44px;padding:0;gap:0;font-size:0!important}
+  .site-header>#cart-open .cart-count{width:22px;height:22px;font-size:11px}
+}
+@media(max-width:350px){
+  .site-header{grid-template-columns:max-content minmax(0,1fr) 44px;grid-template-areas:"brand prefs prefs" "table switch cart";column-gap:4px;padding-inline:8px}
+  .site-header>.header-brand{gap:3px;font-size:15px!important}
+  .site-header>.header-brand img{height:34px}
+  .site-header>.menu-preferences{gap:2px}
+  .site-header>.menu-preferences button{width:44px;height:44px;min-width:44px}
+  .site-header>.restaurant-switch.compact{padding-inline:3px;gap:2px}
+  .site-header>.restaurant-switch.compact img{width:21px;height:21px;flex-basis:21px}
+}
 /* Centrage du groupe mascotte + libellé dans le bouton de bascule. */
 button.restaurant-switch-button{display:flex;justify-content:center;align-items:center;text-align:center;padding-inline:14px}
 button.restaurant-switch-button span{min-width:0;text-align:center}
