@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /cuisine.html
+Disallow: /salle.html
+Disallow: /qr.html
+
+Sitemap: https://qramen.alexisld.fr/sitemap.xml
+Sitemap: https://qroque.alexisld.fr/sitemap.xml
