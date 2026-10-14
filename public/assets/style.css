@@ -516,6 +516,44 @@ button.restaurant-switch-button.switch-variant-accent:hover{background:color-mix
 .dark-mode.landing button.restaurant-switch-button{background:#272b2e;border-color:#55595c;color:#f4f0e8}
 .dark-mode.landing button.restaurant-switch-button.switch-variant-accent{background:var(--gold);border-color:color-mix(in srgb,var(--gold) 72%,var(--ink));color:var(--ink)}
 .dark-mode.theme-qroque button.restaurant-switch-button.switch-variant-accent{background:var(--red);border-color:var(--red);color:#fff}
+
+/* Accueil mobile : commandes dans une vraie rangée, mascotte dans le flux. */
+.landing-top{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:8px}
+.landing-top>.brand-mark{grid-column:1;min-width:0}
+.landing-top>.restaurant-switch-button{grid-column:2;justify-self:center;align-self:center;margin:0;min-height:44px}
+.landing-top>.theme-toggle{grid-column:3;justify-self:end;width:44px;height:44px;min-height:44px}
+.baseline-row{position:relative}
+@media(max-width:700px){
+  .landing-card>.landing-top{padding-top:0}
+  .landing-top{grid-template-columns:minmax(0,1fr) 44px;grid-template-rows:44px 44px;gap:6px 4px}
+  .landing-top>.brand-mark{font-size:16px;line-height:1.05;letter-spacing:-.05em;overflow-wrap:anywhere}
+  .landing-top>.brand-mark img{height:42px;width:auto;max-width:100%;object-fit:contain}
+  .landing-top>.brand-mark .eyebrow{display:block;font-size:7px;letter-spacing:.09em;line-height:1.2}
+  .landing-top>.restaurant-switch-button{grid-column:1/-1;grid-row:2;justify-self:center;width:max-content;max-width:100%;white-space:normal;text-align:center;font-size:clamp(9px,2.6vw,11px);line-height:1.15;padding:5px 7px;gap:4px}
+  .landing-top>.restaurant-switch-button img{width:22px;height:22px;flex-basis:22px}
+  .landing-top>.theme-toggle{grid-column:2;grid-row:1;width:44px;height:44px;min-width:44px}
+  .landing-copy{max-width:100%;z-index:1}
+  .landing h1{position:relative;z-index:1;margin-bottom:10px}
+  .baseline-row{display:flex;align-items:center;gap:8px;min-height:72px}
+  .landing .baseline{flex:1 1 auto;min-width:0;margin:0;font-size:clamp(17px,5.2vw,22px);line-height:1.22}
+  .landing-mascot,.landing-qroque .landing-mascot{position:relative;inset:auto;transform:none;display:block;flex:0 0 clamp(64px,22vw,88px);width:clamp(64px,22vw,88px);height:auto;aspect-ratio:1;object-fit:contain;opacity:1;z-index:2;pointer-events:none}
+}
+@media(max-width:350px){
+  .landing-top>.brand-mark img{height:36px}
+  .landing-top>.brand-mark .eyebrow{font-size:6px}
+  .landing-top>.restaurant-switch-button{font-size:9px;padding:4px 5px;gap:2px}
+  .landing-top>.restaurant-switch-button img{width:18px;height:18px;flex-basis:18px}
+  .baseline-row{gap:5px}
+  .landing .baseline{font-size:17px}
+  .landing-mascot,.landing-qroque .landing-mascot{flex-basis:64px;width:64px}
+}
+@media(min-width:701px){
+  .landing-top{display:flex;justify-content:space-between;gap:12px}
+  .landing-top>.restaurant-switch-button{order:2;margin:0}
+  .landing-top>.theme-toggle{order:3}
+  .landing-copy{width:62%;max-width:62%;align-self:flex-start}
+  .landing-mascot,.landing-qroque .landing-mascot{top:50%;right:-64%;width:min(58vw,390px);transform:translateY(-50%)}
+}
 button.restaurant-switch-button.switch-variant-accent{background:#f2d49b;border-color:#b77b18;color:#35271d}
 button.restaurant-switch-button.switch-variant-accent:hover{background:#f8e7c2;border-color:#9a6900;color:#35271d}
 .dark-mode.landing button.restaurant-switch-button.switch-variant-accent{background:#f2d49b;border-color:#b77b18;color:#35271d}
