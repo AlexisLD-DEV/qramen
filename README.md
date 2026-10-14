@@ -6,7 +6,7 @@ le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
 
 | Restaurant | Concept | En ligne |
 | --- | --- | --- |
-| **Le QRamen** | bar à ramen, Paris 11e | <https://qramen.ledeunf.fr/menu.html?table=T05> |
+| **Le QRamen** | bar à ramen, Rouen | <https://qramen.ledeunf.fr/menu.html?table=T05> |
 | **QRoque Monsieur** | bistrot du croque, Rouen | <https://croq.ledeunf.fr/menu.html?table=T05> |
 
 Écran cuisine (le même pour les deux) : <https://qramen.ledeunf.fr/cuisine.html>
@@ -106,7 +106,7 @@ systemctl --user start qramen-pdf
 
 ## English summary
 
-A fictional ramen bar (Paris) built for a training exercise, taken far beyond the brief: scan the QR
+A fictional ramen bar (Rouen) built for a training exercise, taken far beyond the brief: scan the QR
 code on your table, order from your phone, the kitchen board updates live, and the kitchen ticket is
 generated as a PDF and attached to the order automatically. Automation runs on self-hosted **n8n**,
 data lives in **Airtable**, the pages are plain HTML/CSS/JS, and PDFs are rendered by a small local
