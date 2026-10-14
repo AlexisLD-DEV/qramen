@@ -1,6 +1,10 @@
 # QRamen & QRoque — commande à table par QR code
 
-Deux sites de démonstration pour un parcours de commande en restaurant : le client scanne le QR de sa table, consulte la carte et envoie sa commande; l’équipe la suit depuis les écrans cuisine et salle. Le projet a été réalisé dans le cadre d’un exercice de formation. Les restaurants et leur adresse sont fictifs.
+Deux sites de démonstration pour un parcours de commande en restaurant : le client scanne le QR de sa table, consulte la carte et envoie sa commande; l’équipe la suit depuis les écrans cuisine et salle.
+
+## Contexte
+
+Ce projet est un exercice réalisé dans le cadre de la formation « Product Builder » de DataSuits (No-Code & IA, avec la Sorbonne), donné par le formateur Rachid Lghachi. Les enseignes, les cartes, les prix et les commandes sont fictifs et servent de données de démonstration.
 
 **Sites :** [qramen.alexisld.fr](https://qramen.alexisld.fr) · [qroque.alexisld.fr](https://qroque.alexisld.fr) · [alexisld.fr](https://alexisld.fr)
 
@@ -83,7 +87,11 @@ Le code est distribué sous licence [MIT](LICENSE). Les contenus de démonstrati
 
 # QRamen & QRoque — QR table ordering
 
-Two demonstration websites for restaurant ordering: guests scan their table QR code, browse the menu and submit an order; staff follow it on the kitchen and dining room screens. The project was built as a training exercise. The restaurants and their address are fictional.
+Two demonstration websites for restaurant ordering: guests scan their table QR code, browse the menu and submit an order; staff follow it on the kitchen and dining room screens.
+
+## About this exercise
+
+This project is an exercise completed as part of DataSuits’ “Product Builder” training (No-Code & AI, with the Sorbonne), assigned by trainer Rachid Lghachi. The restaurant brands, menus, prices and orders are fictional demonstration data.
 
 **Websites:** [qramen.alexisld.fr](https://qramen.alexisld.fr) · [qroque.alexisld.fr](https://qroque.alexisld.fr) · [alexisld.fr](https://alexisld.fr)
 
