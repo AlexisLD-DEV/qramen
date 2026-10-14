@@ -16,7 +16,7 @@ SORTIE = pathlib.Path(__file__).resolve().parent.parent / "etat"
 CODE_RESTAU = """const q = ($('Webhook').first().json.query || {});
 const concept = q.concept || 'QRamen';
 const infos = {
-  QRamen: { nom: 'Le QRamen', baseline: 'Scannez. Commandez. Slurpez.', ville: 'Paris 11e',
+  QRamen: { nom: 'Le QRamen', baseline: 'Scannez. Commandez. Slurpez.', ville: 'Rouen',
             cuisine: 'Cuisine japonaise', devise: 'EUR' },
   QRoque: { nom: 'QRoque Monsieur', baseline: 'Le bistrot du croque, qui se scanne.', ville: 'Rouen',
             cuisine: 'Croques & bistrot', devise: 'EUR' },
@@ -35,23 +35,26 @@ return [{ json: { restaurant: infos, concept, categories, plats } }];"""
 
 
 CODE_TICKET = """const cmd = $('Creer la commande').first().json;
-const body = $('Lire la commande').first().json;
-const lignes = (body.lignes || []).map(l => ({ nom: l.nom || l.platId, q: l.quantite || 1 }));
+const prep = $('Preparer les lignes').first().json;
+const lignes = prep.ticketLignes || [];
 const numero = (cmd.fields && cmd.fields.Numero) ? cmd.fields.Numero : '';
+const name = 'Le QRamen · QRoque Monsieur';
+const mascot = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 72"><path d="M14 31q36-33 72 0" fill="#eab653" stroke="#33241d" stroke-width="4"/><path d="M17 34h66l-8 24H25z" fill="#d86438" stroke="#33241d" stroke-width="4" stroke-linejoin="round"/><path d="M20 37h60" stroke="#f4d37f" stroke-width="5"/><path d="M11 62h78" stroke="#33241d" stroke-width="5" stroke-linecap="round"/></svg>`;
 const html = `<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><style>
 @page{size:80mm 200mm;margin:6mm}
 body{font-family:Arial,Helvetica,sans-serif;color:#111;margin:0}
+.brand{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #bbb;padding-bottom:2mm;margin-bottom:3mm}.brand strong{font-size:12pt}.mascot{width:15mm;height:11mm;flex:none}
 h1{font-size:19pt;margin:0 0 2mm}
 .meta{font-size:11pt;margin-bottom:4mm;line-height:1.5}
 table{width:100%;border-collapse:collapse;font-size:12pt}
 td{padding:1.6mm 0;border-bottom:1px dashed #999}
-.q{text-align:right;font-weight:bold}
-.pied{margin-top:5mm;font-size:8pt;color:#333}.pied a{color:#111;text-decoration:underline}
+.q{width:12mm;padding-right:1mm;text-align:right;font-weight:bold;white-space:nowrap}
+.pied{margin-top:5mm;font-size:7pt;color:#333;line-height:1.4}
 </style></head><body>
-<h1>Ticket cuisine</h1>
-<div class="meta"><b>Commande #${numero}</b><br>Table ${body.table}<br>${new Date().toLocaleString('fr-FR')}</div>
-<table>${lignes.map(l => `<tr><td>${l.nom}</td><td class="q">x${l.q}</td></tr>`).join('')}</table>
-<div class="pied">14 rue du Gros-Horloge, 76000 Rouen<br><a href="https://alexisld.fr">alexisld.fr</a> - code open source : github.com/AlexisLD-DEV/qramen</div>
+<div class="brand"><strong>${name}</strong>${mascot}</div><h1>Ticket cuisine</h1>
+<div class="meta"><b>Commande #${numero}</b><br>Table ${$('Lire la commande').first().json.table}<br>${new Date().toLocaleString('fr-FR')}</div>
+<table>${lignes.map(l => `<tr><td><b>${l.concept === 'QRoque' ? '🥪 QRoque Monsieur' : '🍜 Le QRamen'}</b><br>${l.nom}${l.note ? `<br><small>${l.note}</small>` : ''}</td><td class="q">x${l.quantite || 1}</td></tr>`).join('')}</table>
+<div class="pied">14 rue du Gros-Horloge, 76000 Rouen<br>alexisld.fr</div>
 </body></html>`;
 return [{ json: { html, id: cmd.id, numero } }];"""
 
@@ -81,16 +84,20 @@ WF_MENU = {
 }
 
 CODE_CMD = """const b = $json.body || $json;
+const ordre = { QRamen: 0, QRoque: 1 };
 const lignes = (b.lignes || []).map(l => ({ platId: l.platId, quantite: Math.max(1, Number(l.quantite) || 1),
-  note: l.note || '' }));
+  note: l.note || '', nom: l.nom || '', concept: l.concept || b.concept || 'QRamen' }))
+  .sort((a, b) => (ordre[a.concept] ?? 9) - (ordre[b.concept] ?? 9) || a.nom.localeCompare(b.nom));
 if (!b.table || !lignes.length) { throw new Error('table et lignes sont obligatoires'); }
 return [{ json: { table: b.table, concept: b.concept || 'QRamen', lignes, total: b.total || 0 } }];"""
 
 CODE_LIGNES = """const cmd = $('Creer la commande').first().json;
 const prep = $('Lire la commande').first().json;
-const recs = prep.lignes.map(l => ({ fields: { Ligne: l.note || 'ligne', Quantite: l.quantite,
+const labels = { QRamen: '🍜 Le QRamen', QRoque: '🥪 QRoque Monsieur' };
+const recs = prep.lignes.map(l => ({ fields: { Ligne: '[' + (labels[l.concept] || l.concept) + ']' + (l.note ? ' ' + l.note : ''), Quantite: l.quantite,
   Plat: [l.platId], Commande: [cmd.id] } }));
-return [{ json: { commande: cmd.id, numero: cmd.fields.Numero, statut: cmd.fields.Statut, records: recs } }];"""
+return [{ json: { commande: cmd.id, numero: cmd.fields.Numero, statut: cmd.fields.Statut, records: recs,
+  ticketLignes: prep.lignes.map(l => ({ nom: l.nom || l.platId, quantite: l.quantite, concept: l.concept, note: l.note })) } }];"""
 
 WF_CMD = {
     "id": "qramenCommande01",

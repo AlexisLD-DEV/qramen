@@ -9,7 +9,7 @@ const CATEGORIES = [
   { id: "Dessert", nom: "Desserts" }, { id: "Boisson", nom: "Boissons" },
 ];
 const RESTAURANTS = {
-  QRamen: { nom: "Le QRamen", baseline: "Scannez. Commandez. Slurpez.", ville: "Paris 11e", cuisine: "Cuisine japonaise", devise: "EUR" },
+  QRamen: { nom: "Le QRamen", baseline: "Scannez. Commandez. Slurpez.", ville: "Rouen", cuisine: "Cuisine japonaise", devise: "EUR" },
   QRoque: { nom: "QRoque Monsieur", baseline: "Le bistrot du croque, qui se scanne.", ville: "Rouen", cuisine: "Croques & bistrot", devise: "EUR" },
 };
 
@@ -38,6 +38,10 @@ async function allRecords(env, table, query = {}) {
   return records;
 }
 const fields = (record) => record.fields || {};
+function lineLabel(line, designation) {
+  const raw = String(line || ""), tag = raw.match(/^\[(🍜 Le QRamen|🥪 QRoque Monsieur)\]/)?.[1];
+  return `${tag ? `${tag} · ` : ""}${String(designation || raw).replace(/^\[[^\]]+\] ?/, "")}`;
+}
 
 async function menu(env, url) {
   const concept = url.searchParams.get("concept") || "QRamen";
@@ -57,7 +61,7 @@ async function orders(env) {
   const live = cmds.filter(r => !["Terminee", "Servi"].includes(fields(r).Statut));
   const ids = live.flatMap(r => fields(r).Lignes || []);
   const lignes = ids.length ? await allRecords(env, TABLES.lignes, { filterByFormula: `OR(${ids.map(id => `RECORD_ID()='${escapeFormula(id)}'`).join(",")})` }) : [];
-  return live.map(r => ({ id: r.id, numero: fields(r).Numero, table: (fields(r).Table || []).length ? "Sur place" : "A emporter", statut: fields(r).Statut === "Terminee" ? "Servi" : (fields(r).Statut || "En attente"), heure: fields(r)["Passee le"], passee: fields(r)["Passee le"], additionDemandee: !!fields(r)["Addition demandee"], ticket: !!(fields(r)["Ticket cuisine"] || []).length, liens: fields(r).Lignes || [], lignes: lignes.filter(l => (fields(l).Commande || [])[0] === r.id).map(l => ({ id: l.id, commande: (fields(l).Commande || [])[0], designation: fields(l).Designation || fields(l).Ligne || "", quantite: fields(l).Quantite || 1 })) }));
+  return live.map(r => ({ id: r.id, numero: fields(r).Numero, table: (fields(r).Table || []).length ? "Sur place" : "A emporter", statut: fields(r).Statut === "Terminee" ? "Servi" : (fields(r).Statut || "En attente"), heure: fields(r)["Passee le"], passee: fields(r)["Passee le"], additionDemandee: !!fields(r)["Addition demandee"], ticket: !!(fields(r)["Ticket cuisine"] || []).length, liens: fields(r).Lignes || [], lignes: lignes.filter(l => (fields(l).Commande || [])[0] === r.id).map(l => ({ id: l.id, commande: (fields(l).Commande || [])[0], designation: lineLabel(fields(l).Ligne, fields(l).Designation), quantite: fields(l).Quantite || 1 })) }));
 }
 async function room(env) {
   const [tables, commandes] = await Promise.all([allRecords(env, TABLES.tables), allRecords(env, TABLES.commandes, { "sort[0][field]": "Passee le", "sort[0][direction]": "desc" })]);
@@ -79,7 +83,7 @@ async function ticketData(env, numero) {
     const lf = fields(l), p = (lf.Plat || [])[0];
     let nom = lf.Designation || lf.Ligne || "";
     if (!nom && p) { const record = await airtable(env, `${TABLES.plats}/${p}`); nom = fields(record).Plat || ""; }
-    return { designation: nom, quantite: lf.Quantite || 1, sousTotal: lf["Sous-total"] || 0 };
+    return { designation: lineLabel(lf.Ligne, nom), quantite: lf.Quantite || 1, sousTotal: lf["Sous-total"] || 0 };
   }));
   const tableId = (f.Table || [])[0];
   let table = "";
@@ -112,7 +116,7 @@ async function route(request, env) {
     const tables = await allRecords(env, TABLES.tables, { filterByFormula: `{Identifiant}="${String(b.table).replaceAll('"', '\\"')}"` });
     if (!tables[0]) return fail("table introuvable", 404);
     const created = await airtable(env, TABLES.commandes, { method: "POST", body: { fields: { Statut: "En attente", Table: [tables[0].id] } } });
-    const records = lignes.map(l => ({ fields: { Ligne: l.note || "ligne", Quantite: l.quantite, Plat: [l.platId], Commande: [created.id] } }));
+    const records = lignes.map(l => ({ fields: { Ligne: `[${l.concept === "QRoque" ? "🥪 QRoque Monsieur" : "🍜 Le QRamen"}]${l.note ? ` ${l.note}` : ""}`, Quantite: l.quantite, Plat: [l.platId], Commande: [created.id] } }));
     await airtable(env, TABLES.lignes, { method: "POST", body: { records } });
     const f = fields(created);
     return json({ ok: true, numero: f.Numero, statut: f.Statut, commande: created.id });

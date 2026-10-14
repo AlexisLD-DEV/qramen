@@ -25,7 +25,8 @@ return [{ json: { commandes: retenu, lignesFormula: ids.length ? "OR(" + ids.map
 CODE_FIN = """const lignes = ($json.records || []).map(r => ({
   id: r.id,
   commande: (r.fields.Commande || [])[0],
-  designation: r.fields.Designation || r.fields.Ligne || '',
+  designation: (r.fields.Ligne && /^\\[(🍜 Le QRamen|🥪 QRoque Monsieur)\\]/.test(r.fields.Ligne)
+    ? r.fields.Ligne.match(/^\\[(🍜 Le QRamen|🥪 QRoque Monsieur)\\]/)[1] + ' · ' : '') + (r.fields.Designation || r.fields.Ligne || '').replace(/^\\[[^\\]]+\\] ?/, ''),
   quantite: r.fields.Quantite || 1,
 }));
 const premier = $('Preparer les commandes').first().json.commandes;

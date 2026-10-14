@@ -6,6 +6,7 @@ CLE = pathlib.Path("/srv/hermes/.hermes/.secrets/qramen-pdf.key").read_text().st
 DOM = "https://croq.ledeunf.fr"
 SORTIE = pathlib.Path("/srv/projects/shared/qramen/public/assets")
 ACCENT = "#7B2D26"
+MASCOTTE = '<svg class="mascotte" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 72"><path d="M16 28h68l-8 30H24z" fill="#d99a42" stroke="#35251d" stroke-width="4"/><path d="M22 31h56l-7 19H29z" fill="#f5e6c7"/><path d="M29 31 40 20l12 11 12-11 14 11" fill="#f0c05a" stroke="#8d4b2b" stroke-width="4"/><path d="M11 61h78" stroke="#35251d" stroke-width="5"/></svg>'
 
 
 def qr_data(url, taille=1200):
@@ -18,11 +19,12 @@ def qr_data(url, taille=1200):
 def carte(numero, image, format_="a5"):
     pied = (f"Table {numero:02d} · commandez depuis votre téléphone,<br>on apporte tout à table."
             if numero else "Commandez depuis votre téléphone,<br>on apporte tout à table.")
-    pied += "<br>14 rue du Gros-Horloge, 76000 Rouen<br>alexisld.fr - code open source : github.com/AlexisLD-DEV/qramen"
+    pied += "<br>14 rue du Gros-Horloge, 76000 Rouen<br>github.com/AlexisLD-DEV/qramen"
     return f"""
 <div class="carte {format_}">
   <div class="marque"><b>QR</b>oque Monsieur</div>
   <div class="filet"></div>
+  {MASCOTTE}
   <img src="data:image/png;base64,{image}" alt="">
   <div class="action">Scannez pour commander</div>
   <div class="pied">{pied}</div>
@@ -43,6 +45,7 @@ body { margin: 0; font-family: 'Inter', Arial, sans-serif }
 .marque b { color: %(accent)s }
 .carte.a5 .filet { width: 24mm; height: 1mm; background: %(accent)s; margin: 3mm 0 4mm }
 .carte.a6 .filet { width: 18mm; height: .8mm; background: %(accent)s; margin: 2.5mm 0 3.5mm }
+.carte .mascotte { width: 21mm; height: 15mm; margin-bottom: 2mm; flex:none }
 .carte.a5 img { width: 62mm; height: 62mm; image-rendering: pixelated }
 .carte.a6 img { width: 62mm; height: 62mm; image-rendering: pixelated }
 .carte.a5 .action { margin-top: 4mm; font-size: 5.6mm; color: %(accent)s; font-weight: 600 }
