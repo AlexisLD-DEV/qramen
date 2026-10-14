@@ -7,7 +7,7 @@ import urllib.request
 import segno
 
 CLE = pathlib.Path("/srv/hermes/.hermes/.secrets/qramen-pdf.key").read_text().strip()
-DOM = "https://qramen.ledeunf.fr"
+DOM = "https://qramen.alexisld.fr"
 SORTIE = pathlib.Path("/srv/projects/shared/qramen/public/assets/chevalets-tables.pdf")
 MASCOTTE = base64.b64encode(pathlib.Path("/srv/projects/shared/qramen/public/assets/mascottes/ramen-1-bol-print.png").read_bytes()).decode()
 

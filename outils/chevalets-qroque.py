@@ -3,7 +3,7 @@ import base64, io, json, pathlib, urllib.request
 import segno
 
 CLE = pathlib.Path("/srv/hermes/.hermes/.secrets/qramen-pdf.key").read_text().strip()
-DOM = "https://croq.ledeunf.fr"
+DOM = "https://croq.alexisld.fr"
 SORTIE = pathlib.Path("/srv/projects/shared/qramen/public/assets")
 ACCENT = "#7B2D26"
 MASCOTTE = base64.b64encode((SORTIE / "mascottes" / "croque-2-monsieur-print.png").read_bytes()).decode()

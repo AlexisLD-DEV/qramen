@@ -38,7 +38,7 @@ def ma_carte(famille, largeur=1040, hauteur=1420):
         gg = d.textbbox((0, 0), t, font=f)
         d.text((cx, hauteur * 0.075), t, font=f, fill=coul)
         cx += gg[2] - gg[0]
-    url = "https://croq.ledeunf.fr/menu.html" if famille == "croc" else "https://qramen.ledeunf.fr/menu.html"
+    url = "https://croq.alexisld.fr/menu.html" if famille == "croc" else "https://qramen.alexisld.fr/menu.html"
     buf = io.BytesIO()
     segno.make(url, error="h").save(buf, kind="png", scale=22, border=4, dark="#1c1e22", light=None)
     qr = Image.open(buf).convert("RGBA")

@@ -5,7 +5,7 @@
 
 ## Générer un QR de table
 
-1. Ouvrez `https://qramen.ledeunf.fr/qr.html` ou `https://croq.ledeunf.fr/qr.html`.
+1. Ouvrez `https://qramen.alexisld.fr/qr.html` ou `https://croq.alexisld.fr/qr.html`.
 2. Choisissez le restaurant, puis saisissez le nom ou numéro de table (par exemple `T08`, `Terrasse 2`). Le QR et son adresse se mettent à jour immédiatement.
 3. Pour une table déjà enregistrée, utilisez son bouton **Imprimer ce chevalet**. Pour une nouvelle table, utilisez le générateur.
 4. Téléchargez le QR au format SVG (vectoriel) ou PNG (1200 × 1200 px), selon le support choisi.

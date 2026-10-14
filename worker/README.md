@@ -43,10 +43,10 @@ npx wrangler deploy
 
 Coller le PAT Airtable à l'invite Wrangler. `AIRTABLE_BASE_ID` est déjà défini dans `wrangler.toml`. Le nom du Worker est `qramen-engine`.
 
-## Basculer le site
+## Intégration du site
 
-Le site utilise actuellement `https://n8n.ledeunf.fr/webhook/qramen` comme base API. Après déploiement et vérification, remplacer uniquement cette constante par l'URL fournie par Wrangler, en gardant le suffixe `/webhook/qramen` (par exemple `https://qramen-engine.<compte>.workers.dev/webhook/qramen`). Vérifier menu, commande, suivi, cuisine et salle. Cette modification n'est pas faite dans ce livrable.
+`public/assets/api.js` centralise l'API. Le site essaie le Worker `qramen-engine.alexisledeunf.workers.dev` puis `n8n.ledeunf.fr` ; les pages menu, cuisine, salle et QR disposent aussi de leur repli local.
 
-## Revenir en arrière
+## Retour arrière
 
-Remettre la constante API du site à `https://n8n.ledeunf.fr/webhook/qramen`, puis republier le site. L'ancien endpoint n8n et le service PDF restent la référence pendant la validation.
+Pour revenir au moteur n8n en premier, modifier `public/assets/api.js` afin de placer `https://n8n.ledeunf.fr/webhook/qramen` dans `QRAMEN_API` et republier Cloudflare Pages. Le Worker reste déployé et peut être remis en premier en restaurant sa constante.

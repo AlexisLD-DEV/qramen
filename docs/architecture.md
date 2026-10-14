@@ -3,16 +3,16 @@
 ## Vue d'ensemble
 
 ```
- téléphone du client                      serveur (VPS OVH)
+ téléphone du client                      Cloudflare
  ───────────────────                      ──────────────────
  scan du QR de la table
         │
         ▼
- page statique  ◄─────────── Caddy + Cloudflare ────────► qramen.ledeunf.fr  (ramen)
- (HTML/CSS/JS, pas de framework)                            croq.ledeunf.fr    (croques)
+ page statique  ◄──────── Cloudflare Pages ────────► qramen.alexisld.fr  (ramen)
+ (HTML/CSS/JS, pas de framework)                       croq.alexisld.fr    (croques)
         │  fetch JSON
         ▼
- API n8n auto-hébergée  ──────────────►  Airtable (base « exo QR »)
+ Worker Cloudflare → n8n secours ────► Airtable (base « exo QR »)
  (webhooks /menu /commande /statut           Tables · Plats · Commandes · Lignes
   /cuisine /cuisine/statut /addition)
         │
@@ -27,10 +27,11 @@
 | --- | --- | --- |
 | Page client | menu, panier, suivi de commande, demande d'addition | `public/` (statique) |
 | Écran cuisine | 3 colonnes (en attente / en cours / servi), changement de statut | `public/cuisine.html` |
-| n8n | toute la logique métier (6 webhooks) | conteneur `n8n-n8n-1`, <https://n8n.ledeunf.fr> |
+| Worker Cloudflare | routes menu, commande, suivi, cuisine et salle | `worker/src/index.js`; API prioritaire du site |
+| n8n | secours API et workflows PDF | conteneur `n8n-n8n-1`, <https://n8n.ledeunf.fr> |
 | Airtable | base de données | base `appBHi3MxCb0hW1yH` (4 tables) |
 | Service PDF | HTML → PDF via Chrome headless, jeton partagé | `outils/pdf-service.py` (systemd `qramen-pdf`) |
-| Caddy | TLS + domaine | `qramen.ledeunf.fr`, `croq.ledeunf.fr` |
+| Cloudflare Pages | site et TLS | `qramen.alexisld.fr`, `croq.alexisld.fr`; anciens hôtes en 301 |
 
 ## Les workflows n8n
 
@@ -74,7 +75,7 @@ de binaire.
 ## Déploiement
 
 ```bash
-bash outils/mettre-en-ligne.sh      # service systemd --user (port 8802) + site Caddy
+npx wrangler pages deploy public --project-name qramen --branch main  # production Pages
 bash outils/publier-workflows.sh    # workflows n8n : import + publish + redémarrage
 bash outils/faire-qr.sh             # QRs des tables + planche imprimable
 ```

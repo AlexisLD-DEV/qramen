@@ -8,10 +8,10 @@ le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
 
 | Restaurant | Concept | En ligne |
 | --- | --- | --- |
-| **Le QRamen** | bar à ramen, Rouen | <https://qramen.ledeunf.fr/menu.html?table=T05> |
-| **QRoque Monsieur** | bistrot du croque, Rouen | <https://croq.ledeunf.fr/menu.html?table=T05> |
+| **Le QRamen** | bar à ramen, Rouen | <https://qramen.alexisld.fr/menu.html?table=T05> |
+| **QRoque Monsieur** | bistrot du croque, Rouen | <https://croq.alexisld.fr/menu.html?table=T05> |
 
-Écran cuisine (le même pour les deux) : <https://qramen.ledeunf.fr/cuisine.html> · Vue salle : <https://qramen.ledeunf.fr/salle.html>
+Écran cuisine (le même pour les deux) : <https://qramen.alexisld.fr/cuisine.html> · Vue salle : <https://qramen.alexisld.fr/salle.html>
 
 ## Aperçu
 
@@ -79,7 +79,8 @@ Tous les QR de ces fichiers sont testés : ils se décodent vers la bonne URL (`
 Client ───────────────────────► page statique (HTML/CSS/JS, sans framework)
    ▲                                   │
    │                                   ▼
-   │                          API n8n auto-hébergée
+   │                          API Worker Cloudflare
+                 (n8n en secours)
    │                     /menu /commande /statut /cuisine
    │                                   │
    └────────── Airtable ◄──────────────┘
@@ -90,14 +91,12 @@ Client ───────────────────────► 
         → ticket cuisine + addition, rangés dans Airtable
 ```
 
-- **n8n** (auto-hébergé, gratuit) porte toute la logique : lecture du menu, création de la commande et
-  de ses lignes, suivi du statut, écran cuisine, génération des PDF. Les workflows sont **écrits en
-  code** (`outils/workflows.py`, `outils/workflow-cuisine.py` et `outils/workflow-salle.py`) et versionnés ici.
+- **Cloudflare Worker** porte les routes du menu, des commandes, du suivi, de la cuisine et de la salle ; le site essaie n8n en secours. Les workflows n8n versionnés continuent notamment de porter les tâches PDF.
 - **Airtable** porte les données : 7 tables, 16 plats, commandes et lignes, avec les pièces jointes
   (ticket, addition) et un statut.
 - **Le service PDF** (`outils/pdf-service.py`) transforme un HTML en PDF via Chrome headless ; il est
   protégé par un jeton partagé et n'écoute que pour la machine.
-- **Caddy + Cloudflare** servent le domaine `qramen.ledeunf.fr`.
+- **Cloudflare Pages** sert `qramen.alexisld.fr` et `croq.alexisld.fr` ; les anciens hôtes redirigent en 301.
 
 ## Deux cartes, un seul moteur
 

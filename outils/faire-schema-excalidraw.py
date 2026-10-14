@@ -63,7 +63,7 @@ for bid, texte, fond in meca:
     e += boite(bid, x, 440, 220, 86, texte, fond, 15)
     x += 245
 
-e += boite("r1", 80, 570, 1150, 84, "EN LIGNE · qramen.ledeunf.fr/menu.html    CODE PUBLIC · github.com/AlexisLD-DEV/qramen", "#b2f2bb", 17)
+e += boite("r1", 80, 570, 1150, 84, "EN LIGNE · qramen.alexisld.fr/menu.html    CODE PUBLIC · github.com/AlexisLD-DEV/qramen", "#b2f2bb", 17)
 
 chiffres = [
     ("c1", "2 cartes\nramen et croques", "#a5d8ff"),
