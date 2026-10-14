@@ -90,3 +90,14 @@
 .landing .eyebrow{color:#843a29}.landing .kicker{color:#46643d}.landing .button-primary{background:#b63825}.landing .button-primary:hover{background:#982d20}.landing-bottom .label,.landing footer,.landing .qr-admin-link{color:#625d54}.landing .landing-jp{color:#8b816e}.qr-page{--qr-accent:#ae3826}
 @media(max-width:430px){.qr-page .site-header .restaurant-switch.compact a{font-size:9px;padding:0 4px}}
 .landing .landing-jp{color:#6b6255}
+
+@media(max-width:380px){
+  .site-header{height:auto;min-height:68px;flex-wrap:wrap;justify-content:flex-start;gap:6px;padding:8px}
+  .site-header .header-brand{margin-right:auto}
+  .site-header .restaurant-switch.compact{margin:0}
+  .site-header .table-pill{white-space:nowrap}
+  .site-header .menu-preferences{margin-left:auto}
+  .site-header .cart-trigger{flex:none}
+  .menu-legend-row{min-width:0}
+  .menu-legend-row .filters{min-width:0;max-width:100%;overscroll-behavior-x:contain}
+}
