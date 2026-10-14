@@ -3,7 +3,7 @@
 ## Changements
 
 - Remplacement du menu Restaurant par trois boutons exclusifs : Le QRamen, QRoque Monsieur et Les deux (actif par défaut).
-- Filtrage immédiat des commandes en mémoire, compteurs recalculés, badge d’enseigne sur chaque commande. La catégorie « Les deux / non identifié » conserve les commandes mixtes ou sans étiquette exploitable.
+- Filtrage immédiat des commandes en mémoire, compteurs recalculés, badge d’enseigne sur chaque commande. La catégorie « Les deux » conserve les commandes mixtes ou sans étiquette exploitable.
 - Accessibilité : groupe nommé, `aria-pressed`, tabulation native, navigation gauche/droite, focus visible et boutons de 44 px minimum.
 - Mention discrète sous le titre sur cuisine, salle et QR ; aucune mention ajoutée au menu client.
 - Styles adaptatifs au thème clair/sombre, y compris les cartes et le sélecteur.
