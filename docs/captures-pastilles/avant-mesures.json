@@ -1,0 +1,1202 @@
+[
+  {
+    "concept": "qramen",
+    "width": 320,
+    "theme": "clair",
+    "total": 6,
+    "navW": 292,
+    "navH": 112,
+    "blockH": 160,
+    "scrollW": 292,
+    "clientW": 292,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 15,
+        "right": 71.40625,
+        "y": 423.6875,
+        "bottom": 467.6875,
+        "h": 44,
+        "scrollW": 54,
+        "clientW": 54
+      },
+      {
+        "text": "Entrees",
+        "x": 79.40625,
+        "right": 152.859375,
+        "y": 423.6875,
+        "bottom": 467.6875,
+        "h": 44,
+        "scrollW": 71,
+        "clientW": 71
+      },
+      {
+        "text": "Plats",
+        "x": 160.859375,
+        "right": 220.875,
+        "y": 423.6875,
+        "bottom": 467.6875,
+        "h": 44,
+        "scrollW": 58,
+        "clientW": 58
+      },
+      {
+        "text": "Desserts",
+        "x": 15,
+        "right": 95.515625,
+        "y": 475.6875,
+        "bottom": 519.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Boissons",
+        "x": 103.515625,
+        "right": 184.515625,
+        "y": 475.6875,
+        "bottom": 519.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Allergènes",
+        "x": 14,
+        "right": 114.90625,
+        "y": 531.6875,
+        "bottom": 575.6875,
+        "h": 44,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": true,
+    "unclipped": true
+  },
+  {
+    "concept": "qramen",
+    "width": 320,
+    "theme": "sombre",
+    "total": 6,
+    "navW": 292,
+    "navH": 112,
+    "blockH": 160,
+    "scrollW": 292,
+    "clientW": 292,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 15,
+        "right": 71.40625,
+        "y": 423.6875,
+        "bottom": 467.6875,
+        "h": 44,
+        "scrollW": 54,
+        "clientW": 54
+      },
+      {
+        "text": "Entrees",
+        "x": 79.40625,
+        "right": 152.859375,
+        "y": 423.6875,
+        "bottom": 467.6875,
+        "h": 44,
+        "scrollW": 71,
+        "clientW": 71
+      },
+      {
+        "text": "Plats",
+        "x": 160.859375,
+        "right": 220.875,
+        "y": 423.6875,
+        "bottom": 467.6875,
+        "h": 44,
+        "scrollW": 58,
+        "clientW": 58
+      },
+      {
+        "text": "Desserts",
+        "x": 15,
+        "right": 95.515625,
+        "y": 475.6875,
+        "bottom": 519.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Boissons",
+        "x": 103.515625,
+        "right": 184.515625,
+        "y": 475.6875,
+        "bottom": 519.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Allergènes",
+        "x": 14,
+        "right": 114.90625,
+        "y": 531.6875,
+        "bottom": 575.6875,
+        "h": 44,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": true,
+    "unclipped": true
+  },
+  {
+    "concept": "qramen",
+    "width": 390,
+    "theme": "clair",
+    "total": 6,
+    "navW": 362,
+    "navH": 112,
+    "blockH": 160,
+    "scrollW": 362,
+    "clientW": 362,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 15,
+        "right": 71.40625,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 54,
+        "clientW": 54
+      },
+      {
+        "text": "Entrees",
+        "x": 79.40625,
+        "right": 152.859375,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 71,
+        "clientW": 71
+      },
+      {
+        "text": "Plats",
+        "x": 160.859375,
+        "right": 220.875,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 58,
+        "clientW": 58
+      },
+      {
+        "text": "Desserts",
+        "x": 228.875,
+        "right": 309.390625,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Boissons",
+        "x": 15,
+        "right": 96,
+        "y": 466.6875,
+        "bottom": 510.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Allergènes",
+        "x": 14,
+        "right": 114.90625,
+        "y": 522.6875,
+        "bottom": 566.6875,
+        "h": 44,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": true,
+    "unclipped": true
+  },
+  {
+    "concept": "qramen",
+    "width": 390,
+    "theme": "sombre",
+    "total": 6,
+    "navW": 362,
+    "navH": 112,
+    "blockH": 160,
+    "scrollW": 362,
+    "clientW": 362,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 15,
+        "right": 71.40625,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 54,
+        "clientW": 54
+      },
+      {
+        "text": "Entrees",
+        "x": 79.40625,
+        "right": 152.859375,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 71,
+        "clientW": 71
+      },
+      {
+        "text": "Plats",
+        "x": 160.859375,
+        "right": 220.875,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 58,
+        "clientW": 58
+      },
+      {
+        "text": "Desserts",
+        "x": 228.875,
+        "right": 309.390625,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Boissons",
+        "x": 15,
+        "right": 96,
+        "y": 466.6875,
+        "bottom": 510.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Allergènes",
+        "x": 14,
+        "right": 114.90625,
+        "y": 522.6875,
+        "bottom": 566.6875,
+        "h": 44,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": true,
+    "unclipped": true
+  },
+  {
+    "concept": "qramen",
+    "width": 768,
+    "theme": "clair",
+    "total": 6,
+    "navW": 593.640625,
+    "navH": 70,
+    "blockH": 70,
+    "scrollW": 594,
+    "clientW": 594,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 30.71875,
+        "right": 95.1875,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 62,
+        "clientW": 62
+      },
+      {
+        "text": "Entrees",
+        "x": 104.1875,
+        "right": 188.546875,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 82,
+        "clientW": 82
+      },
+      {
+        "text": "Plats",
+        "x": 197.546875,
+        "right": 266.234375,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 67,
+        "clientW": 67
+      },
+      {
+        "text": "Desserts",
+        "x": 275.234375,
+        "right": 367.828125,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Boissons",
+        "x": 376.828125,
+        "right": 470,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Allergènes",
+        "x": 636.359375,
+        "right": 737.265625,
+        "y": 359.71875,
+        "bottom": 401.71875,
+        "h": 42,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": false,
+    "unclipped": true
+  },
+  {
+    "concept": "qramen",
+    "width": 768,
+    "theme": "sombre",
+    "total": 6,
+    "navW": 593.640625,
+    "navH": 70,
+    "blockH": 70,
+    "scrollW": 594,
+    "clientW": 594,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 30.71875,
+        "right": 95.1875,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 62,
+        "clientW": 62
+      },
+      {
+        "text": "Entrees",
+        "x": 104.1875,
+        "right": 188.546875,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 82,
+        "clientW": 82
+      },
+      {
+        "text": "Plats",
+        "x": 197.546875,
+        "right": 266.234375,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 67,
+        "clientW": 67
+      },
+      {
+        "text": "Desserts",
+        "x": 275.234375,
+        "right": 367.828125,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Boissons",
+        "x": 376.828125,
+        "right": 470,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Allergènes",
+        "x": 636.359375,
+        "right": 737.265625,
+        "y": 359.71875,
+        "bottom": 401.71875,
+        "h": 42,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": false,
+    "unclipped": true
+  },
+  {
+    "concept": "qramen",
+    "width": 1440,
+    "theme": "clair",
+    "total": 6,
+    "navW": 1047.09375,
+    "navH": 70,
+    "blockH": 70,
+    "scrollW": 1047,
+    "clientW": 1047,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 140,
+        "right": 204.46875,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 62,
+        "clientW": 62
+      },
+      {
+        "text": "Entrees",
+        "x": 213.46875,
+        "right": 297.828125,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 82,
+        "clientW": 82
+      },
+      {
+        "text": "Plats",
+        "x": 306.828125,
+        "right": 375.515625,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 67,
+        "clientW": 67
+      },
+      {
+        "text": "Desserts",
+        "x": 384.515625,
+        "right": 477.109375,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Boissons",
+        "x": 486.109375,
+        "right": 579.28125,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Allergènes",
+        "x": 1199.09375,
+        "right": 1300,
+        "y": 396.6875,
+        "bottom": 438.6875,
+        "h": 42,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": false,
+    "unclipped": true
+  },
+  {
+    "concept": "qramen",
+    "width": 1440,
+    "theme": "sombre",
+    "total": 6,
+    "navW": 1047.09375,
+    "navH": 70,
+    "blockH": 70,
+    "scrollW": 1047,
+    "clientW": 1047,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 140,
+        "right": 204.46875,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 62,
+        "clientW": 62
+      },
+      {
+        "text": "Entrees",
+        "x": 213.46875,
+        "right": 297.828125,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 82,
+        "clientW": 82
+      },
+      {
+        "text": "Plats",
+        "x": 306.828125,
+        "right": 375.515625,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 67,
+        "clientW": 67
+      },
+      {
+        "text": "Desserts",
+        "x": 384.515625,
+        "right": 477.109375,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Boissons",
+        "x": 486.109375,
+        "right": 579.28125,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Allergènes",
+        "x": 1199.09375,
+        "right": 1300,
+        "y": 396.6875,
+        "bottom": 438.6875,
+        "h": 42,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": false,
+    "unclipped": true
+  },
+  {
+    "concept": "qroque",
+    "width": 320,
+    "theme": "clair",
+    "total": 6,
+    "navW": 292,
+    "navH": 112,
+    "blockH": 160,
+    "scrollW": 292,
+    "clientW": 292,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 15,
+        "right": 71.40625,
+        "y": 502.28125,
+        "bottom": 546.28125,
+        "h": 44,
+        "scrollW": 54,
+        "clientW": 54
+      },
+      {
+        "text": "Entrees",
+        "x": 79.40625,
+        "right": 152.859375,
+        "y": 502.28125,
+        "bottom": 546.28125,
+        "h": 44,
+        "scrollW": 71,
+        "clientW": 71
+      },
+      {
+        "text": "Plats",
+        "x": 160.859375,
+        "right": 220.875,
+        "y": 502.28125,
+        "bottom": 546.28125,
+        "h": 44,
+        "scrollW": 58,
+        "clientW": 58
+      },
+      {
+        "text": "Desserts",
+        "x": 15,
+        "right": 95.515625,
+        "y": 554.28125,
+        "bottom": 598.28125,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Boissons",
+        "x": 103.515625,
+        "right": 184.515625,
+        "y": 554.28125,
+        "bottom": 598.28125,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Allergènes",
+        "x": 14,
+        "right": 114.90625,
+        "y": 610.28125,
+        "bottom": 654.28125,
+        "h": 44,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": true,
+    "unclipped": true
+  },
+  {
+    "concept": "qroque",
+    "width": 320,
+    "theme": "sombre",
+    "total": 6,
+    "navW": 292,
+    "navH": 112,
+    "blockH": 160,
+    "scrollW": 292,
+    "clientW": 292,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 15,
+        "right": 71.40625,
+        "y": 502.28125,
+        "bottom": 546.28125,
+        "h": 44,
+        "scrollW": 54,
+        "clientW": 54
+      },
+      {
+        "text": "Entrees",
+        "x": 79.40625,
+        "right": 152.859375,
+        "y": 502.28125,
+        "bottom": 546.28125,
+        "h": 44,
+        "scrollW": 71,
+        "clientW": 71
+      },
+      {
+        "text": "Plats",
+        "x": 160.859375,
+        "right": 220.875,
+        "y": 502.28125,
+        "bottom": 546.28125,
+        "h": 44,
+        "scrollW": 58,
+        "clientW": 58
+      },
+      {
+        "text": "Desserts",
+        "x": 15,
+        "right": 95.515625,
+        "y": 554.28125,
+        "bottom": 598.28125,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Boissons",
+        "x": 103.515625,
+        "right": 184.515625,
+        "y": 554.28125,
+        "bottom": 598.28125,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Allergènes",
+        "x": 14,
+        "right": 114.90625,
+        "y": 610.28125,
+        "bottom": 654.28125,
+        "h": 44,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": true,
+    "unclipped": true
+  },
+  {
+    "concept": "qroque",
+    "width": 390,
+    "theme": "clair",
+    "total": 6,
+    "navW": 362,
+    "navH": 112,
+    "blockH": 160,
+    "scrollW": 362,
+    "clientW": 362,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 15,
+        "right": 71.40625,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 54,
+        "clientW": 54
+      },
+      {
+        "text": "Entrees",
+        "x": 79.40625,
+        "right": 152.859375,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 71,
+        "clientW": 71
+      },
+      {
+        "text": "Plats",
+        "x": 160.859375,
+        "right": 220.875,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 58,
+        "clientW": 58
+      },
+      {
+        "text": "Desserts",
+        "x": 228.875,
+        "right": 309.390625,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Boissons",
+        "x": 15,
+        "right": 96,
+        "y": 466.6875,
+        "bottom": 510.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Allergènes",
+        "x": 14,
+        "right": 114.90625,
+        "y": 522.6875,
+        "bottom": 566.6875,
+        "h": 44,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": true,
+    "unclipped": true
+  },
+  {
+    "concept": "qroque",
+    "width": 390,
+    "theme": "sombre",
+    "total": 6,
+    "navW": 362,
+    "navH": 112,
+    "blockH": 160,
+    "scrollW": 362,
+    "clientW": 362,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 15,
+        "right": 71.40625,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 54,
+        "clientW": 54
+      },
+      {
+        "text": "Entrees",
+        "x": 79.40625,
+        "right": 152.859375,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 71,
+        "clientW": 71
+      },
+      {
+        "text": "Plats",
+        "x": 160.859375,
+        "right": 220.875,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 58,
+        "clientW": 58
+      },
+      {
+        "text": "Desserts",
+        "x": 228.875,
+        "right": 309.390625,
+        "y": 414.6875,
+        "bottom": 458.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Boissons",
+        "x": 15,
+        "right": 96,
+        "y": 466.6875,
+        "bottom": 510.6875,
+        "h": 44,
+        "scrollW": 79,
+        "clientW": 79
+      },
+      {
+        "text": "Allergènes",
+        "x": 14,
+        "right": 114.90625,
+        "y": 522.6875,
+        "bottom": 566.6875,
+        "h": 44,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": true,
+    "unclipped": true
+  },
+  {
+    "concept": "qroque",
+    "width": 768,
+    "theme": "clair",
+    "total": 6,
+    "navW": 593.640625,
+    "navH": 70,
+    "blockH": 70,
+    "scrollW": 594,
+    "clientW": 594,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 30.71875,
+        "right": 95.1875,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 62,
+        "clientW": 62
+      },
+      {
+        "text": "Entrees",
+        "x": 104.1875,
+        "right": 188.546875,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 82,
+        "clientW": 82
+      },
+      {
+        "text": "Plats",
+        "x": 197.546875,
+        "right": 266.234375,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 67,
+        "clientW": 67
+      },
+      {
+        "text": "Desserts",
+        "x": 275.234375,
+        "right": 367.828125,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Boissons",
+        "x": 376.828125,
+        "right": 470,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Allergènes",
+        "x": 636.359375,
+        "right": 737.265625,
+        "y": 359.71875,
+        "bottom": 401.71875,
+        "h": 42,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": false,
+    "unclipped": true
+  },
+  {
+    "concept": "qroque",
+    "width": 768,
+    "theme": "sombre",
+    "total": 6,
+    "navW": 593.640625,
+    "navH": 70,
+    "blockH": 70,
+    "scrollW": 594,
+    "clientW": 594,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 30.71875,
+        "right": 95.1875,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 62,
+        "clientW": 62
+      },
+      {
+        "text": "Entrees",
+        "x": 104.1875,
+        "right": 188.546875,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 82,
+        "clientW": 82
+      },
+      {
+        "text": "Plats",
+        "x": 197.546875,
+        "right": 266.234375,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 67,
+        "clientW": 67
+      },
+      {
+        "text": "Desserts",
+        "x": 275.234375,
+        "right": 367.828125,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Boissons",
+        "x": 376.828125,
+        "right": 470,
+        "y": 349.71875,
+        "bottom": 393.71875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Allergènes",
+        "x": 636.359375,
+        "right": 737.265625,
+        "y": 359.71875,
+        "bottom": 401.71875,
+        "h": 42,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": false,
+    "unclipped": true
+  },
+  {
+    "concept": "qroque",
+    "width": 1440,
+    "theme": "clair",
+    "total": 6,
+    "navW": 1047.09375,
+    "navH": 70,
+    "blockH": 70,
+    "scrollW": 1047,
+    "clientW": 1047,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 140,
+        "right": 204.46875,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 62,
+        "clientW": 62
+      },
+      {
+        "text": "Entrees",
+        "x": 213.46875,
+        "right": 297.828125,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 82,
+        "clientW": 82
+      },
+      {
+        "text": "Plats",
+        "x": 306.828125,
+        "right": 375.515625,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 67,
+        "clientW": 67
+      },
+      {
+        "text": "Desserts",
+        "x": 384.515625,
+        "right": 477.109375,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Boissons",
+        "x": 486.109375,
+        "right": 579.28125,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Allergènes",
+        "x": 1199.09375,
+        "right": 1300,
+        "y": 396.6875,
+        "bottom": 438.6875,
+        "h": 42,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": false,
+    "unclipped": true
+  },
+  {
+    "concept": "qroque",
+    "width": 1440,
+    "theme": "sombre",
+    "total": 6,
+    "navW": 1047.09375,
+    "navH": 70,
+    "blockH": 70,
+    "scrollW": 1047,
+    "clientW": 1047,
+    "items": [
+      {
+        "text": "Tout",
+        "x": 140,
+        "right": 204.46875,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 62,
+        "clientW": 62
+      },
+      {
+        "text": "Entrees",
+        "x": 213.46875,
+        "right": 297.828125,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 82,
+        "clientW": 82
+      },
+      {
+        "text": "Plats",
+        "x": 306.828125,
+        "right": 375.515625,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 67,
+        "clientW": 67
+      },
+      {
+        "text": "Desserts",
+        "x": 384.515625,
+        "right": 477.109375,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Boissons",
+        "x": 486.109375,
+        "right": 579.28125,
+        "y": 386.6875,
+        "bottom": 430.6875,
+        "h": 44,
+        "scrollW": 91,
+        "clientW": 91
+      },
+      {
+        "text": "Allergènes",
+        "x": 1199.09375,
+        "right": 1300,
+        "y": 396.6875,
+        "bottom": 438.6875,
+        "h": 42,
+        "scrollW": 99,
+        "clientW": 99
+      }
+    ],
+    "allInBounds": false,
+    "unclipped": true
+  }
+]
