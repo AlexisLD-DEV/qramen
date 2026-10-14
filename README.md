@@ -13,8 +13,8 @@ le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
 
 ## Aperçu
 
-![Bon de commande — confirmation client](docs/captures/01-bon-de-commande.png)
-La confirmation client affiche le numéro de commande et son suivi en cuisine.
+![Bon de cuisine imprimé à la réception de la commande](docs/captures/01-bon-de-commande.png)
+Le bon imprimé en cuisine à la réception indique la table et les plats commandés, avec leurs quantités et la note de préparation.
 
 ![Menu QRamen sur téléphone](docs/captures/02-menu-telephone.png)
 La carte QRamen sur un écran de téléphone, avec ses catégories et ses plats.

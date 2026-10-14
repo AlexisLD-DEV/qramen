@@ -1,0 +1,8 @@
+# Rapport — Bon de cuisine réel
+
+- Le PDF a été produit par le service du dépôt `outils/pdf-service.py` : `POST http://127.0.0.1:8798/pdf`, avec l’en-tête `X-PDF-Key` lu depuis `/srv/hermes/.hermes/.secrets/qramen-pdf.key`. La route, le port et l’en-tête correspondent au nœud « Imprimer le ticket » du workflow `qramenCommande01` (`http://172.19.0.1:8798/pdf?json=1`).
+- Le webhook `/webhook/qramen/commande` n’a pas été appelé afin de ne pas créer une commande de test dans Airtable. Le service PDF a rendu directement un HTML reprenant la mise en page définie par `CODE_TICKET` dans `outils/workflows.py` : titre, numéro, table, horodatage, lignes, quantités et pied de ticket. Pour cet exemple, la ligne concernée porte la note « Sans piment ».
+- La commande illustrée est Le QRamen, commande d’exemple **#104**, table **T03** : deux ramen tonkotsu (dont un sans piment) et un gyoza. Le fichier est `docs/captures/01b-bon-cuisine.pdf` (une page, PDF valide).
+- `docs/captures/01-bon-de-commande.png` est rendu depuis ce PDF à 300 dpi : **946 × 2363 px** (format 80 × 200 mm; résolution inscrite dans les métadonnées PNG).
+- Le 403 signalé avant cette exécution n’a pas été reproduit : avec la route locale, le port `8798` et l’en-tête `X-PDF-Key` portant le contenu du secret, le service a répondu 200. Le workflow n8n utilise l’adresse conteneur `172.19.0.1` avec la même route et le même en-tête. Poppler n’était pas installé et l’installation système a été refusée faute de droits; le rendu final a été fait avec PDF.js et Canvas natif en espace temporaire.
+- Aucun fichier de capture existant n’a été supprimé. Les liens d’images Markdown du README ont été contrôlés.
