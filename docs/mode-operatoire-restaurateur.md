@@ -26,7 +26,7 @@ Ajoutez un enregistrement à la table **Plats** et renseignez le nom, le prix, l
 ## Mettre à jour les allergènes d’un plat
 
 1. Ouvrez la base Airtable QRamen, table **Plats**, puis la fiche du plat concerné.
-2. Dans **Allergenes**, sélectionnez toutes les familles effectivement présentes dans la recette ou susceptibles d’être présentes selon les ingrédients fournisseurs : gluten, crustacés, œufs, poissons, arachides, soja, lait, fruits à coque, céleri, moutarde, sésame, sulfites, lupin et mollusques.
+2. Dans **Allergenes**, sélectionnez toutes les familles effectivement présentes dans la recette ou susceptibles d’être présentes selon les ingrédients fournisseurs : gluten, crustaces, oeufs, poissons, arachides, soja, lait, fruits a coque, celeri, moutarde, sesame, sulfites, lupin et mollusques. Ces choix sont affichés avec les accents sur la carte publique.
 3. Vérifiez les fiches techniques des ingrédients et les risques de contamination croisée avec la cuisine avant d’enregistrer. La liste affichée au client reflète uniquement les sélections Airtable.
 4. Vérifiez la carte publique et le détail sous le plat. Le bouton **Allergènes** donne accès à la liste complète des 14 familles.
 

@@ -89,7 +89,22 @@
 /* Contrastes renforcés sur les petits textes */
 .landing .eyebrow{color:#843a29}.landing .kicker{color:#46643d}.landing .button-primary{background:#b63825}.landing .button-primary:hover{background:#982d20}.landing-bottom .label,.landing footer,.landing .qr-admin-link{color:#625d54}.landing .landing-jp{color:#8b816e}.qr-page{--qr-accent:#ae3826}
 @media(max-width:430px){.qr-page .site-header .restaurant-switch.compact a{font-size:9px;padding:0 4px}}
+@media(max-width:359px){.site-header .menu-preferences{gap:0}.site-header .menu-preferences button{width:26px;height:26px}}
 .landing .landing-jp{color:#6b6255}
+:root{--muted:#656159}
+.theme-qroque{--muted:#625c52}
+.header-brand b{color:#b63825}.theme-qroque .header-brand b{color:var(--red)}
+.dish-body p,.demo-note,.site-footer,.status-step,.text-button{color:#625e56}
+.dish-price{color:#8e5f00}.theme-qroque .dish-price{color:#7B2D26}
+.status-step.done{color:#47613b}.status-action{background:#48643e}
+.cart-row-top span:last-child{color:#8e5f00}
+.send-button{background:#b63825}.theme-qroque .send-button{background:var(--red)}
+.kitchen-header .header-brand b{color:#ffd166}
+.dark-mode .header-brand b{color:#ef907a}.dark-mode .theme-qroque .header-brand b{color:#f0a395}.dark-mode .restaurant-switch a[aria-current="page"],.dark-mode.theme-qroque .restaurant-switch a[aria-current="page"]{background:#f0e8d5;color:#202124}
+.dark-mode.theme-qroque{--muted:#c3bcae}
+.dark-mode.theme-qroque .dish-price{color:#f0bd77}
+.dark-mode .empty-cart{color:#c3c0b8}
+.dark-mode .opening-screen{background:#24282d;color:#f3f0e7}.dark-mode .opening-screen strong{color:#f3f0e7}.dark-mode .opening-screen>span:last-child{color:#c3c0b8}
 
 @media(max-width:380px){
   .site-header{height:auto;min-height:68px;flex-wrap:wrap;justify-content:flex-start;gap:6px;padding:8px}
