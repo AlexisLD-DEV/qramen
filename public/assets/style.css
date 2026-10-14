@@ -357,3 +357,40 @@ button{display:inline-flex;align-items:center;justify-content:center;line-height
 .site-footer .footer-mascot,.landing footer .footer-mascot{display:block;width:44px;height:44px;object-fit:contain;margin:0 auto 12px;position:relative;z-index:1}
 .site-footer{padding-top:18px}
 .landing footer .footer-mascot{width:40px;height:40px;margin-bottom:10px}
+/* Filtre enseigne cuisine et mentions de destination */
+.staff-audience{margin:-8px auto 0;width:min(100% - 40px,1500px);padding-bottom:7px;color:var(--color-185);font-size:12px;font-weight:700;letter-spacing:.01em}
+.qr-audience{width:auto;margin:0 0 18px;padding:0;color:var(--color-208)}
+.kitchen-filter{display:flex;align-items:center;gap:9px;font-weight:700}
+.restaurant-filter{display:flex;gap:7px;flex-wrap:wrap}
+.restaurant-filter button{min-height:44px!important;border:1px solid var(--color-215)!important;border-radius:99px!important;background:var(--color-174)!important;color:var(--color-214)!important;padding:0 16px!important;font-size:13px!important;font-weight:700!important;cursor:pointer}
+.restaurant-filter button[aria-pressed="true"]{background:var(--color-216)!important;border-color:var(--color-216)!important;color:var(--color-029)!important}
+.restaurant-filter button:focus-visible{outline:3px solid var(--color-182);outline-offset:3px}
+.restaurant-badge{display:inline-flex;align-items:center;min-height:28px;margin-top:5px;padding:3px 9px;border:1px solid var(--color-215);border-radius:99px;background:var(--color-005);color:var(--color-180);font-size:11px;font-weight:800;white-space:nowrap}
+@media(max-width:600px){.staff-audience{width:calc(100% - 28px);margin-top:-5px;font-size:11px}.kitchen-filter{align-items:flex-start;flex-direction:column;gap:6px;width:100%}.restaurant-filter{width:100%;gap:6px}.restaurant-filter button{flex:1 1 auto;padding:0 10px!important;font-size:12px!important}.kitchen-tools{gap:10px}}
+@media(prefers-color-scheme:dark){
+  .kitchen-page,.staff-page{background:#111820;color:#f4f2ec}
+  .kitchen-header{background:#090e13;color:#f5f5f1;border-color:#35414c}
+  .kitchen-header .header-brand,.kitchen-title{color:#f5f5f1}
+  .staff-audience{color:#c2cbd1}
+  .kitchen-tools{color:#e2e7eb}
+  .kitchen-tools>button,.kitchen-tools select{background:#202b35!important;color:#f5f5f1!important;border-color:#52606b!important}
+  .restaurant-filter button{background:#202b35!important;color:#e8edf1!important;border-color:#52606b!important}
+  .restaurant-filter button[aria-pressed="true"]{background:#e5edf4!important;color:#111820!important;border-color:#e5edf4!important}
+  .restaurant-filter button:focus-visible{outline-color:#ffd166}
+  .restaurant-badge{background:#202b35;color:#f5f5f1;border-color:#52606b}
+  .kitchen-column,.kitchen-menu{background:#18222b;color:#f8f7f2;border-color:#34424e}
+  .column-head h2,.kitchen-menu h2{color:#f7f5ef}
+  .column-count{background:#34424e;color:#f5f5f1}
+  .order-card,.kitchen-dish{background:#202c36;color:#f8f7f2;border-color:#43515d}
+  .order-table{color:#f5f5f1}
+  .order-time,.order-lines,.elapsed-time,.kitchen-dish small{color:#e2e8ed}
+  .kitchen-dish strong{color:#f8f7f2}
+  .kitchen-empty{color:#c5d0d7;border-color:#50606c}
+  .qr-page{background:#171a1e;color:#f3f0e7}
+  .qr-page .qr-intro h1,.qr-page .qr-intro p,.qr-page .qr-audience{color:#f3f0e7}
+}
+@media(prefers-color-scheme:dark){
+  .order-card.watch,.order-card.overdue{background:#202c36;color:#f8f7f2;border-color:#43515d}
+  .order-card.watch .order-num,.order-card.overdue .order-num,.order-card.watch .order-time,.order-card.overdue .order-time,.order-card.watch .order-lines,.order-card.overdue .order-lines{color:#e2e8ed}
+  .order-card.watch .elapsed-time{color:#ffcb75}.order-card.overdue .elapsed-time{color:#ff9292}
+}
