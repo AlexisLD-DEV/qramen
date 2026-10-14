@@ -142,3 +142,27 @@ body{font-family:var(--sans);font-size:16px;line-height:1.5}.landing{background:
 .staff-footer{margin:20px auto 0;padding:12px 0 18px;font-size:10px}
 
 .qr-signature{font-size:10px}
+
+/* Shared, centered vertical brand signature and compact loading mascots. */
+.landing-bottom{padding-right:34px;align-items:flex-start}
+.landing-jp{top:50%;right:2px;bottom:auto;transform:translateY(-50%);writing-mode:vertical-rl;text-orientation:mixed;line-height:1;letter-spacing:.12em;font-size:16px}
+.landing-qroque .landing-jp{font-size:16px;letter-spacing:.12em}
+@media(max-width:380px){.landing-jp{display:block;font-size:14px}.landing-bottom{padding-right:27px}}
+.mascot-loading{display:flex;align-items:center;justify-content:center;gap:14px;height:58px}
+.mascot-loading img{width:48px;height:48px;object-fit:contain;animation:mascot-sway 1.5s ease-in-out infinite;transform-origin:50% 85%}
+.mascot-loading img+img{animation-delay:-.75s}
+@keyframes mascot-sway{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(4deg) translateY(-3px)}}
+.qr-loading{display:flex;align-items:center;gap:14px;min-height:62px;transition:opacity .2s ease}
+.qr-loading .mascot-loading{height:52px;gap:6px}
+.qr-loading .mascot-loading img{width:38px;height:38px}
+.qr-loading .qr-status{margin:0}
+.qr-loading.finished{opacity:.55}
+.add-button.added-pulse{animation:add-bounce .26s ease-out}
+.cart-count.added-pulse{animation:cart-pulse .28s ease-out}
+@keyframes add-bounce{0%{transform:scale(1)}45%{transform:scale(1.16) translateY(-3px)}75%{transform:scale(.96)}100%{transform:scale(1)}}
+@keyframes cart-pulse{0%{transform:scale(1)}45%{transform:scale(1.2)}100%{transform:scale(1)}}
+.landing-jp{white-space:nowrap;line-height:1;letter-spacing:.08em;font-size:14px}
+.landing-qroque .landing-jp{font-size:14px;letter-spacing:.08em}
+@media(max-width:380px){.landing-jp{font-size:13px}}
+
+.menu-skeleton-mascots{grid-column:1/-1;height:52px;margin:0 0 -2px}.qr-loading.finished .mascot-loading{display:none}
