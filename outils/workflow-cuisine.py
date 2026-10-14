@@ -3,7 +3,7 @@
 Ecrit directement le JSON dans etat/ (pas via le generateur) : plus simple a relire."""
 import json, pathlib
 
-BASE, T_CMD, T_LIGNES = "appBHi3MxCb0hW1yH", "tblKs9b4rmMzoSAJy", "tblNmtM5qYLKyQZW9"
+BASE, T_PLATS, T_CMD, T_LIGNES = "appBHi3MxCb0hW1yH", "tbl4riw5L76eRvSsN", "tblKs9b4rmMzoSAJy", "tblNmtM5qYLKyQZW9"
 AT = "https://api.airtable.com/v0/" + BASE
 CRED = {"httpHeaderAuth": {"id": "qramenPatCred", "name": "QRamen — Airtable"}}
 
@@ -34,6 +34,16 @@ let statut = b.statut || 'En cours';
 if (statut === 'Servi') statut = 'Terminee';
 if (!['En attente', 'En cours', 'Terminee'].includes(statut)) statut = 'En cours';
 return [{ json: { id: b.id, statut } }];"""
+
+CODE_CARTE = """const concept = $('Webhook carte').first().json.query?.concept || 'QRamen';
+const plats = ($json.records || []).map(r => ({ id: r.id, nom: r.fields.Plat || '',
+  categorie: r.fields.Categorie || 'Plat', disponible: r.fields.Disponible !== false,
+  concept: r.fields.Concept || 'QRoque' })).filter(p => p.concept === concept);
+return [{ json: { concept, plats } }];"""
+
+CODE_DISPO = """const b = $('Webhook disponibilite').first().json.body || {};
+if (!b.id || typeof b.disponible !== 'boolean') throw new Error('id et disponible sont obligatoires');
+return [{ json: { id: b.id, disponible: b.disponible } }];"""
 
 def n(nid, name, typ, tv, pos, params, extra=None):
     d = {"parameters": params, "id": nid, "name": name, "type": typ, "typeVersion": tv, "position": pos}
@@ -71,6 +81,26 @@ WF = {
         n("k10", "Repondre statut", "n8n-nodes-base.respondToWebhook", 1.1, [660, 220],
           {"respondWith": "json", "responseBody": "={{ { ok: true, statut: $('Lire le statut').first().json.statut } }}",
            "options": {}}),
+        n("k11", "Webhook carte", "n8n-nodes-base.webhook", 2, [0, 440],
+          {"httpMethod": "GET", "path": "qramen/cuisine/carte", "responseMode": "responseNode",
+           "options": {"allowedOrigins": "*"}}, {"webhookId": "qramen-cuisine-carte"}),
+        n("k12", "Plats de la carte", "n8n-nodes-base.httpRequest", 4.2, [220, 440],
+          {"url": AT + "/" + T_PLATS + "?pageSize=100", "authentication": "genericCredentialType",
+           "genericAuthType": "httpHeaderAuth", "options": {}}, {"credentials": CRED}),
+        n("k13", "Filtrer la carte", "n8n-nodes-base.code", 2, [440, 440], {"jsCode": CODE_CARTE}),
+        n("k14", "Repondre carte", "n8n-nodes-base.respondToWebhook", 1.1, [660, 440],
+          {"respondWith": "json", "responseBody": "={{ $json }}", "options": {}}),
+        n("k15", "Webhook disponibilite", "n8n-nodes-base.webhook", 2, [0, 660],
+          {"httpMethod": "POST", "path": "qramen/cuisine/disponibilite", "responseMode": "responseNode",
+           "options": {"allowedOrigins": "*"}}, {"webhookId": "qramen-cuisine-disponibilite"}),
+        n("k16", "Valider disponibilite", "n8n-nodes-base.code", 2, [220, 660], {"jsCode": CODE_DISPO}),
+        n("k17", "Mettre a jour disponibilite", "n8n-nodes-base.httpRequest", 4.2, [440, 660],
+          {"method": "PATCH", "url": "={{ '" + AT + "/" + T_PLATS + "/' + $json.id }}",
+           "sendBody": True, "specifyBody": "json",
+           "jsonBody": "={{ JSON.stringify({ fields: { Disponible: $json.disponible } }) }}",
+           "authentication": "genericCredentialType", "genericAuthType": "httpHeaderAuth", "options": {}}, {"credentials": CRED}),
+        n("k18", "Repondre disponibilite", "n8n-nodes-base.respondToWebhook", 1.1, [660, 660],
+          {"respondWith": "json", "responseBody": "={{ { ok: true, id: $('Valider disponibilite').first().json.id, disponible: $('Valider disponibilite').first().json.disponible } }}", "options": {}}),
     ],
     "connections": {
         "Webhook cuisine": {"main": [[{"node": "Commandes ouvertes", "type": "main", "index": 0}]]},
@@ -81,6 +111,12 @@ WF = {
         "Webhook statut": {"main": [[{"node": "Lire le statut", "type": "main", "index": 0}]]},
         "Lire le statut": {"main": [[{"node": "Mettre a jour", "type": "main", "index": 0}]]},
         "Mettre a jour": {"main": [[{"node": "Repondre statut", "type": "main", "index": 0}]]},
+        "Webhook carte": {"main": [[{"node": "Plats de la carte", "type": "main", "index": 0}]]},
+        "Plats de la carte": {"main": [[{"node": "Filtrer la carte", "type": "main", "index": 0}]]},
+        "Filtrer la carte": {"main": [[{"node": "Repondre carte", "type": "main", "index": 0}]]},
+        "Webhook disponibilite": {"main": [[{"node": "Valider disponibilite", "type": "main", "index": 0}]]},
+        "Valider disponibilite": {"main": [[{"node": "Mettre a jour disponibilite", "type": "main", "index": 0}]]},
+        "Mettre a jour disponibilite": {"main": [[{"node": "Repondre disponibilite", "type": "main", "index": 0}]]},
     },
     "settings": {"executionOrder": "v1"},
 }

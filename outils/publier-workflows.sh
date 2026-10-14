@@ -17,4 +17,4 @@ for id in qramenMenu01 qramenCommande01 qramenStatut01 qramenCuisine01 qramenAdd
   sudo -n docker exec n8n-n8n-1 n8n publish:workflow --id=$id >/dev/null 2>&1
 done
 sudo -n docker restart n8n-n8n-1 >/dev/null 2>&1
-echo "workflows importes + publies (menu, commande, statut, cuisine, addition), n8n redemarre"
+echo "workflows importes + publies (menu, commande, statut, cuisine/carte/disponibilite, addition), n8n redemarre"

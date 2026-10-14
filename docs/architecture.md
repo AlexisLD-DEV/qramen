@@ -45,6 +45,8 @@ redémarre.
 | `qramenStatut01` | `GET /webhook/qramen/statut?numero=` | renvoie le statut + l'addition |
 | `qramenCuisine01` | `GET /webhook/qramen/cuisine` | commandes ouvertes + lignes |
 | `qramenCuisine01` | `POST /webhook/qramen/cuisine/statut` | passe une commande en « en cours » ou « servi » |
+| `qramenCuisine01` | `GET /webhook/qramen/cuisine/carte?concept=QRamen%7CQRoque` | renvoie les plats du restaurant avec leur disponibilité |
+| `qramenCuisine01` | `POST /webhook/qramen/cuisine/disponibilite` | met à jour `Disponible` dans Airtable (`{ "id": "rec…", "disponible": false }`) |
 | `qramenAddition01` | `POST /webhook/qramen/addition` | construit l'addition (lignes + total), la génère en PDF, l'attache |
 
 Le vocabulaire de l'écran cuisine (« Servi ») est traduit vers celui de la base (« Terminee ») dans
