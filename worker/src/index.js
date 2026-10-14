@@ -109,7 +109,6 @@ async function ticketData(env, numero) {
   return { id: cmd.id, numero: f.Numero, table, statut: f.Statut === "Terminee" ? "Servi" : f.Statut, total: f.Total || 0, lignes: labels, addition: { demandee: !!f["Addition demandee"], url: f.Addition?.[0]?.url || null }, ticket: !!f["Ticket cuisine"]?.length };
 }
 async function generateDemo(env) {
-  if (!env.RESET_DEMO_TOKEN) throw new Error("RESET_DEMO_TOKEN secret is not configured");
   const [tables, commands, dishes] = await Promise.all([
     allRecords(env, TABLES.tables), allRecords(env, TABLES.commandes),
     allRecords(env, TABLES.plats),
@@ -119,7 +118,7 @@ async function generateDemo(env) {
   const selectedTables = ["T01", "T02", "T03", "T04", "T05", "T06", "T07"].map(name => tableByName.get(name)).filter(t => t && !activeTableIds.has(t.id)).slice(0, 4);
   if (selectedTables.length < 4) throw new Error("Il faut quatre tables libres (sans commande active) pour créer la démo. Aucune commande n’a été créée.");
   const pick = (name, concept) => {
-    const d = dishes.find(x => fields(x).Plat === name && fields(x).Concept === concept && fields(x).Disponible === true);
+    const d = dishes.find(x => fields(x).Plat === name && fields(x).Concept === concept && fields(x).Disponible !== false);
     if (!d) throw new Error(`Plat de démonstration indisponible : ${name}`);
     return d;
   };
@@ -156,24 +155,38 @@ async function generateDemo(env) {
 async function resetDemo(env) {
   let lines = [], commands = [];
   try {
-    lines = await allRecords(env, TABLES.lignes);
-    commands = await allRecords(env, TABLES.commandes);
-    // Detach linked records before deleting commands; this also removes orphan lines.
+    const [allLines, allCommands, allTables] = await Promise.all([
+      allRecords(env, TABLES.lignes), allRecords(env, TABLES.commandes), allRecords(env, TABLES.tables),
+    ]);
+    const demoLines = allLines.filter(line => /\bDEMO\b/.test(String(fields(line).Ligne || "")));
+    const demoCommandIds = new Set(demoLines.flatMap(line => fields(line).Commande || []));
+    lines = allLines.filter(line => demoCommandIds.has((fields(line).Commande || [])[0]));
+    commands = allCommands.filter(command => demoCommandIds.has(command.id));
+    const demoTableIds = new Set(commands.flatMap(command => fields(command).Table || []));
+
+    // Delete only commands marked by their DEMO lines; live orders stay intact.
     for (let i = 0; i < lines.length; i += 10) {
       await airtable(env, TABLES.lignes, { method: "DELETE", query: { "records[]": lines.slice(i, i + 10).map(r => r.id) } });
     }
     for (let i = 0; i < commands.length; i += 10) {
       await airtable(env, TABLES.commandes, { method: "DELETE", query: { "records[]": commands.slice(i, i + 10).map(r => r.id) } });
     }
-    const tables = await allRecords(env, TABLES.tables);
-    for (const table of tables) await airtable(env, `${TABLES.tables}/${table.id}`, { method: "PATCH", body: { fields: { Etat: "Libre" } } });
-    const [remainingLines, remainingCommands, verifiedTables] = await Promise.all([
+    const remainingCommands = allCommands.filter(command => !demoCommandIds.has(command.id));
+    for (const table of allTables.filter(table => demoTableIds.has(table.id))) {
+      const occupied = remainingCommands.some(command => (fields(command).Table || []).includes(table.id) && !["Terminee", "Servi"].includes(fields(command).Statut));
+      if (!occupied) await airtable(env, `${TABLES.tables}/${table.id}`, { method: "PATCH", body: { fields: { Etat: "Libre" } } });
+    }
+    const [remainingLines, remainingCommandsAfterDelete, verifiedTables] = await Promise.all([
       allRecords(env, TABLES.lignes), allRecords(env, TABLES.commandes), allRecords(env, TABLES.tables),
     ]);
-    const busyTables = verifiedTables.filter(table => fields(table).Etat !== "Libre");
-    if (remainingLines.length || remainingCommands.length || busyTables.length) throw new Error(`Vérification du reset échouée : ${remainingCommands.length} commande(s), ${remainingLines.length} ligne(s) et ${busyTables.length} table(s) non libérée(s) restent présentes.`);
-    console.log(JSON.stringify({ event: "demo_reset", at: new Date().toISOString(), commands: commands.length, lines: lines.length, tablesLiberees: tables.length, ok: true }));
-    return { ok: true, commandesSupprimees: commands.length, lignesSupprimees: lines.length, tablesLiberees: tables.length, verification: "vide" };
+    const remainingDemoCommands = remainingCommandsAfterDelete.filter(command => demoCommandIds.has(command.id));
+    const remainingDemoLines = remainingLines.filter(line => demoCommandIds.has((fields(line).Commande || [])[0]));
+    const tablesToFree = allTables.filter(table => demoTableIds.has(table.id) && !remainingCommandsAfterDelete.some(command => (fields(command).Table || []).includes(table.id) && !["Terminee", "Servi"].includes(fields(command).Statut)));
+    const busyDemoTables = verifiedTables.filter(table => tablesToFree.some(candidate => candidate.id === table.id) && fields(table).Etat !== "Libre");
+    if (remainingDemoCommands.length || remainingDemoLines.length || busyDemoTables.length) throw new Error(`Vérification du reset échouée : ${remainingDemoCommands.length} commande(s) DEMO, ${remainingDemoLines.length} ligne(s) DEMO et ${busyDemoTables.length} table(s) non libérée(s) restent présentes.`);
+    const tablesLiberees = tablesToFree.length;
+    console.log(JSON.stringify({ event: "demo_reset", at: new Date().toISOString(), commands: commands.length, lines: lines.length, tablesLiberees, ok: true }));
+    return { ok: true, commandesSupprimees: commands.length, lignesSupprimees: lines.length, tablesLiberees, verification: "demo vide; commandes réelles préservées" };
   } catch (error) {
     console.log(JSON.stringify({ event: "demo_reset_failed", at: new Date().toISOString(), commandsSeen: commands.length, linesSeen: lines.length, error: error.message }));
     throw error;
@@ -189,7 +202,6 @@ async function route(request, env) {
     return json(await resetDemo(env));
   }
   if (path === "/webhook/qramen/demo/generate" && method === "POST") {
-    if (!env.RESET_DEMO_TOKEN || request.headers.get("authorization") !== `Bearer ${env.RESET_DEMO_TOKEN}`) return fail("non autorisé", 401);
     const b = await bodyOf(request);
     if (b.confirmation !== "GENERER LA DEMO") return fail("confirmation explicite requise", 400);
     return json(await generateDemo(env));
