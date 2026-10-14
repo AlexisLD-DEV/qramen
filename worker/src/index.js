@@ -49,16 +49,17 @@ function lineLabel(line, designation) {
 
 async function menu(env, url) {
   const concept = url.searchParams.get("concept") || "QRamen";
-  const records = await allRecords(env, TABLES.plats, { "filterByFormula": "{Disponible}=TRUE()" });
+  // Airtable omits unchecked fields on legacy rows. Only explicit false means sold out.
+  const records = await allRecords(env, TABLES.plats);
   const plats = records.map(r => ({ id: r.id, ...fields(r) }))
-    .filter(f => (f.Concept || "QRoque") === concept && f.Disponible === true)
+    .filter(f => (f.Concept || "QRoque") === concept && f.Disponible !== false)
     .map(f => ({ id: f.id, nom: f.Plat, description: f.Description || "", prix: f.Prix || 0, categorie: f.Categorie || "Plat", photo: "assets/img/" + (f.Photo || "default.webp"), disponible: true, allergenes: f.Allergenes || [], tags: [] }));
   return { restaurant: RESTAURANTS[concept] || null, concept, categories: CATEGORIES, plats };
 }
 async function cuisineMenu(env, url) {
   const concept = url.searchParams.get("concept") || "QRamen";
   const records = await allRecords(env, TABLES.plats);
-  return { concept, plats: records.map(r => ({ id: r.id, nom: fields(r).Plat || "", categorie: fields(r).Categorie || "Plat", disponible: fields(r).Disponible === true, concept: fields(r).Concept || "QRoque" })).filter(p => p.concept === concept) };
+  return { concept, plats: records.map(r => ({ id: r.id, nom: fields(r).Plat || "", categorie: fields(r).Categorie || "Plat", disponible: fields(r).Disponible !== false, disponibiliteExplicite: typeof fields(r).Disponible === "boolean", concept: fields(r).Concept || "QRoque" })).filter(p => p.concept === concept) };
 }
 async function orders(env) {
   const [cmds, tableRows, allLines] = await Promise.all([
@@ -221,7 +222,7 @@ async function route(request, env) {
     for (const line of lignes) {
       const dish = byDishId.get(line.platId);
       if (!dish) return fail("Un plat de cette commande n’existe plus. Actualisez le menu.", 409);
-      if (dish.Disponible !== true) return fail(`« ${dish.Plat || "Ce plat"} » est épuisé. Actualisez le menu.`, 409);
+      if (dish.Disponible === false) return fail(`« ${dish.Plat || "Ce plat"} » est épuisé. Actualisez le menu.`, 409);
       if ((dish.Concept || "QRoque") !== (line.concept === "QRoque" ? "QRoque" : "QRamen")) return fail("Le menu a changé. Actualisez la page.", 409);
     }
     const tables = await allRecords(env, TABLES.tables, { filterByFormula: `{Identifiant}="${String(b.table).replaceAll('"', '\\"')}"` });
