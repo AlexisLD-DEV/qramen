@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "source": "n8n menu API",
+  "capturedAt": "2026-10-14",
+  "menus": {
+    "QRamen": {
+      "restaurant": {
+        "nom": "Le QRamen",
+        "baseline": "Scannez. Commandez. Slurpez.",
+        "ville": "Paris 11e",
+        "cuisine": "Cuisine japonaise",
+        "devise": "EUR"
+      },
+      "concept": "QRamen",
+      "categories": [
+        {
+          "id": "Entree",
+          "nom": "Entrees"
+        },
+        {
+          "id": "Plat",
+          "nom": "Plats"
+        },
+        {
+          "id": "Dessert",
+          "nom": "Desserts"
+        },
+        {
+          "id": "Boisson",
+          "nom": "Boissons"
+        }
+      ],
+      "plats": [
+        {
+          "id": "rec0w6q9Ucp71ATHw",
+          "nom": "Mochi glaces (3)",
+          "description": "Mangue, matcha, sesame noir.",
+          "prix": 5.9,
+          "categorie": "Dessert",
+          "photo": "assets/img/mochi.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "soja"
+          ],
+          "tags": []
+        },
+        {
+          "id": "rec2FEZ40mycg2kHn",
+          "nom": "Ramen shoyu",
+          "description": "Bouillon clair au soja, bambou, nori, oeuf mollet.",
+          "prix": 14.5,
+          "categorie": "Plat",
+          "photo": "assets/img/ramen-shoyu.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "soja",
+            "sesame",
+            "oeufs",
+            "poissons"
+          ],
+          "tags": []
+        },
+        {
+          "id": "rec7tRZPUfUUUPN1h",
+          "nom": "Gyoza (6 pieces)",
+          "description": "Raviolis dores a la poele, sauce ponzu, sesame.",
+          "prix": 6.9,
+          "categorie": "Entree",
+          "photo": "assets/img/gyoza.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "soja",
+            "sesame"
+          ],
+          "tags": []
+        },
+        {
+          "id": "recG3WsaGGqKFHGU4",
+          "nom": "Ramen tonkotsu",
+          "description": "Bouillon de porc 12 h, chashu fondant, oeuf mollet marine.",
+          "prix": 15.9,
+          "categorie": "Plat",
+          "photo": "assets/img/ramen-tonkotsu.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "soja",
+            "oeufs",
+            "sesame"
+          ],
+          "tags": []
+        },
+        {
+          "id": "recIP4gcWcn8raJ9X",
+          "nom": "Donburi teriyaki",
+          "description": "Riz vapeur, poulet laque, oignon nouveau.",
+          "prix": 14.9,
+          "categorie": "Plat",
+          "photo": "assets/img/donburi-teriyaki.webp",
+          "disponible": true,
+          "allergenes": [
+            "soja",
+            "sesame",
+            "gluten"
+          ],
+          "tags": []
+        },
+        {
+          "id": "receC6rlZOyDEMgRB",
+          "nom": "Karaage",
+          "description": "Poulet croustillant, citron, mayonnaise japonaise.",
+          "prix": 7.9,
+          "categorie": "Entree",
+          "photo": "assets/img/karaage.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "oeufs",
+            "soja"
+          ],
+          "tags": []
+        },
+        {
+          "id": "recmQKCgn4n9gNZPe",
+          "nom": "Ramen vegetarien",
+          "description": "Shiitakes, tofu grille, pousses de soja, coriandre.",
+          "prix": 13.5,
+          "categorie": "Plat",
+          "photo": "assets/img/ramen-veggie.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "soja",
+            "sesame"
+          ],
+          "tags": []
+        },
+        {
+          "id": "recwQtGGuOkyHvsQY",
+          "nom": "Bao buns (2 pieces)",
+          "description": "Pains vapeur, porc effiloche, cacahuetes, coriandre.",
+          "prix": 7.5,
+          "categorie": "Entree",
+          "photo": "assets/img/bao.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "arachides",
+            "soja",
+            "sesame"
+          ],
+          "tags": []
+        }
+      ]
+    },
+    "QRoque": {
+      "restaurant": {
+        "nom": "QRoque Monsieur",
+        "baseline": "Le bistrot du croque, qui se scanne.",
+        "ville": "Rouen",
+        "cuisine": "Croques & bistrot",
+        "devise": "EUR"
+      },
+      "concept": "QRoque",
+      "categories": [
+        {
+          "id": "Entree",
+          "nom": "Entrees"
+        },
+        {
+          "id": "Plat",
+          "nom": "Plats"
+        },
+        {
+          "id": "Dessert",
+          "nom": "Desserts"
+        },
+        {
+          "id": "Boisson",
+          "nom": "Boissons"
+        }
+      ],
+      "plats": [
+        {
+          "id": "rec4qPEMDeCvf7Goo",
+          "nom": "Croque raclette",
+          "description": "Raclette fondue, pommes de terre, cornichons maison.",
+          "prix": 14.5,
+          "categorie": "Plat",
+          "photo": "assets/img/croque-raclette.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "lait",
+            "oeufs"
+          ],
+          "tags": []
+        },
+        {
+          "id": "rec5VriyWTxMQPyK0",
+          "nom": "Croque saumon",
+          "description": "Saumon fumé, aneth, citron, crème légère.",
+          "prix": 15.5,
+          "categorie": "Plat",
+          "photo": "assets/img/croque-saumon.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "lait",
+            "poissons",
+            "oeufs"
+          ],
+          "tags": []
+        },
+        {
+          "id": "rec6J4ahxSSpYDIUi",
+          "nom": "Croque madame",
+          "description": "Le classique surmonté d'un œuf au plat et sa salade.",
+          "prix": 13.5,
+          "categorie": "Plat",
+          "photo": "assets/img/croque-madame.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "lait",
+            "oeufs"
+          ],
+          "tags": []
+        },
+        {
+          "id": "recWvQip8x7rJyyrJ",
+          "nom": "Croque apéro (6 pièces)",
+          "description": "Six mini-croques au comté dorés, à partager avant de choisir.",
+          "prix": 7.5,
+          "categorie": "Entree",
+          "photo": "assets/img/croque-apero.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "lait",
+            "oeufs"
+          ],
+          "tags": []
+        },
+        {
+          "id": "reccz4iRO6mONAMUx",
+          "nom": "Croque végétarien",
+          "description": "Champignons rôtis, épinards, chèvre frais.",
+          "prix": 12.5,
+          "categorie": "Plat",
+          "photo": "assets/img/croque-vegetarien.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "lait",
+            "oeufs"
+          ],
+          "tags": []
+        },
+        {
+          "id": "recf5kk9SgFKAaIU1",
+          "nom": "Croque monsieur",
+          "description": "Pain de mie maison, jambon blanc, béchamel, comté gratiné.",
+          "prix": 12.5,
+          "categorie": "Plat",
+          "photo": "assets/img/croque-monsieur.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "lait",
+            "oeufs"
+          ],
+          "tags": []
+        },
+        {
+          "id": "reckwBsf9BDRScOqG",
+          "nom": "Café gourmand",
+          "description": "Café, mousse au chocolat et mini-brioche perdue.",
+          "prix": 7.5,
+          "categorie": "Dessert",
+          "photo": "assets/img/cafe-gourmand.webp",
+          "disponible": true,
+          "allergenes": [
+            "gluten",
+            "lait",
+            "oeufs",
+            "fruits a coque"
+          ],
+          "tags": []
+        },
+        {
+          "id": "recxnu9zhYLfndHcx",
+          "nom": "Cidre brut 50 cl",
+          "description": "Cidre fermier brut, 50 cl.",
+          "prix": 5.5,
+          "categorie": "Boisson",
+          "photo": "assets/img/cidre-brut.webp",
+          "disponible": true,
+          "allergenes": [
+            "sulfites"
+          ],
+          "tags": []
+        }
+      ]
+    }
+  }
+}
