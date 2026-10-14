@@ -679,6 +679,11 @@ button.restaurant-switch-button span{min-width:0;text-align:center}
   .landing-top>.restaurant-switch-button img{width:22px;height:22px;flex-basis:22px}
 }
 @media(max-width:350px){.landing-top>.brand-mark img{height:36px}.landing-top>.brand-mark .eyebrow{font-size:6px}.landing-top>.restaurant-switch-button{font-size:9px;padding:4px 5px;gap:2px}.landing-top>.restaurant-switch-button img{width:18px;height:18px;flex-basis:18px}}
+
+/* Le groupe mascotte + texte reste centré, même quand le libellé passe sur deux lignes. */
+button.restaurant-switch-button,.landing-top>button.restaurant-switch-button,.site-header>button.restaurant-switch.compact.restaurant-switch-button{box-sizing:border-box;display:flex;flex-direction:row;align-items:center;justify-content:center;text-align:center;padding-left:10px;padding-right:10px;line-height:1.15;gap:6px}
+button.restaurant-switch-button img{display:block;flex:0 0 auto}
+button.restaurant-switch-button span{min-width:0;flex:0 1 auto;text-align:center;line-height:inherit}
 @media(min-width:701px){.landing-top{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.landing-top>.landing-preferences{justify-self:start}.landing-top>.restaurant-switch-button{justify-self:center}.landing-top>.brand-mark{justify-self:end}}
 @media(max-width:430px){.site-header>.restaurant-switch.compact{justify-self:center;width:max-content;max-width:100%}}
 @media(max-width:430px){.site-header{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}}
