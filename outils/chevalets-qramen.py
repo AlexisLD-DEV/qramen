@@ -21,18 +21,18 @@ def qr_data(table):
 
 def card(table):
     qr = qr_data(table)
-    return f'''<article><div class="brand">Le <b>QR</b>amen</div><div class="rule"></div>
+    return f'''<article>
     <img class="mascotte" src="data:image/png;base64,{MASCOTTE}" alt="Mascotte QRamen"><img class="qr" src="data:image/png;base64,{qr}" alt="">
     <div class="call">Scannez pour commander</div><div class="foot">Table T{table:02d}<br>
     14 rue du Gros-Horloge, 76000 Rouen<br>github.com/AlexisLD-DEV/qramen</div></article>'''
 
 
-style = '''@page{size:A4 landscape;margin:0}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif}
+style = ''':root{--print-color-00:#cfc6b8;--print-color-01:#a93627;--print-color-02:#625d54;}
+@page{size:A4 landscape;margin:0}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif}
 .sheet{width:297mm;height:210mm;padding:5mm;display:flex;flex-wrap:wrap;gap:4mm;align-content:flex-start;page-break-after:always}
-article{width:141mm;height:100mm;border:1px dashed #cfc6b8;border-radius:3mm;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5mm}
-.brand{font: bold 13mm Georgia,serif;color:#14161a}.brand b{color:#a93627}.rule{width:24mm;height:1mm;background:#a93627;margin:2mm 0 1mm}
-article .mascotte{width:22mm;height:22mm;object-fit:contain;margin-bottom:1mm;mix-blend-mode:multiply}.qr{width:49mm;height:49mm;image-rendering:pixelated}.call{font-size:5mm;color:#a93627;font-weight:bold;margin-top:2mm}
-.foot{font-size:3mm;color:#625d54;line-height:1.35;margin-top:2mm}'''
+article{width:141mm;height:100mm;border:1px dashed var(--print-color-00);border-radius:3mm;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5mm}
+article .mascotte{width:38mm;height:38mm;object-fit:contain;margin-bottom:1mm;mix-blend-mode:multiply}.qr{width:49mm;height:49mm;image-rendering:pixelated}.call{font-size:5mm;color:var(--print-color-01);font-weight:bold;margin-top:2mm}
+.foot{font-size:3mm;color:var(--print-color-02);line-height:1.35;margin-top:2mm}'''
 pages = []
 for start in range(1, 8, 2):
     pages.append('<section class="sheet">' + card(start) + (card(start + 1) if start < 7 else '') + '</section>')

@@ -22,8 +22,6 @@ def carte(numero, image, format_="a5"):
     pied += "<br>14 rue du Gros-Horloge, 76000 Rouen<br>github.com/AlexisLD-DEV/qramen"
     return f"""
 <div class="carte {format_}">
-  <div class="marque"><b>QR</b>oque Monsieur</div>
-  <div class="filet"></div>
   <img class="mascotte" src="data:image/png;base64,{MASCOTTE}" alt="Mascotte QRoque Monsieur">
   <img src="data:image/png;base64,{image}" alt="">
   <div class="action">Scannez pour commander</div>
@@ -31,27 +29,23 @@ def carte(numero, image, format_="a5"):
 </div>"""
 
 
-STYLE = """
+STYLE = """:root{--print-accent:%(accent)s;--print-color-00:#cfc6b8;--print-color-01:#6f6b63;}
+
 @page { size: A4 %(sens)s; margin: 0 }
 * { box-sizing: border-box }
 body { margin: 0; font-family: 'Inter', Arial, sans-serif }
 .page { width: %(larg)s; height: %(haut)s; display: flex; flex-wrap: wrap; padding: 5mm; gap: 4mm; page-break-after: always; align-content: flex-start }
-.carte { border: 1px dashed #cfc6b8; border-radius: 3mm; text-align: center; display: flex;
+.carte { border: 1px dashed var(--print-color-00); border-radius: 3mm; text-align: center; display: flex;
          flex-direction: column; align-items: center; justify-content: center; }
 .carte.a5 { width: 141mm; height: 100mm; padding: 6mm }
 .carte.a6 { width: 100mm; height: 138mm; padding: 5mm }
-.carte.a5 .marque { font-family: Georgia, serif; font-size: 13mm; letter-spacing: -.4mm; color: #14161A }
-.carte.a6 .marque { font-family: Georgia, serif; font-size: 9mm; letter-spacing: -.3mm; color: #14161A }
-.marque b { color: %(accent)s }
-.carte.a5 .filet { width: 24mm; height: 1mm; background: %(accent)s; margin: 3mm 0 4mm }
-.carte.a6 .filet { width: 18mm; height: .8mm; background: %(accent)s; margin: 2.5mm 0 3.5mm }
-.carte .mascotte { width: 24mm; height: 24mm; margin-bottom: 2mm; flex:none; object-fit:contain; mix-blend-mode:multiply }
+.carte .mascotte { width: 38mm; height: 38mm; margin-bottom: 2mm; flex:none; object-fit:contain; mix-blend-mode:multiply }
 .carte.a5 img:not(.mascotte) { width: 62mm; height: 62mm; image-rendering: pixelated }
 .carte.a6 img:not(.mascotte) { width: 62mm; height: 62mm; image-rendering: pixelated }
-.carte.a5 .action { margin-top: 4mm; font-size: 5.6mm; color: %(accent)s; font-weight: 600 }
-.carte.a6 .action { margin-top: 3.5mm; font-size: 4.4mm; color: %(accent)s; font-weight: 600 }
-.carte.a5 .pied { margin-top: 3mm; font-size: 3.8mm; color: #6f6b63; line-height: 1.45 }
-.carte.a6 .pied { margin-top: 2.5mm; font-size: 3.2mm; color: #6f6b63; line-height: 1.45 }
+.carte.a5 .action { margin-top: 4mm; font-size: 5.6mm; color: var(--print-accent); font-weight: 600 }
+.carte.a6 .action { margin-top: 3.5mm; font-size: 4.4mm; color: var(--print-accent); font-weight: 600 }
+.carte.a5 .pied { margin-top: 3mm; font-size: 3.8mm; color: var(--print-color-01); line-height: 1.45 }
+.carte.a6 .pied { margin-top: 2.5mm; font-size: 3.2mm; color: var(--print-color-01); line-height: 1.45 }
 """ % {"accent": ACCENT, "sens": "landscape", "larg": "297mm", "haut": "210mm"}
 
 
