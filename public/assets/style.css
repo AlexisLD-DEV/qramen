@@ -592,3 +592,6 @@ button.restaurant-switch-button.switch-to-qramen:focus-visible{outline-color:#e2
 .dark-mode button.restaurant-switch-button.switch-to-qramen,.dark-mode.landing button.restaurant-switch-button.switch-to-qramen{background:#14161a;border-color:#e2543a;color:#fffdf8;box-shadow:0 3px 10px rgba(0,0,0,.28)}
 .dark-mode button.restaurant-switch-button.switch-to-qramen:hover,.dark-mode.landing button.restaurant-switch-button.switch-to-qramen:hover{background:#24282d;border-color:#e2543a;color:#fffdf8}
 @media(max-width:760px){.site-header>.restaurant-switch-button{align-self:center}.landing-top>.restaurant-switch-button{align-self:center}}
+/* Centrage du groupe mascotte + libellé dans le bouton de bascule. */
+button.restaurant-switch-button{display:flex;justify-content:center;align-items:center;text-align:center;padding-inline:14px}
+button.restaurant-switch-button span{min-width:0;text-align:center}
