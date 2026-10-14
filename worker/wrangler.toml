@@ -1,0 +1,6 @@
+name = "qramen-engine"
+main = "src/index.js"
+compatibility_date = "2026-10-13"
+
+[vars]
+AIRTABLE_BASE_ID = "appBHi3MxCb0hW1yH"

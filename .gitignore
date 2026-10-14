@@ -5,3 +5,5 @@ MISSION-*.md
 __pycache__/
 *.pyc
 .DS_Store
+worker/.dev.vars
+worker/.wrangler/
