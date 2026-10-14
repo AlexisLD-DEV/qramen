@@ -1,0 +1,270 @@
+[
+  {
+    "brand": "qramen",
+    "width": 390,
+    "route": "",
+    "lcp": 856,
+    "cls": 0.0018720969026284919,
+    "colors": [
+      {
+        "sel": ".button-primary",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(158, 51, 37)",
+        "font": "10px",
+        "ratio": 7.11
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(98, 94, 86)",
+        "bg": "rgb(243, 229, 205)",
+        "font": "8px",
+        "ratio": 5.19
+      }
+    ]
+  },
+  {
+    "brand": "qramen",
+    "width": 390,
+    "route": "menu.html?table=T01",
+    "lcp": 6136,
+    "cls": 0.0013168771118671166,
+    "colors": [
+      {
+        "sel": ".dish-price",
+        "color": "rgb(128, 87, 0)",
+        "bg": "rgb(255, 253, 248)",
+        "font": "14px",
+        "ratio": 6.3
+      },
+      {
+        "sel": ".filter.active",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(129, 52, 41)",
+        "font": "14px",
+        "ratio": 8.55
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(81, 72, 62)",
+        "bg": "rgb(255, 247, 233)",
+        "font": "11px",
+        "ratio": 8.41
+      },
+      {
+        "sel": ".cart-count",
+        "color": "rgb(53, 37, 31)",
+        "bg": "rgb(154, 105, 0)",
+        "font": "10px",
+        "ratio": 3.06
+      },
+      {
+        "sel": ".send-button",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(182, 56, 37)",
+        "font": "16px",
+        "ratio": 5.86
+      }
+    ]
+  },
+  {
+    "brand": "qramen",
+    "width": 1440,
+    "route": "",
+    "lcp": 864,
+    "cls": 0.005185647796743352,
+    "colors": [
+      {
+        "sel": ".button-primary",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(158, 51, 37)",
+        "font": "13px",
+        "ratio": 7.11
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(98, 94, 86)",
+        "bg": "rgb(243, 229, 205)",
+        "font": "10px",
+        "ratio": 5.19
+      }
+    ]
+  },
+  {
+    "brand": "qramen",
+    "width": 1440,
+    "route": "menu.html?table=T01",
+    "lcp": 6916,
+    "cls": 0.0009995399454116932,
+    "colors": [
+      {
+        "sel": ".dish-price",
+        "color": "rgb(128, 87, 0)",
+        "bg": "rgb(255, 253, 248)",
+        "font": "14px",
+        "ratio": 6.3
+      },
+      {
+        "sel": ".filter.active",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(129, 52, 41)",
+        "font": "14px",
+        "ratio": 8.55
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(81, 72, 62)",
+        "bg": "rgb(255, 247, 233)",
+        "font": "11px",
+        "ratio": 8.41
+      },
+      {
+        "sel": ".cart-count",
+        "color": "rgb(53, 37, 31)",
+        "bg": "rgb(154, 105, 0)",
+        "font": "11px",
+        "ratio": 3.06
+      },
+      {
+        "sel": ".send-button",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(182, 56, 37)",
+        "font": "16px",
+        "ratio": 5.86
+      }
+    ]
+  },
+  {
+    "brand": "qroque",
+    "width": 390,
+    "route": "",
+    "lcp": 980,
+    "cls": 0.002156981189444451,
+    "colors": [
+      {
+        "sel": ".button-primary",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(158, 51, 37)",
+        "font": "10px",
+        "ratio": 7.11
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(98, 94, 86)",
+        "bg": "rgb(243, 237, 225)",
+        "font": "8px",
+        "ratio": 5.53
+      }
+    ]
+  },
+  {
+    "brand": "qroque",
+    "width": 390,
+    "route": "menu.html?table=T01",
+    "lcp": 1028,
+    "cls": 0.0013874790577077139,
+    "colors": [
+      {
+        "sel": ".dish-price",
+        "color": "rgb(123, 45, 38)",
+        "bg": "rgb(255, 252, 245)",
+        "font": "14px",
+        "ratio": 9.13
+      },
+      {
+        "sel": ".filter.active",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(129, 52, 41)",
+        "font": "14px",
+        "ratio": 8.55
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(81, 72, 62)",
+        "bg": "rgb(243, 237, 225)",
+        "font": "11px",
+        "ratio": 7.68
+      },
+      {
+        "sel": ".cart-count",
+        "color": "rgb(31, 32, 27)",
+        "bg": "rgb(201, 162, 39)",
+        "font": "10px",
+        "ratio": 6.78
+      },
+      {
+        "sel": ".send-button",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(123, 45, 38)",
+        "font": "16px",
+        "ratio": 9.35
+      }
+    ]
+  },
+  {
+    "brand": "qroque",
+    "width": 1440,
+    "route": "",
+    "lcp": 948,
+    "cls": 0.005356353104452818,
+    "colors": [
+      {
+        "sel": ".button-primary",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(158, 51, 37)",
+        "font": "13px",
+        "ratio": 7.11
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(98, 94, 86)",
+        "bg": "rgb(243, 237, 225)",
+        "font": "10px",
+        "ratio": 5.53
+      }
+    ]
+  },
+  {
+    "brand": "qroque",
+    "width": 1440,
+    "route": "menu.html?table=T01",
+    "lcp": 6504,
+    "cls": 0.0010467687500457113,
+    "colors": [
+      {
+        "sel": ".dish-price",
+        "color": "rgb(123, 45, 38)",
+        "bg": "rgb(255, 252, 245)",
+        "font": "14px",
+        "ratio": 9.13
+      },
+      {
+        "sel": ".filter.active",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(129, 52, 41)",
+        "font": "14px",
+        "ratio": 8.55
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(81, 72, 62)",
+        "bg": "rgb(243, 237, 225)",
+        "font": "11px",
+        "ratio": 7.68
+      },
+      {
+        "sel": ".cart-count",
+        "color": "rgb(31, 32, 27)",
+        "bg": "rgb(201, 162, 39)",
+        "font": "11px",
+        "ratio": 6.78
+      },
+      {
+        "sel": ".send-button",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(123, 45, 38)",
+        "font": "16px",
+        "ratio": 9.35
+      }
+    ]
+  }
+]

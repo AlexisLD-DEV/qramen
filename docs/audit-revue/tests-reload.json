@@ -1,0 +1,11 @@
+{
+  "reloadDuringPost": true,
+  "postCount": 1,
+  "cartSaved": true,
+  "warning": true,
+  "filterKeyboard": true,
+  "ring": {
+    "outline": "solid",
+    "width": "3px"
+  }
+}

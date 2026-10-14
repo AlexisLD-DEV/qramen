@@ -1,0 +1,46 @@
+[
+  {
+    "host": "qramen",
+    "width": 390,
+    "menuOffline": true,
+    "cap999": true,
+    "kitchenStatus": true,
+    "roomTransitions": true,
+    "qrOffline7": true,
+    "posts": 0,
+    "errors": []
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "menuOffline": true,
+    "cap999": true,
+    "kitchenStatus": true,
+    "roomTransitions": true,
+    "qrOffline7": true,
+    "posts": 0,
+    "errors": []
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "menuOffline": true,
+    "cap999": true,
+    "kitchenStatus": true,
+    "roomTransitions": true,
+    "qrOffline7": true,
+    "posts": 0,
+    "errors": []
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "menuOffline": true,
+    "cap999": true,
+    "kitchenStatus": true,
+    "roomTransitions": true,
+    "qrOffline7": true,
+    "posts": 0,
+    "errors": []
+  }
+]

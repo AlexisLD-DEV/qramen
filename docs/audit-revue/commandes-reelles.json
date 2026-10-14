@@ -1,0 +1,81 @@
+{
+  "results": [
+    {
+      "host": "qramen",
+      "width": 390,
+      "numero": 25,
+      "postCount": 1,
+      "ticket": {
+        "ok": true,
+        "type": "ticket-data",
+        "id": "recgncUSBcxbjJXrR",
+        "numero": 25,
+        "table": "T07",
+        "statut": "En attente",
+        "total": 28.4,
+        "lignes": [
+          {
+            "designation": "🍜 Le QRamen · Ramen tonkotsu x 1",
+            "quantite": 1,
+            "sousTotal": 15.9
+          },
+          {
+            "designation": "🥪 QRoque Monsieur · Croque monsieur x 1",
+            "quantite": 1,
+            "sousTotal": 12.5
+          }
+        ],
+        "addition": {
+          "demandee": false,
+          "url": null
+        },
+        "ticket": false
+      },
+      "tableVisibleInKitchen": true,
+      "room": true,
+      "printTicket": true,
+      "reload": true
+    },
+    {
+      "host": "qroque",
+      "width": 1440,
+      "numero": 26,
+      "postCount": 1,
+      "ticket": {
+        "ok": true,
+        "type": "ticket-data",
+        "id": "recixN9WYwrbVkFXl",
+        "numero": 26,
+        "table": "T07",
+        "statut": "En attente",
+        "total": 28.4,
+        "lignes": [
+          {
+            "designation": "🍜 Le QRamen · Ramen tonkotsu x 1",
+            "quantite": 1,
+            "sousTotal": 15.9
+          },
+          {
+            "designation": "🥪 QRoque Monsieur · Croque monsieur x 1",
+            "quantite": 1,
+            "sousTotal": 12.5
+          }
+        ],
+        "addition": {
+          "demandee": false,
+          "url": null
+        },
+        "ticket": false
+      },
+      "tableVisibleInKitchen": true,
+      "room": true,
+      "printTicket": true,
+      "reload": true
+    }
+  ],
+  "ordersClosed": [
+    "recgncUSBcxbjJXrR",
+    "recixN9WYwrbVkFXl"
+  ],
+  "tableRestored": "Libre"
+}

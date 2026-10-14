@@ -1,0 +1,54 @@
+[
+  {
+    "brand": "QRamen",
+    "width": 390,
+    "empty": true,
+    "rapid25": true,
+    "quantityKeyboard": true,
+    "errorPreservesCart": true,
+    "doubleClickSinglePost": true,
+    "confirmationReload": true,
+    "keyboardModal": true,
+    "pageErrors": []
+  },
+  {
+    "brand": "QRamen",
+    "width": 1440,
+    "empty": true,
+    "rapid25": true,
+    "quantityKeyboard": true,
+    "errorPreservesCart": true,
+    "doubleClickSinglePost": true,
+    "confirmationReload": true,
+    "keyboardModal": true,
+    "pageErrors": []
+  },
+  {
+    "brand": "QRoque",
+    "width": 390,
+    "empty": true,
+    "rapid25": true,
+    "quantityKeyboard": true,
+    "errorPreservesCart": true,
+    "doubleClickSinglePost": true,
+    "confirmationReload": true,
+    "keyboardModal": true,
+    "pageErrors": []
+  },
+  {
+    "brand": "QRoque",
+    "width": 1440,
+    "empty": true,
+    "rapid25": true,
+    "quantityKeyboard": true,
+    "errorPreservesCart": true,
+    "doubleClickSinglePost": true,
+    "confirmationReload": true,
+    "keyboardModal": true,
+    "pageErrors": []
+  },
+  {
+    "offlineKitchen": true,
+    "dishes": 8
+  }
+]

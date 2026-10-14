@@ -304,3 +304,8 @@ button,select,input,textarea,.button,.filter,.restaurant-switch a,.staff-link,.q
 @media(max-width:380px){
   .landing .restaurant-switch a,.landing .button,.landing .demo-actions .button{min-height:44px}
 }
+
+/* Le compteur utilise un fond clair pour conserver AA avec son texte sombre. */
+.cart-count{background:#f2d48d;color:#35251f}
+.ticket-print{min-height:44px;padding:8px 12px;border:1px solid #66564b;border-radius:8px;background:#fffaf1;color:#35251f;font:inherit;cursor:pointer}
+ .dark-mode .demo-note{color:#ddd8cd}

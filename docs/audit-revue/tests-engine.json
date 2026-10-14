@@ -1,0 +1,8 @@
+{
+  "invalidQuantitiesBeforeWrite": true,
+  "mixedTags": true,
+  "batches": [
+    10,
+    6
+  ]
+}

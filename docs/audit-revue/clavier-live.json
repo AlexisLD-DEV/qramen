@@ -1,0 +1,3698 @@
+[
+  {
+    "host": "qramen",
+    "width": 390,
+    "route": "",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "menu-link",
+        "text": "Voir le menu\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Table 5\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Cuisine\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Salle\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : QR\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qramen",
+    "width": 390,
+    "route": "menu.html?table=T01",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "language-toggle",
+        "text": "EN",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "theme-toggle",
+        "text": "☾",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "cart-open",
+        "text": "Panier\n0",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "concept-toggle",
+        "text": "Vous préférez un croque ?",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Tout",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Entrees",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Plats",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Desserts",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Boissons",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "allergen-open",
+        "text": "Allergènes",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qramen",
+    "width": 390,
+    "route": "cuisine.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Vue salle",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "kitchen-concept",
+        "text": "QRamen\nQRoque",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "sound-enable",
+        "text": "Activer le son",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "fullscreen-toggle",
+        "text": "Plein écran",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "En attente",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "En cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Servi",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qramen",
+    "width": 390,
+    "route": "salle.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Vue cuisine",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "salle-concept",
+        "text": "QRamen\nQRoque",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QR des tables",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qramen",
+    "width": 390,
+    "route": "qr.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Retour à l’accueil",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ouvrir la vue salle",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "restaurant",
+        "text": "Le QRamen\nQRoque Monsieur",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "table-name",
+        "text": "",
+        "tag": "INPUT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "download-png",
+        "text": "Télécharger PNG",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "download-svg",
+        "text": "Télécharger SVG",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "print-custom",
+        "text": "Imprimer le chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "route": "",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "menu-link",
+        "text": "Voir le menu\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Table 5\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Cuisine\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Salle\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : QR\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "route": "menu.html?table=T01",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "language-toggle",
+        "text": "EN",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "theme-toggle",
+        "text": "☾",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "cart-open",
+        "text": "Panier\n0",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "concept-toggle",
+        "text": "Vous préférez un croque ?",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Tout",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Entrees",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Plats",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Desserts",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Boissons",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "allergen-open",
+        "text": "Allergènes",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "route": "cuisine.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Vue salle",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "kitchen-concept",
+        "text": "QRamen\nQRoque",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "sound-enable",
+        "text": "Activer le son",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "fullscreen-toggle",
+        "text": "Plein écran",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « Servi »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « Servi »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "route": "salle.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Vue cuisine",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "salle-concept",
+        "text": "QRamen\nQRoque",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QR des tables",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "route": "qr.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Retour à l’accueil",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ouvrir la vue salle",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "restaurant",
+        "text": "Le QRamen\nQRoque Monsieur",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "table-name",
+        "text": "",
+        "tag": "INPUT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "download-png",
+        "text": "Télécharger PNG",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "download-svg",
+        "text": "Télécharger SVG",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "print-custom",
+        "text": "Imprimer le chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "route": "",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "menu-link",
+        "text": "Voir le menu\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Table 5\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Cuisine\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Salle\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : QR\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "route": "menu.html?table=T01",
+    "focuses": [
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "language-toggle",
+        "text": "EN",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "theme-toggle",
+        "text": "☾",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "cart-open",
+        "text": "Panier\n0",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "concept-toggle",
+        "text": "Vous préférez un ramen ?",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Tout",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Entrees",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Plats",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Desserts",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Boissons",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "allergen-open",
+        "text": "Allergènes",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "route": "cuisine.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Vue salle",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "kitchen-concept",
+        "text": "QRamen\nQRoque",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "sound-enable",
+        "text": "Activer le son",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "fullscreen-toggle",
+        "text": "Plein écran",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "En attente",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "En cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Servi",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "route": "salle.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Vue cuisine",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "salle-concept",
+        "text": "QRamen\nQRoque",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QR des tables",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "route": "qr.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Retour à l’accueil",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ouvrir la vue salle",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "restaurant",
+        "text": "Le QRamen\nQRoque Monsieur",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "table-name",
+        "text": "",
+        "tag": "INPUT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "download-png",
+        "text": "Télécharger PNG",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "download-svg",
+        "text": "Télécharger SVG",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "print-custom",
+        "text": "Imprimer le chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "route": "",
+    "focuses": [
+      {
+        "id": "",
+        "text": "Le QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "menu-link",
+        "text": "Voir le menu\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Table 5\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Cuisine\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : Salle\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Demo : QR\n↗",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "route": "menu.html?table=T01",
+    "focuses": [
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "language-toggle",
+        "text": "EN",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "theme-toggle",
+        "text": "☾",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "cart-open",
+        "text": "Panier\n0",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "concept-toggle",
+        "text": "Vous préférez un ramen ?",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Tout",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Entrees",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Plats",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Desserts",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Boissons",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "allergen-open",
+        "text": "Allergènes",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "+",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "route": "cuisine.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Vue salle",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "kitchen-concept",
+        "text": "QRamen\nQRoque",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "sound-enable",
+        "text": "Activer le son",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "fullscreen-toggle",
+        "text": "Plein écran",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ticket PDF",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « En cours »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « Servi »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Passer à « Servi »",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ticket",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Disponible · épuiser",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "route": "salle.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Vue cuisine",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "salle-concept",
+        "text": "QRamen\nQRoque",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QR des tables",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer servie",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Libérer la table",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Marquer en cours",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "route": "qr.html",
+    "focuses": [
+      {
+        "id": "",
+        "text": "QRoque Monsieur",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRamen",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "QRoque",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Retour à l’accueil",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Ouvrir la vue salle",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "restaurant",
+        "text": "Le QRamen\nQRoque Monsieur",
+        "tag": "SELECT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "table-name",
+        "text": "",
+        "tag": "INPUT",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "download-png",
+        "text": "Télécharger PNG",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "download-svg",
+        "text": "Télécharger SVG",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "print-custom",
+        "text": "Imprimer le chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "Imprimer ce chevalet",
+        "tag": "BUTTON",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "alexisld.fr",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      },
+      {
+        "id": "",
+        "text": "GitHub",
+        "tag": "A",
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "hidden": false
+      }
+    ],
+    "withoutVisibleOutline": []
+  }
+]

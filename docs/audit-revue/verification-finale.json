@@ -1,0 +1,202 @@
+[
+  {
+    "host": "qramen",
+    "width": 390,
+    "demo": "Table 5",
+    "href": "menu.html?table=T05",
+    "enterWorks": true
+  },
+  {
+    "host": "qramen",
+    "width": 390,
+    "demo": "Cuisine",
+    "href": "cuisine.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qramen",
+    "width": 390,
+    "demo": "Salle",
+    "href": "salle.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qramen",
+    "width": 390,
+    "demo": "QR",
+    "href": "qr.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qramen",
+    "width": 390,
+    "darkColors": [
+      {
+        "sel": ".cart-count",
+        "color": "rgb(243, 240, 231)",
+        "bg": "rgb(242, 212, 141)"
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(81, 72, 62)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "host": "qramen",
+    "width": 390,
+    "attachedTicketHttp": 200,
+    "type": "application/pdf"
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "demo": "Table 5",
+    "href": "menu.html?table=T05",
+    "enterWorks": true
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "demo": "Cuisine",
+    "href": "cuisine.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "demo": "Salle",
+    "href": "salle.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "demo": "QR",
+    "href": "qr.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "darkColors": [
+      {
+        "sel": ".cart-count",
+        "color": "rgb(53, 37, 31)",
+        "bg": "rgb(242, 212, 141)"
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(221, 216, 205)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "host": "qramen",
+    "width": 1440,
+    "attachedTicketHttp": 200,
+    "type": "application/pdf"
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "demo": "Table 5",
+    "href": "menu.html?table=T05",
+    "enterWorks": true
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "demo": "Cuisine",
+    "href": "cuisine.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "demo": "Salle",
+    "href": "salle.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "demo": "QR",
+    "href": "qr.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "darkColors": [
+      {
+        "sel": ".cart-count",
+        "color": "rgb(53, 37, 31)",
+        "bg": "rgb(242, 212, 141)"
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(221, 216, 205)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "host": "qroque",
+    "width": 390,
+    "attachedTicketHttp": 200,
+    "type": "application/pdf"
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "demo": "Table 5",
+    "href": "menu.html?table=T05",
+    "enterWorks": true
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "demo": "Cuisine",
+    "href": "cuisine.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "demo": "Salle",
+    "href": "salle.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "demo": "QR",
+    "href": "qr.html",
+    "enterWorks": true
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "darkColors": [
+      {
+        "sel": ".cart-count",
+        "color": "rgb(53, 37, 31)",
+        "bg": "rgb(242, 212, 141)"
+      },
+      {
+        "sel": ".demo-note",
+        "color": "rgb(221, 216, 205)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "host": "qroque",
+    "width": 1440,
+    "attachedTicketHttp": 200,
+    "type": "application/pdf"
+  }
+]

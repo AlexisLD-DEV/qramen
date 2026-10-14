@@ -1,0 +1,16 @@
+[
+  {
+    "host": "qramen",
+    "http": 200,
+    "finalJavaScript": true,
+    "finalCSS": true,
+    "finalHTML": true
+  },
+  {
+    "host": "qroque",
+    "http": 200,
+    "finalJavaScript": true,
+    "finalCSS": true,
+    "finalHTML": true
+  }
+]

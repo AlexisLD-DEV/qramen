@@ -40,7 +40,8 @@ async function allRecords(env, table, query = {}) {
 const fields = (record) => record.fields || {};
 function lineLabel(line, designation) {
   const raw = String(line || ""), tag = raw.match(/^\[(🍜 Le QRamen|🥪 QRoque Monsieur)\]/)?.[1];
-  return `${tag ? `${tag} · ` : ""}${String(designation || raw).replace(/^\[[^\]]+\] ?/, "")}`;
+  const name = String(designation || raw).replace(/^\[[^\]]+\] ?/, ""), note = raw.replace(/^\[[^\]]+\] ?/, "").trim();
+  return `${tag ? `${tag} · ` : ""}${name}${tag && designation && note && !note.includes(name) && !name.includes(note) ? ` — Note : ${note}` : ""}`;
 }
 
 async function menu(env, url) {
@@ -57,11 +58,12 @@ async function cuisineMenu(env, url) {
   return { concept, plats: records.map(r => ({ id: r.id, nom: fields(r).Plat || "", categorie: fields(r).Categorie || "Plat", disponible: fields(r).Disponible !== false, concept: fields(r).Concept || "QRoque" })).filter(p => p.concept === concept) };
 }
 async function orders(env) {
-  const cmds = await allRecords(env, TABLES.commandes, { "sort[0][field]": "Passee le", "sort[0][direction]": "desc" });
+  const [cmds, tableRows] = await Promise.all([allRecords(env, TABLES.commandes, { "sort[0][field]": "Passee le", "sort[0][direction]": "desc" }), allRecords(env, TABLES.tables)]);
+  const tableNames = new Map(tableRows.map(t => [t.id, fields(t).Identifiant || fields(t).Nom]));
   const live = cmds.filter(r => !["Terminee", "Servi"].includes(fields(r).Statut));
   const ids = live.flatMap(r => fields(r).Lignes || []);
   const lignes = ids.length ? await allRecords(env, TABLES.lignes, { filterByFormula: `OR(${ids.map(id => `RECORD_ID()='${escapeFormula(id)}'`).join(",")})` }) : [];
-  return live.map(r => ({ id: r.id, numero: fields(r).Numero, table: (fields(r).Table || []).length ? "Sur place" : "A emporter", statut: fields(r).Statut === "Terminee" ? "Servi" : (fields(r).Statut || "En attente"), heure: fields(r)["Passee le"], passee: fields(r)["Passee le"], additionDemandee: !!fields(r)["Addition demandee"], ticket: !!(fields(r)["Ticket cuisine"] || []).length, liens: fields(r).Lignes || [], lignes: lignes.filter(l => (fields(l).Commande || [])[0] === r.id).map(l => ({ id: l.id, commande: (fields(l).Commande || [])[0], designation: lineLabel(fields(l).Ligne, fields(l).Designation), quantite: fields(l).Quantite || 1 })) }));
+  return live.map(r => ({ id: r.id, numero: fields(r).Numero, table: tableNames.get((fields(r).Table || [])[0]) || "A emporter", statut: fields(r).Statut === "Terminee" ? "Servi" : (fields(r).Statut || "En attente"), heure: fields(r)["Passee le"], passee: fields(r)["Passee le"], additionDemandee: !!fields(r)["Addition demandee"], ticket: !!(fields(r)["Ticket cuisine"] || []).length, ticketUrl: fields(r)["Ticket cuisine"]?.[0]?.url || null, liens: fields(r).Lignes || [], lignes: lignes.filter(l => (fields(l).Commande || [])[0] === r.id).map(l => ({ id: l.id, commande: (fields(l).Commande || [])[0], designation: lineLabel(fields(l).Ligne, fields(l).Designation), quantite: fields(l).Quantite || 1 })) }));
 }
 async function room(env) {
   const [tables, commandes] = await Promise.all([allRecords(env, TABLES.tables), allRecords(env, TABLES.commandes, { "sort[0][field]": "Passee le", "sort[0][direction]": "desc" })]);
@@ -111,13 +113,18 @@ async function route(request, env) {
     return ticket ? json({ ok: true, type: "ticket-data", ...ticket }) : json({ trouve: false }, 404);
   }
   if (path === "/webhook/qramen/commande" && method === "POST") {
-    const b = await bodyOf(request), lignes = (b.lignes || []).map(l => ({ platId: l.platId, quantite: Math.max(1, Number(l.quantite) || 1), note: l.note || "" }));
-    if (!b.table || !lignes.length) return fail("table et lignes sont obligatoires");
+    const b = await bodyOf(request);
+    if (!Array.isArray(b.lignes)) return fail("lignes doit être une liste");
+    if (b.lignes.some(l => !l || typeof l !== "object")) return fail("ligne invalide");
+    const lignes = b.lignes.map(l => ({ platId: l.platId, quantite: Number(l.quantite), note: String(l.note || "").slice(0,500), concept: l.concept }));
+    if (!/^T0[1-7]$/.test(b.table || "") || !lignes.length) return fail("table T01–T07 et lignes sont obligatoires");
+    if (lignes.some(l => !/^rec[A-Za-z0-9]+$/.test(l.platId || "") || !Number.isSafeInteger(l.quantite) || l.quantite < 1 || l.quantite > 999)) return fail("plat ou quantité invalide (1–999)");
     const tables = await allRecords(env, TABLES.tables, { filterByFormula: `{Identifiant}="${String(b.table).replaceAll('"', '\\"')}"` });
     if (!tables[0]) return fail("table introuvable", 404);
     const created = await airtable(env, TABLES.commandes, { method: "POST", body: { fields: { Statut: "En attente", Table: [tables[0].id] } } });
     const records = lignes.map(l => ({ fields: { Ligne: `[${l.concept === "QRoque" ? "🥪 QRoque Monsieur" : "🍜 Le QRamen"}]${l.note ? ` ${l.note}` : ""}`, Quantite: l.quantite, Plat: [l.platId], Commande: [created.id] } }));
-    await airtable(env, TABLES.lignes, { method: "POST", body: { records } });
+    for (let i = 0; i < records.length; i += 10) await airtable(env, TABLES.lignes, { method: "POST", body: { records: records.slice(i, i + 10) } });
+    await airtable(env, `${TABLES.tables}/${tables[0].id}`, { method: "PATCH", body: { fields: { Etat: "En cours" } } });
     const f = fields(created);
     return json({ ok: true, numero: f.Numero, statut: f.Statut, commande: created.id });
   }
