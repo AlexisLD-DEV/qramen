@@ -9,7 +9,7 @@ le ticket arriver, et le ticket (puis l'addition) part en PDF **tout seul**.
 | Restaurant | Concept | En ligne |
 | --- | --- | --- |
 | **Le QRamen** | bar à ramen, Rouen | <https://qramen.alexisld.fr/menu.html?table=T05> |
-| **QRoque Monsieur** | bistrot du croque, Rouen | <https://croq.alexisld.fr/menu.html?table=T05> |
+| **QRoque Monsieur** | bistrot du croque, Rouen | <https://qroque.alexisld.fr/menu.html?table=T05> |
 
 Écran cuisine (le même pour les deux) : <https://qramen.alexisld.fr/cuisine.html> · Vue salle : <https://qramen.alexisld.fr/salle.html>
 
@@ -96,7 +96,7 @@ Client ───────────────────────► 
   (ticket, addition) et un statut.
 - **Le service PDF** (`outils/pdf-service.py`) transforme un HTML en PDF via Chrome headless ; il est
   protégé par un jeton partagé et n'écoute que pour la machine.
-- **Cloudflare Pages** sert `qramen.alexisld.fr` et `croq.alexisld.fr` ; les anciens hôtes redirigent en 301.
+- **Cloudflare Pages** sert `qramen.alexisld.fr` et `qroque.alexisld.fr` ; les anciens hôtes redirigent en 301.
 
 ## Deux cartes, un seul moteur
 

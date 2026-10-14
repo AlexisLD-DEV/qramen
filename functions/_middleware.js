@@ -1,6 +1,7 @@
 const LEGACY_HOSTS = new Map([
   ["qramen.ledeunf.fr", "qramen.alexisld.fr"],
-  ["croq.ledeunf.fr", "croq.alexisld.fr"],
+  ["croq.alexisld.fr", "qroque.alexisld.fr"],
+  ["croq.ledeunf.fr", "qroque.alexisld.fr"],
 ]);
 
 export async function onRequest({ request, next }) {

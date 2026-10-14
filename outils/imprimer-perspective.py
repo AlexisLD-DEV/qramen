@@ -78,7 +78,7 @@ def bloc(famille, largeur, hauteur):
     haut, bas = H * 0.09, H * 0.09
     espace = H * 0.045
     cote = int(min(L * 0.62, H - haut - bas - ht_marque - 2 * espace - ht_acc))
-    url = "https://croq.alexisld.fr/menu.html" if famille == "croc" else "https://qramen.alexisld.fr/menu.html"
+    url = "https://qroque.alexisld.fr/menu.html" if famille == "croc" else "https://qramen.alexisld.fr/menu.html"
     buf = io.BytesIO()
     segno.make(url, error="h").save(buf, kind="png", scale=20, border=4, dark="#14161A", light=None)
     qr = Image.open(buf).convert("RGBA").resize((cote, cote), Image.LANCZOS)
