@@ -1,0 +1,25 @@
+{
+  "deployment": {
+    "project": "qramen",
+    "commit": "e40213d",
+    "url": "https://7ae92401.qramen.pages.dev",
+    "status": "Production"
+  },
+  "defaults": [
+    {"restaurant":"QRamen","pages":{"accueil":"sombre","menu":"sombre","cuisine":"clair","salle":"clair","qr":"clair"}},
+    {"restaurant":"QRoque","pages":{"accueil":"clair","menu":"clair","cuisine":"clair","salle":"clair","qr":"clair"}}
+  ],
+  "switches": [
+    {"from":"QRamen","page":"menu","before":"https://qramen.alexisld.fr/menu?table=T0X","after":"https://qroque.alexisld.fr/menu?table=T0X","table":"T0X"},
+    {"from":"QRamen","page":"cuisine","before":"https://qramen.alexisld.fr/cuisine?table=T0X","after":"https://qroque.alexisld.fr/cuisine?table=T0X","table":"T0X"},
+    {"from":"QRamen","page":"salle","before":"https://qramen.alexisld.fr/salle?table=T0X","after":"https://qroque.alexisld.fr/salle?table=T0X","table":"T0X"},
+    {"from":"QRamen","page":"qr","before":"https://qramen.alexisld.fr/qr?table=T0X","after":"https://qroque.alexisld.fr/qr?table=T0X","table":"T0X"},
+    {"from":"QRoque","page":"menu","before":"https://qroque.alexisld.fr/menu?table=T0X","after":"https://qramen.alexisld.fr/menu?table=T0X","table":"T0X"},
+    {"from":"QRoque","page":"cuisine","before":"https://qroque.alexisld.fr/cuisine?table=T0X","after":"https://qramen.alexisld.fr/cuisine?table=T0X","table":"T0X"},
+    {"from":"QRoque","page":"salle","before":"https://qroque.alexisld.fr/salle?table=T0X","after":"https://qramen.alexisld.fr/salle?table=T0X","table":"T0X"},
+    {"from":"QRoque","page":"qr","before":"https://qroque.alexisld.fr/qr?table=T0X","after":"https://qramen.alexisld.fr/qr?table=T0X","table":"T0X"},
+    {"from":"QRamen","page":"menu, bouton carte","before":"https://qramen.alexisld.fr/menu?table=T0X","after":"https://qroque.alexisld.fr/menu?table=T0X","table":"T0X"},
+    {"from":"QRoque","page":"menu, bouton carte","before":"https://qroque.alexisld.fr/menu?table=T0X","after":"https://qramen.alexisld.fr/menu?table=T0X","table":"T0X"}
+  ],
+  "browser_errors": []
+}
