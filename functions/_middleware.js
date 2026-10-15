@@ -29,7 +29,7 @@ export async function onRequest({ request, next }) {
     "qr": ["QR des tables — " + brand, "Générez et imprimez les QR codes de table de " + brand + " à Rouen."],
   };
   const [title, description] = pages[page] || pages["index"];
-  const image = siteHost + "/assets/og/" + (qroque ? "qroque-share-20261015.jpg" : "qramen-share-20261015.jpg");
+  const image = siteHost + "/assets/og/" + (qroque ? "qroque-share-20261015.jpg" : "qramen-share-20261015.jpg") + "?v=20261015";
   const canonical = siteHost + (page === "index" ? "/" : "/" + page);
   const metadata = `<meta name="description" content="${description}"><link rel="canonical" href="${canonical}"><meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="${brand}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">`;
   let html = await response.text();
