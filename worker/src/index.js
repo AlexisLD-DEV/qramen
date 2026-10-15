@@ -41,6 +41,18 @@ async function allRecords(env, table, query = {}) {
   return records;
 }
 const fields = (record) => record.fields || {};
+let tablesCache = { at: 0, rows: null };
+async function tableRecords(env, refresh = false) {
+  if (!refresh && tablesCache.rows && Date.now() - tablesCache.at < 45000) return tablesCache.rows;
+  const rows = await allRecords(env, TABLES.tables);
+  tablesCache = { at: Date.now(), rows };
+  return rows;
+}
+function activeTable(record) { return fields(record).Active !== false; }
+function publicTable(record) {
+  const f = fields(record);
+  return { identifiant: f.Identifiant || f.Nom || "", nom: f.Nom || f.Identifiant || "", active: activeTable(record) };
+}
 function lineLabel(line, designation) {
   const raw = String(line || ""), tag = raw.match(/^\[(🍜 Le QRamen|🥪 QRoque Monsieur)\]/)?.[1];
   const name = String(designation || raw).replace(/^\[[^\]]+\] ?/, ""), note = raw.replace(/^\[[^\]]+\] ?/, "").trim();
@@ -109,12 +121,11 @@ async function ticketData(env, numero) {
 }
 async function generateDemo(env) {
   const [tables, commands, dishes] = await Promise.all([
-    allRecords(env, TABLES.tables), allRecords(env, TABLES.commandes),
+    tableRecords(env), allRecords(env, TABLES.commandes),
     allRecords(env, TABLES.plats),
   ]);
-  const tableByName = new Map(tables.map(t => [fields(t).Identifiant || fields(t).Nom, t]));
   const activeTableIds = new Set(commands.filter(c => !["Terminee", "Servi"].includes(fields(c).Statut)).flatMap(c => fields(c).Table || []));
-  const selectedTables = ["T01", "T02", "T03", "T04", "T05", "T06", "T07"].map(name => tableByName.get(name)).filter(t => t && !activeTableIds.has(t.id)).slice(0, 4);
+  const selectedTables = tables.filter(t => activeTable(t) && !activeTableIds.has(t.id)).slice(0, 4);
   if (selectedTables.length < 4) throw new Error("Il faut quatre tables libres (sans commande active) pour créer la démo. Aucune commande n’a été créée.");
   const pick = (name, concept) => {
     const d = dishes.find(x => fields(x).Plat === name && fields(x).Concept === concept && fields(x).Disponible !== false);
@@ -195,6 +206,27 @@ async function route(request, env) {
   const url = new URL(request.url), path = url.pathname.replace(/\/$/, ""), method = request.method;
   if (method === "OPTIONS") return new Response(null, { status: 204, headers: { "access-control-allow-origin": "*", "access-control-allow-methods": "GET,POST,OPTIONS", "access-control-allow-headers": "Content-Type, Authorization, X-Reset-Token" } });
   if (path === "/webhook/qramen/ping" && method === "GET") return json({ ok: true, service: "qramen-engine" });
+  if (path === "/webhook/qramen/tables" && method === "GET") {
+    const rows = await tableRecords(env);
+    return json({ tables: rows.map(publicTable).filter(t => t.identifiant).sort((a, b) => a.identifiant.localeCompare(b.identifiant, "fr", { numeric: true })) });
+  }
+  if (path === "/webhook/qramen/tables" && method === "POST") {
+    const b = await bodyOf(request), nom = String(b.nom || "").trim().slice(0, 80);
+    if (!nom) return fail("nom est obligatoire");
+    const current = await tableRecords(env, true);
+    let identifiant = String(b.identifiant || "").trim().slice(0, 24);
+    if (!identifiant) {
+      const used = new Set(current.map(t => String(fields(t).Identifiant || fields(t).Nom || "").toUpperCase()));
+      let n = 1;
+      while (used.has(`T${String(n).padStart(2, "0")}`)) n++;
+      identifiant = `T${String(n).padStart(2, "0")}`;
+    }
+    if (current.some(t => String(fields(t).Identifiant || fields(t).Nom || "").toLowerCase() === identifiant.toLowerCase())) return fail("identifiant déjà utilisé", 409);
+    const created = await airtable(env, TABLES.tables, { method: "POST", body: { fields: { Identifiant: identifiant, Nom: nom, Active: true } } });
+    tablesCache = { at: Date.now(), rows: [...current, created] };
+    console.log(JSON.stringify({ event: "table_create", at: new Date().toISOString(), identifiant, nom, record: created.id }));
+    return json({ ok: true, table: publicTable(created) }, 201);
+  }
   if (path === "/webhook/qramen/reset" && method === "POST") {
     const b = await bodyOf(request);
     if (b.confirmation !== "REINITIALISER LA DEMO") return fail("confirmation explicite requise", 400);
@@ -226,7 +258,7 @@ async function route(request, env) {
     if (!Array.isArray(b.lignes)) return fail("lignes doit être une liste");
     if (b.lignes.some(l => !l || typeof l !== "object")) return fail("ligne invalide");
     const lignes = b.lignes.map(l => ({ platId: l.platId, quantite: Number(l.quantite), note: String(l.note || "").slice(0,500), concept: l.concept }));
-    if (!/^T0[1-7]$/.test(b.table || "") || !lignes.length) return fail("table T01–T07 et lignes sont obligatoires");
+    if (typeof b.table !== "string" || !b.table.trim() || b.table.length > 24 || !lignes.length) return fail("table et lignes sont obligatoires");
     if (lignes.some(l => !/^rec[A-Za-z0-9]+$/.test(l.platId || "") || !Number.isSafeInteger(l.quantite) || l.quantite < 1 || l.quantite > 999)) return fail("plat ou quantité invalide (1–999)");
     const availableRecords = await Promise.all([...new Set(lignes.map(l => l.platId))].map(id => airtable(env, `${TABLES.plats}/${id}`)));
     const byDishId = new Map(availableRecords.map(record => [record.id, fields(record)]));
@@ -236,12 +268,13 @@ async function route(request, env) {
       if (dish["Épuisé"] === true) return fail(`« ${dish.Plat || "Ce plat"} » est épuisé. Actualisez le menu.`, 409);
       if ((dish.Concept || "QRoque") !== (line.concept === "QRoque" ? "QRoque" : "QRamen")) return fail("Le menu a changé. Actualisez la page.", 409);
     }
-    const tables = await allRecords(env, TABLES.tables, { filterByFormula: `{Identifiant}="${String(b.table).replaceAll('"', '\\"')}"` });
-    if (!tables[0]) return fail("table introuvable", 404);
-    const created = await airtable(env, TABLES.commandes, { method: "POST", body: { fields: { Statut: "En attente", Table: [tables[0].id] } } });
+    const tables = await tableRecords(env);
+    const selectedTable = tables.find(t => String(fields(t).Identifiant || fields(t).Nom || "") === b.table.trim());
+    if (!selectedTable || !activeTable(selectedTable)) return fail("Table inconnue", 404);
+    const created = await airtable(env, TABLES.commandes, { method: "POST", body: { fields: { Statut: "En attente", Table: [selectedTable.id] } } });
     const records = lignes.map(l => ({ fields: { Ligne: `[${l.concept === "QRoque" ? "🥪 QRoque Monsieur" : "🍜 Le QRamen"}]${l.note ? ` ${l.note}` : ""}`, Quantite: l.quantite, Plat: [l.platId], Commande: [created.id] } }));
     for (let i = 0; i < records.length; i += 10) await airtable(env, TABLES.lignes, { method: "POST", body: { records: records.slice(i, i + 10) } });
-    await airtable(env, `${TABLES.tables}/${tables[0].id}`, { method: "PATCH", body: { fields: { Etat: "En cours" } } });
+    await airtable(env, `${TABLES.tables}/${selectedTable.id}`, { method: "PATCH", body: { fields: { Etat: "En cours" } } });
     const f = fields(created);
     return json({ ok: true, numero: f.Numero, statut: f.Statut, commande: created.id });
   }

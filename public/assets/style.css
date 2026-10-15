@@ -834,3 +834,5 @@ button.restaurant-switch-button span{min-width:0;flex:0 1 auto;text-align:center
 .order-card.attention .elapsed-time{color:var(--k-order-attention-time);font-weight:800}
 .order-card.urgent .elapsed-time{display:inline-block;margin-top:3px;padding:4px 8px;border-radius:99px;background:var(--k-order-urgent-time-bg);color:var(--k-order-urgent-time-fg);font-weight:800}
 .order-card.urgent .order-num{color:inherit}
+
+.qr-page .qr-add-table{grid-template-columns:1fr 1fr auto;align-items:end;margin-top:28px;margin-bottom:34px;padding:16px}.qr-page .qr-add-table .qr-status{grid-column:1/-1;min-height:0;margin:0;padding:0}.qr-page .qr-add-table .qr-actions{align-self:end}.qr-page .qr-add-table .qr-action{min-height:46px}@media(max-width:700px){.qr-page .qr-add-table{grid-template-columns:1fr 1fr}.qr-page .qr-add-table .qr-actions{grid-column:1/-1}.qr-page .qr-add-table .qr-status{grid-column:1/-1}}
