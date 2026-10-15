@@ -1,0 +1,156 @@
+[
+  {
+    "brand": "qramen",
+    "width": 1440,
+    "route": "cuisine.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F7F2E9",
+    "pressed": "false"
+  },
+  {
+    "brand": "qramen",
+    "width": 1440,
+    "route": "salle.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F7F2E9",
+    "pressed": "false"
+  },
+  {
+    "brand": "qramen",
+    "width": 1440,
+    "route": "qr.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F7F2E9",
+    "pressed": "false"
+  },
+  {
+    "brand": "qramen",
+    "width": 390,
+    "route": "cuisine.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F7F2E9",
+    "pressed": "false"
+  },
+  {
+    "brand": "qramen",
+    "width": 390,
+    "route": "salle.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F7F2E9",
+    "pressed": "false"
+  },
+  {
+    "brand": "qramen",
+    "width": 390,
+    "route": "qr.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F7F2E9",
+    "pressed": "false"
+  },
+  {
+    "brand": "qroque",
+    "width": 1440,
+    "route": "cuisine.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F3EDE1",
+    "pressed": "false"
+  },
+  {
+    "brand": "qroque",
+    "width": 1440,
+    "route": "salle.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F3EDE1",
+    "pressed": "false"
+  },
+  {
+    "brand": "qroque",
+    "width": 1440,
+    "route": "qr.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F3EDE1",
+    "pressed": "false"
+  },
+  {
+    "brand": "qroque",
+    "width": 390,
+    "route": "cuisine.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F3EDE1",
+    "pressed": "false"
+  },
+  {
+    "brand": "qroque",
+    "width": 390,
+    "route": "salle.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F3EDE1",
+    "pressed": "false"
+  },
+  {
+    "brand": "qroque",
+    "width": 390,
+    "route": "qr.html",
+    "dark": false,
+    "bg": "rgb(255, 250, 242)",
+    "meta": "#F3EDE1",
+    "pressed": "false"
+  },
+  {
+    "brand": "qramen",
+    "interaction": {
+      "menuKey": {
+        "client": "light",
+        "staff": null
+      },
+      "cuisineInitial": {
+        "dark": false,
+        "bg": "rgb(255, 250, 242)"
+      },
+      "terrainDark": {
+        "dark": true,
+        "meta": "#171a1e",
+        "pressed": "true"
+      },
+      "menuUnchanged": {
+        "dark": false,
+        "client": "light",
+        "staff": "dark"
+      }
+    }
+  },
+  {
+    "brand": "qroque",
+    "interaction": {
+      "menuKey": {
+        "client": "dark",
+        "staff": null
+      },
+      "cuisineInitial": {
+        "dark": false,
+        "bg": "rgb(255, 250, 242)"
+      },
+      "terrainDark": {
+        "dark": true,
+        "meta": "#171a1e",
+        "pressed": "true"
+      },
+      "menuUnchanged": {
+        "dark": true,
+        "client": "dark",
+        "staff": "dark"
+      }
+    }
+  }
+]

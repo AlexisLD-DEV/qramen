@@ -1,0 +1,290 @@
+[
+  {
+    "brand": "qramen",
+    "width": 1440,
+    "route": "cuisine.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    }
+  },
+  {
+    "brand": "qramen",
+    "width": 1440,
+    "route": "salle.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    }
+  },
+  {
+    "brand": "qramen",
+    "width": 1440,
+    "route": "qr.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    }
+  },
+  {
+    "brand": "qramen",
+    "width": 390,
+    "route": "cuisine.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    }
+  },
+  {
+    "brand": "qramen",
+    "width": 390,
+    "route": "salle.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    }
+  },
+  {
+    "brand": "qramen",
+    "width": 390,
+    "route": "qr.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F7F2E9",
+      "pressed": "false"
+    }
+  },
+  {
+    "brand": "qroque",
+    "width": 1440,
+    "route": "cuisine.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    }
+  },
+  {
+    "brand": "qroque",
+    "width": 1440,
+    "route": "salle.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    }
+  },
+  {
+    "brand": "qroque",
+    "width": 1440,
+    "route": "qr.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    }
+  },
+  {
+    "brand": "qroque",
+    "width": 390,
+    "route": "cuisine.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    }
+  },
+  {
+    "brand": "qroque",
+    "width": 390,
+    "route": "salle.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    }
+  },
+  {
+    "brand": "qroque",
+    "width": 390,
+    "route": "qr.html",
+    "initial": {
+      "dark": false,
+      "bg": "rgb(255, 250, 242)",
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    },
+    "dark": {
+      "dark": true,
+      "bg": "rgb(17, 24, 32)",
+      "meta": "#171a1e",
+      "pressed": "true",
+      "staff": "dark",
+      "client": "dark"
+    },
+    "light": {
+      "dark": false,
+      "meta": "#F3EDE1",
+      "pressed": "false"
+    }
+  }
+]
