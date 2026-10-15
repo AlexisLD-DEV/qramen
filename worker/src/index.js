@@ -168,35 +168,26 @@ async function resetDemo(env) {
     const [allLines, allCommands, allTables] = await Promise.all([
       allRecords(env, TABLES.lignes), allRecords(env, TABLES.commandes), allRecords(env, TABLES.tables),
     ]);
-    const demoLines = allLines.filter(line => /\bDEMO\b/.test(String(fields(line).Ligne || "")));
-    const demoCommandIds = new Set(demoLines.flatMap(line => fields(line).Commande || []));
-    lines = allLines.filter(line => demoCommandIds.has((fields(line).Commande || [])[0]));
-    commands = allCommands.filter(command => demoCommandIds.has(command.id));
-    const demoTableIds = new Set(commands.flatMap(command => fields(command).Table || []));
+    lines = allLines;
+    commands = allCommands;
 
-    // Delete only commands marked by their DEMO lines; live orders stay intact.
+    // Delete every order line before its parent command.
     for (let i = 0; i < lines.length; i += 10) {
       await airtable(env, TABLES.lignes, { method: "DELETE", query: { "records[]": lines.slice(i, i + 10).map(r => r.id) } });
     }
     for (let i = 0; i < commands.length; i += 10) {
       await airtable(env, TABLES.commandes, { method: "DELETE", query: { "records[]": commands.slice(i, i + 10).map(r => r.id) } });
     }
-    const remainingCommands = allCommands.filter(command => !demoCommandIds.has(command.id));
-    for (const table of allTables.filter(table => demoTableIds.has(table.id))) {
-      const occupied = remainingCommands.some(command => (fields(command).Table || []).includes(table.id) && !["Terminee", "Servi"].includes(fields(command).Statut));
-      if (!occupied) await airtable(env, `${TABLES.tables}/${table.id}`, { method: "PATCH", body: { fields: { Etat: "Libre" } } });
-    }
+    for (const table of allTables) await airtable(env, `${TABLES.tables}/${table.id}`, { method: "PATCH", body: { fields: { Etat: "Libre" } } });
     const [remainingLines, remainingCommandsAfterDelete, verifiedTables] = await Promise.all([
       allRecords(env, TABLES.lignes), allRecords(env, TABLES.commandes), allRecords(env, TABLES.tables),
     ]);
-    const remainingDemoCommands = remainingCommandsAfterDelete.filter(command => demoCommandIds.has(command.id));
-    const remainingDemoLines = remainingLines.filter(line => demoCommandIds.has((fields(line).Commande || [])[0]));
-    const tablesToFree = allTables.filter(table => demoTableIds.has(table.id) && !remainingCommandsAfterDelete.some(command => (fields(command).Table || []).includes(table.id) && !["Terminee", "Servi"].includes(fields(command).Statut)));
-    const busyDemoTables = verifiedTables.filter(table => tablesToFree.some(candidate => candidate.id === table.id) && fields(table).Etat !== "Libre");
-    if (remainingDemoCommands.length || remainingDemoLines.length || busyDemoTables.length) throw new Error(`Vérification du reset échouée : ${remainingDemoCommands.length} commande(s) DEMO, ${remainingDemoLines.length} ligne(s) DEMO et ${busyDemoTables.length} table(s) non libérée(s) restent présentes.`);
-    const tablesLiberees = tablesToFree.length;
+    const linkedTables = verifiedTables.filter(table => (fields(table).Commandes || []).length > 0);
+    const busyTables = verifiedTables.filter(table => fields(table).Etat !== "Libre");
+    if (remainingCommandsAfterDelete.length || remainingLines.length || linkedTables.length || busyTables.length) throw new Error(`Vérification du reset échouée : ${remainingCommandsAfterDelete.length} commande(s), ${remainingLines.length} ligne(s), ${linkedTables.length} table(s) encore liée(s) et ${busyTables.length} table(s) non libres restent présentes.`);
+    const tablesLiberees = verifiedTables.length;
     console.log(JSON.stringify({ event: "demo_reset", at: new Date().toISOString(), commands: commands.length, lines: lines.length, tablesLiberees, ok: true }));
-    return { ok: true, commandesSupprimees: commands.length, lignesSupprimees: lines.length, tablesLiberees, verification: "demo vide; commandes réelles préservées" };
+    return { ok: true, commandesSupprimees: commands.length, lignesSupprimees: lines.length, tablesLiberees, verification: "toutes les commandes et lignes supprimées; toutes les tables libres" };
   } catch (error) {
     console.log(JSON.stringify({ event: "demo_reset_failed", at: new Date().toISOString(), commandsSeen: commands.length, linesSeen: lines.length, error: error.message }));
     throw error;
