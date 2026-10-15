@@ -788,3 +788,48 @@ button.restaurant-switch-button span{min-width:0;flex:0 1 auto;text-align:center
 .site-footer .signature-links,.landing footer .signature-links{grid-column:3;grid-row:1;align-self:center;justify-self:end;margin:0;min-height:44px}
 @media(max-width:520px){.site-footer .footer-brand-row,.landing footer .footer-brand-row{grid-template-columns:minmax(0,1fr) 48px;row-gap:8px}.site-footer .footer-brand-row .signature-links,.landing footer .footer-brand-row .signature-links{grid-column:1/-1;grid-row:2;justify-self:start}}
 .kitchen-tools #sound-enable{min-height:44px;padding:0 16px}
+
+/* Kitchen queue aging: explicit theme tokens keep every state legible. */
+:root{
+  --k-order-normal-bg:#fff;
+  --k-order-normal-fg:#262522;
+  --k-order-attention-bg:#fff1cd;
+  --k-order-attention-fg:#3a2b0c;
+  --k-order-attention-border:#986300;
+  --k-order-attention-time:#6a4500;
+  --k-order-urgent-bg:#7f291f;
+  --k-order-urgent-fg:#fff;
+  --k-order-urgent-border:#ffb8a8;
+  --k-order-urgent-time-bg:#5b1d17;
+  --k-order-urgent-time-fg:#fff;
+  --k-order-served-bg:#f2eee7;
+  --k-order-served-fg:#38352f;
+  --k-order-waiting-border:#8a7550;
+  --k-order-working-border:#566b78;
+}
+.dark-mode{
+  --k-order-normal-bg:#202c36;
+  --k-order-normal-fg:#f8f7f2;
+  --k-order-attention-bg:#3a301e;
+  --k-order-attention-fg:#fff0cb;
+  --k-order-attention-border:#ffb447;
+  --k-order-attention-time:#ffcb75;
+  --k-order-urgent-bg:#4a2021;
+  --k-order-urgent-fg:#fff0ed;
+  --k-order-urgent-border:#ff9292;
+  --k-order-urgent-time-bg:#321719;
+  --k-order-urgent-time-fg:#fff;
+  --k-order-served-bg:#292d30;
+  --k-order-served-fg:#e0dfda;
+  --k-order-waiting-border:#c6a75f;
+  --k-order-working-border:#78a8d1;
+}
+.order-card{background:var(--k-order-normal-bg);color:var(--k-order-normal-fg);border:1px solid var(--line);border-top:4px solid var(--k-order-waiting-border)}
+.order-card.en-cours{border-top-color:var(--k-order-working-border)}
+.order-card.attention{background:var(--k-order-attention-bg);color:var(--k-order-attention-fg);border-color:var(--k-order-attention-border);border-top-width:5px}
+.order-card.urgent{background:var(--k-order-urgent-bg);color:var(--k-order-urgent-fg);border:2px solid var(--k-order-urgent-border);border-top-width:6px;box-shadow:0 0 0 2px color-mix(in srgb,var(--k-order-urgent-border) 28%,transparent),0 6px 18px var(--color-225)}
+.order-card.servi{background:var(--k-order-served-bg);color:var(--k-order-served-fg);border-color:var(--line);border-top-color:var(--line);box-shadow:none}
+.order-card .order-num,.order-card .order-lines,.order-card .order-table,.order-card .order-time,.order-card .elapsed-time{color:inherit}
+.order-card.attention .elapsed-time{color:var(--k-order-attention-time);font-weight:800}
+.order-card.urgent .elapsed-time{display:inline-block;margin-top:3px;padding:4px 8px;border-radius:99px;background:var(--k-order-urgent-time-bg);color:var(--k-order-urgent-time-fg);font-weight:800}
+.order-card.urgent .order-num{color:inherit}
