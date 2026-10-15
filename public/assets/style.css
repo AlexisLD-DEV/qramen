@@ -88,6 +88,10 @@
 :where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid var(--color-153);outline-offset:3px}
 @media(max-width:600px){.menu-legend-row{align-items:flex-start;flex-wrap:wrap}.menu-legend-row .filters{flex-basis:100%;order:2}.allergen-open{order:1;margin-left:auto}.menu-preferences button{width:34px;height:34px}.allergen-dialog ol{columns:1}}
 @media(max-width:430px){.site-header .header-brand{font-size:12px!important;gap:3px}.site-header .header-brand img{height:24px}.site-header .restaurant-switch.compact a{padding:0 2px;font-size:7px}.site-header .table-pill{font-size:8px;padding:4px}.site-header .menu-preferences{gap:2px}.site-header .menu-preferences button{width:28px;height:28px}}
+/* Pastilles de statut salle : tons pastel stables dans les thèmes clair et sombre. */
+.table-card-head .status-pill,.table-order .status-pill{display:inline-flex;align-items:center;justify-content:center;min-height:28px;padding:4px 10px;border:1px solid;border-radius:999px;font:700 14px/1.15 var(--sans);white-space:nowrap;vertical-align:middle}
+.status-table{flex:none}.status-free{background:#F1F3F5;color:#343A40;border-color:#AEB5BC}.status-busy{background:#FFF1C2;color:#674400;border-color:#D5A222}.status-served{background:#DDF4E4;color:#14532D;border-color:#63A574}.status-pending{background:#DCEEFF;color:#123D68;border-color:#5793C5}.status-bill{background:#FFE0CC;color:#7A2600;border-color:#D85C22;font-weight:800!important}
+.table-order .status-pill{margin-inline:2px}
 /* Contrastes renforcés sur les petits textes */
 .landing .eyebrow{color:var(--color-154)}.landing .kicker{color:var(--color-155)}.landing .button-primary{background:var(--color-156)}.landing .button-primary:hover{background:var(--color-157)}.landing-bottom .label,.landing footer,.landing .qr-admin-link{color:var(--color-158)}.landing .landing-jp{color:var(--color-159)}.qr-page{--qr-accent:var(--color-160)}
 @media(max-width:430px){.qr-page .site-header .restaurant-switch.compact a{font-size:9px;padding:0 4px}}
