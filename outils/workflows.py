@@ -27,10 +27,10 @@ const categories = [
 ];
 const plats = ($json.records || [])
   .map(r => ({ id: r.id, ...r.fields }))
-  .filter(f => (f.Concept || 'QRoque') === concept && f.Disponible !== false)
+  .filter(f => (f.Concept || 'QRoque') === concept && f["Épuisé"] !== true)
   .map(f => ({ id: f.id, nom: f.Plat, description: f.Description || '', prix: f.Prix || 0,
                categorie: f.Categorie || 'Plat', photo: 'assets/img/' + (f.Photo || 'default.webp'),
-               disponible: f.Disponible !== false, allergenes: f.Allergenes || [], tags: [] }));
+               disponible: true, allergenes: f.Allergenes || [], tags: [] }));
 return [{ json: { restaurant: infos, concept, categories, plats } }];"""
 
 
@@ -65,7 +65,7 @@ WF_MENU = {
         {"parameters": {"httpMethod": "GET", "path": "qramen/menu", "responseMode": "responseNode", "options": {"allowedOrigins": "*"}},
          "id": "m1", "name": "Webhook", "type": "n8n-nodes-base.webhook", "typeVersion": 2,
          "position": [0, 0], "webhookId": "qramen-menu"},
-        {"parameters": {"url": AT + "/" + T_PLATS + "?filterByFormula=%7BDisponible%7D%3DTRUE()&pageSize=100",
+        {"parameters": {"url": AT + "/" + T_PLATS + "?pageSize=100",
                         "authentication": "genericCredentialType", "genericAuthType": "httpHeaderAuth",
                         "options": {}},
          "id": "m2", "name": "Airtable — plats", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2,

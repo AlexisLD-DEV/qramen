@@ -40,13 +40,13 @@ return [{ json: { id: b.id, statut } }];"""
 
 CODE_CARTE = """const concept = $('Webhook carte').first().json.query?.concept || 'QRamen';
 const plats = ($json.records || []).map(r => ({ id: r.id, nom: r.fields.Plat || '',
-  categorie: r.fields.Categorie || 'Plat', disponible: r.fields.Disponible !== false,
+  categorie: r.fields.Categorie || 'Plat', epuise: r.fields["Épuisé"] === true,
   concept: r.fields.Concept || 'QRoque' })).filter(p => p.concept === concept);
 return [{ json: { concept, plats } }];"""
 
 CODE_DISPO = """const b = $('Webhook disponibilite').first().json.body || {};
-if (!b.id || typeof b.disponible !== 'boolean') throw new Error('id et disponible sont obligatoires');
-return [{ json: { id: b.id, disponible: b.disponible } }];"""
+if (!b.id || typeof b.epuise !== 'boolean') throw new Error('id et epuise sont obligatoires');
+return [{ json: { id: b.id, epuise: b.epuise } }];"""
 
 def n(nid, name, typ, tv, pos, params, extra=None):
     d = {"parameters": params, "id": nid, "name": name, "type": typ, "typeVersion": tv, "position": pos}
@@ -100,10 +100,10 @@ WF = {
         n("k17", "Mettre a jour disponibilite", "n8n-nodes-base.httpRequest", 4.2, [440, 660],
           {"method": "PATCH", "url": "={{ '" + AT + "/" + T_PLATS + "/' + $json.id }}",
            "sendBody": True, "specifyBody": "json",
-           "jsonBody": "={{ JSON.stringify({ fields: { Disponible: $json.disponible } }) }}",
+           "jsonBody": "={{ JSON.stringify({ fields: { 'Épuisé': $json.epuise } }) }}",
            "authentication": "genericCredentialType", "genericAuthType": "httpHeaderAuth", "options": {}}, {"credentials": CRED}),
         n("k18", "Repondre disponibilite", "n8n-nodes-base.respondToWebhook", 1.1, [660, 660],
-          {"respondWith": "json", "responseBody": "={{ { ok: true, id: $('Valider disponibilite').first().json.id, disponible: $('Valider disponibilite').first().json.disponible } }}", "options": {}}),
+          {"respondWith": "json", "responseBody": "={{ { ok: true, id: $('Valider disponibilite').first().json.id, epuise: $('Valider disponibilite').first().json.epuise } }}", "options": {}}),
     ],
     "connections": {
         "Webhook cuisine": {"main": [[{"node": "Commandes ouvertes", "type": "main", "index": 0}]]},
