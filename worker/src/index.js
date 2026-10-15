@@ -49,6 +49,13 @@ async function tableRecords(env, refresh = false) {
   return rows;
 }
 function activeTable(record) { return fields(record).Active !== false; }
+function resolveTable(records, identifier) {
+  const wanted = String(identifier || "").trim();
+  const exact = records.find(record => String(fields(record).Identifiant || fields(record).Nom || "").trim() === wanted);
+  if (exact) return exact;
+  const normalized = wanted.toLocaleLowerCase("fr");
+  return records.find(record => String(fields(record).Identifiant || fields(record).Nom || "").trim().toLocaleLowerCase("fr") === normalized);
+}
 function publicTable(record) {
   const f = fields(record);
   return { identifiant: f.Identifiant || f.Nom || "", nom: f.Nom || f.Identifiant || "", active: activeTable(record) };
@@ -260,7 +267,7 @@ async function route(request, env, ctx) {
       if ((dish.Concept || "QRoque") !== (line.concept === "QRoque" ? "QRoque" : "QRamen")) return fail("Le menu a changé. Actualisez la page.", 409);
     }
     const tables = await tableRecords(env);
-    const selectedTable = tables.find(t => String(fields(t).Identifiant || fields(t).Nom || "") === b.table.trim());
+    const selectedTable = resolveTable(tables, b.table);
     if (!selectedTable || !activeTable(selectedTable)) return fail("Table inconnue", 404);
     const created = await airtable(env, TABLES.commandes, { method: "POST", body: { fields: { Statut: "En attente", Table: [selectedTable.id] } } });
     const records = lignes.map(l => ({ fields: { Ligne: `[${l.concept === "QRoque" ? "🥪 QRoque Monsieur" : "🍜 Le QRamen"}]${l.note ? ` ${l.note}` : ""}`, Quantite: l.quantite, Plat: [l.platId], Commande: [created.id] } }));
