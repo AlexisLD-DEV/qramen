@@ -95,11 +95,11 @@ async function room(env) {
   return { tables: tables.map(t => {
     const f = fields(t), linked = commandes.filter(c => (fields(c).Table || []).includes(t.id)).sort((a,b) => Date.parse(fields(b)["Passee le"] || 0) - Date.parse(fields(a)["Passee le"] || 0));
     const active = linked.filter(c => !["Terminee", "Servi"].includes(fields(c).Statut)).sort((a,b) => Date.parse(fields(b)["Passee le"] || 0) - Date.parse(fields(a)["Passee le"] || 0))[0];
-    const bill = linked.filter(c => fields(c)["Addition demandee"] && fields(c).Statut !== "Terminee").sort((a,b) => Date.parse(fields(b)["Passee le"] || 0) - Date.parse(fields(a)["Passee le"] || 0))[0];
-    const latest = linked[0], cleared = ["Libre", "Servie"].includes(f.Etat), latestIsDemo = latest && (String(fields(latest).Numero || "").startsWith("DEMO") || lignes.some(l => (fields(l).Commande || []).includes(latest.id) && /\bDEMO\b/.test(String(fields(l).Ligne || "")))), order = cleared ? (latestIsDemo ? latest : null) : (bill || active || (latestIsDemo ? latest : null));
+    const bill = linked.filter(c => fields(c)["Addition demandee"]).sort((a,b) => Date.parse(fields(b)["Passee le"] || 0) - Date.parse(fields(a)["Passee le"] || 0))[0];
+    const latest = linked[0], cleared = ["Libre", "Servie"].includes(f.Etat), latestIsDemo = latest && (String(fields(latest).Numero || "").startsWith("DEMO") || lignes.some(l => (fields(l).Commande || []).includes(latest.id) && /\bDEMO\b/.test(String(fields(l).Ligne || "")))), order = bill || (cleared ? (latestIsDemo ? latest : null) : (active || (latestIsDemo ? latest : null)));
     const orderLines = order ? lignes.filter(l => (fields(l).Commande || []).includes(order.id)) : [];
     const demo = orderLines.some(l => /\bDEMO\b/.test(String(fields(l).Ligne || "")));
-    return { id: t.id, nom: f.Identifiant || f.Nom || "Table", concept: orderConcept(order || latest), etat: cleared ? f.Etat : bill ? "Addition demandée" : active ? "En cours" : (f.Etat || "Libre"), commande: order ? { id: order.id, numero: fields(order).Numero, statut: fields(order).Statut === "Terminee" ? "Servi" : fields(order).Statut, passee: fields(order)["Passee le"], demo, lignes: orderLines.map(l => { const raw=String(fields(l).Ligne || ""), tag=raw.match(/^\[(🍜 Le QRamen|🥪 QRoque Monsieur)\]/)?.[1] || ""; return { designation: String(fields(l).Designation || raw).replace(/^\[[^\]]+\] ?/, "").replace(/\s+x\s+\d+$/, "").replace(/\s+[—-]\s+Note\s*:.+$/, "").trim(), quantite: Number(fields(l).Quantite || 1), concept: tag.includes("QRoque") ? "QRoque Monsieur" : "Le QRamen" }; }) } : null };
+    return { id: t.id, nom: f.Identifiant || f.Nom || "Table", concept: orderConcept(order || latest), etat: bill ? "Addition demandée" : cleared ? f.Etat : active ? "En cours" : (f.Etat || "Libre"), commande: order ? { id: order.id, numero: fields(order).Numero, statut: fields(order).Statut === "Terminee" ? "Servi" : fields(order).Statut, total: Number(fields(order).Total || 0), additionUrl: fields(order).Addition?.[0]?.url || null, passee: fields(order)["Passee le"], demo, lignes: orderLines.map(l => { const raw=String(fields(l).Ligne || ""), tag=raw.match(/^\[(🍜 Le QRamen|🥪 QRoque Monsieur)\]/)?.[1] || ""; return { designation: String(fields(l).Designation || raw).replace(/^\[[^\]]+\] ?/, "").replace(/\s+x\s+\d+$/, "").replace(/\s+[—-]\s+Note\s*:.+$/, "").trim(), quantite: Number(fields(l).Quantite || 1), concept: tag.includes("QRoque") ? "QRoque Monsieur" : "Le QRamen" }; }) } : null };
   }) };
 }
 async function ticketData(env, numero) {
@@ -193,7 +193,7 @@ async function resetDemo(env) {
     throw error;
   }
 }
-async function route(request, env) {
+async function route(request, env, ctx) {
   const url = new URL(request.url), path = url.pathname.replace(/\/$/, ""), method = request.method;
   if (method === "OPTIONS") return new Response(null, { status: 204, headers: { "access-control-allow-origin": "*", "access-control-allow-methods": "GET,POST,OPTIONS", "access-control-allow-headers": "Content-Type, Authorization, X-Reset-Token" } });
   if (path === "/webhook/qramen/ping" && method === "GET") return json({ ok: true, service: "qramen-engine" });
@@ -290,10 +290,12 @@ async function route(request, env) {
   if (path === "/webhook/qramen/addition" && method === "POST") {
     const b = await bodyOf(request), ticket = await ticketData(env, Number(b.numero || 0));
     if (!ticket) return json({ trouve: false }, 404);
-    // Le Worker prépare les données d'addition; le rendu et l'attachement PDF restent au service VPS.
     await airtable(env, `${TABLES.commandes}/${ticket.id}`, { method: "PATCH", body: { fields: { "Addition demandee": true } } });
+    if (!ticket.addition.url && ctx?.waitUntil) {
+      ctx.waitUntil(fetch("https://n8n.ledeunf.fr/webhook/qramen/addition", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ numero: ticket.numero }) }).then(response => { if (!response.ok) console.log(JSON.stringify({ event: "addition_webhook_failed", numero: ticket.numero, status: response.status })); }).catch(error => { console.log(JSON.stringify({ event: "addition_webhook_failed", numero: ticket.numero, error: String(error).slice(0, 120) })); }));
+    }
     return json({ ok: true, numero: ticket.numero });
   }
   return fail("route introuvable", 404);
 }
-export default { async fetch(request, env) { try { return await route(request, env); } catch (error) { return fail(error.message || "erreur interne", 502); } } };
+export default { async fetch(request, env, ctx) { try { return await route(request, env, ctx); } catch (error) { return fail(error.message || "erreur interne", 502); } } };
