@@ -1,842 +1,442 @@
 [
   {
     "site": "qramen",
-    "page": "index.html",
+    "page": "index",
     "width": 320,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 61.609375
-      },
-      {
-        "height": 44,
-        "width": 48.609375
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 773.2,
+    "linksCenter": 827.2,
+    "linkMinHeight": 44,
     "scrollWidth": 320,
-    "viewport": 320,
-    "brand": "Le QRamen"
+    "viewport": 320
   },
   {
     "site": "qramen",
-    "page": "index.html",
+    "page": "index",
     "width": 390,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 61.609375
-      },
-      {
-        "height": 44,
-        "width": 48.609375
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 773.2,
+    "linksCenter": 827.2,
+    "linkMinHeight": 44,
     "scrollWidth": 390,
-    "viewport": 390,
-    "brand": "Le QRamen"
+    "viewport": 390
   },
   {
     "site": "qramen",
-    "page": "index.html",
+    "page": "index",
     "width": 768,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 61.609375
-      },
-      {
-        "height": 44,
-        "width": 48.609375
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 823.2,
+    "linksCenter": 823.2,
+    "linkMinHeight": 44,
     "scrollWidth": 768,
-    "viewport": 768,
-    "brand": "Le QRamen"
+    "viewport": 768
   },
   {
     "site": "qramen",
-    "page": "index.html",
+    "page": "index",
     "width": 1440,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 61.609375
-      },
-      {
-        "height": 44,
-        "width": 48.609375
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 823.2,
+    "linksCenter": 823.2,
+    "linkMinHeight": 44,
     "scrollWidth": 1440,
-    "viewport": 1440,
-    "brand": "Le QRamen"
+    "viewport": 1440
   },
   {
     "site": "qramen",
-    "page": "menu.html",
+    "page": "menu",
     "width": 320,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 2595,
+    "linksCenter": 2649,
+    "linkMinHeight": 44,
     "scrollWidth": 320,
-    "viewport": 320,
-    "brand": "Le QRamen"
+    "viewport": 320
   },
   {
     "site": "qramen",
-    "page": "menu.html",
+    "page": "menu",
     "width": 390,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 2510.8,
+    "linksCenter": 2564.8,
+    "linkMinHeight": 44,
     "scrollWidth": 390,
-    "viewport": 390,
-    "brand": "Le QRamen"
+    "viewport": 390
   },
   {
     "site": "qramen",
-    "page": "menu.html",
+    "page": "menu",
     "width": 768,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 2007.7,
+    "linksCenter": 2007.7,
+    "linkMinHeight": 44,
     "scrollWidth": 768,
-    "viewport": 768,
-    "brand": "Le QRamen"
+    "viewport": 768
   },
   {
     "site": "qramen",
-    "page": "menu.html",
+    "page": "menu",
     "width": 1440,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1961.9,
+    "linksCenter": 1961.9,
+    "linkMinHeight": 44,
     "scrollWidth": 1440,
-    "viewport": 1440,
-    "brand": "Le QRamen"
+    "viewport": 1440
   },
   {
     "site": "qramen",
-    "page": "cuisine.html",
+    "page": "cuisine",
     "width": 320,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 900.5,
+    "linksCenter": 954.5,
+    "linkMinHeight": 44,
     "scrollWidth": 320,
-    "viewport": 320,
-    "brand": "Le QRamen"
+    "viewport": 320
   },
   {
     "site": "qramen",
-    "page": "cuisine.html",
+    "page": "cuisine",
     "width": 390,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 900.5,
+    "linksCenter": 954.5,
+    "linkMinHeight": 44,
     "scrollWidth": 390,
-    "viewport": 390,
-    "brand": "Le QRamen"
+    "viewport": 390
   },
   {
     "site": "qramen",
-    "page": "cuisine.html",
+    "page": "cuisine",
     "width": 768,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 979.5,
+    "linksCenter": 979.5,
+    "linkMinHeight": 44,
     "scrollWidth": 768,
-    "viewport": 768,
-    "brand": "Le QRamen"
+    "viewport": 768
   },
   {
     "site": "qramen",
-    "page": "cuisine.html",
+    "page": "cuisine",
     "width": 1440,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1255.4,
+    "linksCenter": 1255.4,
+    "linkMinHeight": 44,
     "scrollWidth": 1440,
-    "viewport": 1440,
-    "brand": "Le QRamen"
+    "viewport": 1440
   },
   {
     "site": "qramen",
-    "page": "salle.html",
+    "page": "salle",
     "width": 320,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 833.5,
+    "linksCenter": 887.5,
+    "linkMinHeight": 44,
     "scrollWidth": 320,
-    "viewport": 320,
-    "brand": "Le QRamen"
+    "viewport": 320
   },
   {
     "site": "qramen",
-    "page": "salle.html",
+    "page": "salle",
     "width": 390,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 833.5,
+    "linksCenter": 887.5,
+    "linkMinHeight": 44,
     "scrollWidth": 390,
-    "viewport": 390,
-    "brand": "Le QRamen"
+    "viewport": 390
   },
   {
     "site": "qramen",
-    "page": "salle.html",
+    "page": "salle",
     "width": 768,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 711.5,
+    "linksCenter": 711.5,
+    "linkMinHeight": 44,
     "scrollWidth": 768,
-    "viewport": 768,
-    "brand": "Le QRamen"
+    "viewport": 768
   },
   {
     "site": "qramen",
-    "page": "salle.html",
+    "page": "salle",
     "width": 1440,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1011,
+    "linksCenter": 1011,
+    "linkMinHeight": 44,
     "scrollWidth": 1440,
-    "viewport": 1440,
-    "brand": "Le QRamen"
+    "viewport": 1440
   },
   {
     "site": "qramen",
-    "page": "qr.html",
+    "page": "qr",
     "width": 320,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 2121.2,
+    "linksCenter": 2175.2,
+    "linkMinHeight": 44,
     "scrollWidth": 320,
-    "viewport": 320,
-    "brand": "Le QRamen"
+    "viewport": 320
   },
   {
     "site": "qramen",
-    "page": "qr.html",
+    "page": "qr",
     "width": 390,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 2089.9,
+    "linksCenter": 2143.9,
+    "linkMinHeight": 44,
     "scrollWidth": 390,
-    "viewport": 390,
-    "brand": "Le QRamen"
+    "viewport": 390
   },
   {
     "site": "qramen",
-    "page": "qr.html",
+    "page": "qr",
     "width": 768,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1616.9,
+    "linksCenter": 1616.9,
+    "linkMinHeight": 44,
     "scrollWidth": 768,
-    "viewport": 768,
-    "brand": "Le QRamen"
+    "viewport": 768
   },
   {
     "site": "qramen",
-    "page": "qr.html",
+    "page": "qr",
     "width": 1440,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1633.6,
+    "linksCenter": 1633.6,
+    "linkMinHeight": 44,
     "scrollWidth": 1440,
-    "viewport": 1440,
-    "brand": "Le QRamen"
+    "viewport": 1440
   },
   {
     "site": "qroque",
-    "page": "index.html",
+    "page": "index",
     "width": 320,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 61.609375
-      },
-      {
-        "height": 44,
-        "width": 48.609375
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 773.2,
+    "linksCenter": 827.2,
+    "linkMinHeight": 44,
     "scrollWidth": 320,
-    "viewport": 320,
-    "brand": "QRoque Monsieur"
+    "viewport": 320
   },
   {
     "site": "qroque",
-    "page": "index.html",
+    "page": "index",
     "width": 390,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 61.609375
-      },
-      {
-        "height": 44,
-        "width": 48.609375
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 773.2,
+    "linksCenter": 827.2,
+    "linkMinHeight": 44,
     "scrollWidth": 390,
-    "viewport": 390,
-    "brand": "QRoque Monsieur"
+    "viewport": 390
   },
   {
     "site": "qroque",
-    "page": "index.html",
+    "page": "index",
     "width": 768,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 61.609375
-      },
-      {
-        "height": 44,
-        "width": 48.609375
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 823.2,
+    "linksCenter": 823.2,
+    "linkMinHeight": 44,
     "scrollWidth": 768,
-    "viewport": 768,
-    "brand": "QRoque Monsieur"
+    "viewport": 768
   },
   {
     "site": "qroque",
-    "page": "index.html",
+    "page": "index",
     "width": 1440,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 61.609375
-      },
-      {
-        "height": 44,
-        "width": 48.609375
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 823.2,
+    "linksCenter": 823.2,
+    "linkMinHeight": 44,
     "scrollWidth": 1440,
-    "viewport": 1440,
-    "brand": "QRoque Monsieur"
+    "viewport": 1440
   },
   {
     "site": "qroque",
-    "page": "menu.html",
+    "page": "menu",
     "width": 320,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 2711.4,
+    "linksCenter": 2765.4,
+    "linkMinHeight": 44,
     "scrollWidth": 320,
-    "viewport": 320,
-    "brand": "QRoque Monsieur"
+    "viewport": 320
   },
   {
     "site": "qroque",
-    "page": "menu.html",
+    "page": "menu",
     "width": 390,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 2545.2,
+    "linksCenter": 2599.2,
+    "linkMinHeight": 44,
     "scrollWidth": 390,
-    "viewport": 390,
-    "brand": "QRoque Monsieur"
+    "viewport": 390
   },
   {
     "site": "qroque",
-    "page": "menu.html",
+    "page": "menu",
     "width": 768,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1539.9,
+    "linksCenter": 1539.9,
+    "linkMinHeight": 44,
     "scrollWidth": 768,
-    "viewport": 768,
-    "brand": "QRoque Monsieur"
+    "viewport": 768
   },
   {
     "site": "qroque",
-    "page": "menu.html",
+    "page": "menu",
     "width": 1440,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1514.5,
+    "linksCenter": 1514.5,
+    "linkMinHeight": 44,
     "scrollWidth": 1440,
-    "viewport": 1440,
-    "brand": "QRoque Monsieur"
+    "viewport": 1440
   },
   {
     "site": "qroque",
-    "page": "cuisine.html",
+    "page": "cuisine",
     "width": 320,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 900.5,
+    "linksCenter": 954.5,
+    "linkMinHeight": 44,
     "scrollWidth": 320,
-    "viewport": 320,
-    "brand": "QRoque Monsieur"
+    "viewport": 320
   },
   {
     "site": "qroque",
-    "page": "cuisine.html",
+    "page": "cuisine",
     "width": 390,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 1515.5,
+    "linksCenter": 1569.5,
+    "linkMinHeight": 44,
     "scrollWidth": 390,
-    "viewport": 390,
-    "brand": "QRoque Monsieur"
+    "viewport": 390
   },
   {
     "site": "qroque",
-    "page": "cuisine.html",
+    "page": "cuisine",
     "width": 768,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 979.5,
+    "linksCenter": 979.5,
+    "linkMinHeight": 44,
     "scrollWidth": 768,
-    "viewport": 768,
-    "brand": "QRoque Monsieur"
+    "viewport": 768
   },
   {
     "site": "qroque",
-    "page": "cuisine.html",
+    "page": "cuisine",
     "width": 1440,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1255.4,
+    "linksCenter": 1255.4,
+    "linkMinHeight": 44,
     "scrollWidth": 1440,
-    "viewport": 1440,
-    "brand": "QRoque Monsieur"
+    "viewport": 1440
   },
   {
     "site": "qroque",
-    "page": "salle.html",
+    "page": "salle",
     "width": 320,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 833.5,
+    "linksCenter": 887.5,
+    "linkMinHeight": 44,
     "scrollWidth": 320,
-    "viewport": 320,
-    "brand": "Le QRamen"
+    "viewport": 320
   },
   {
     "site": "qroque",
-    "page": "salle.html",
+    "page": "salle",
     "width": 390,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 2071,
+    "linksCenter": 2125,
+    "linkMinHeight": 44,
     "scrollWidth": 390,
-    "viewport": 390,
-    "brand": "Le QRamen"
+    "viewport": 390
   },
   {
     "site": "qroque",
-    "page": "salle.html",
+    "page": "salle",
     "width": 768,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1403,
+    "linksCenter": 1403,
+    "linkMinHeight": 44,
     "scrollWidth": 768,
-    "viewport": 768,
-    "brand": "Le QRamen"
+    "viewport": 768
   },
   {
     "site": "qroque",
-    "page": "salle.html",
+    "page": "salle",
     "width": 1440,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1011,
+    "linksCenter": 1011,
+    "linkMinHeight": 44,
     "scrollWidth": 1440,
-    "viewport": 1440,
-    "brand": "Le QRamen"
+    "viewport": 1440
   },
   {
     "site": "qroque",
-    "page": "qr.html",
+    "page": "qr",
     "width": 320,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 2121.2,
+    "linksCenter": 2175.2,
+    "linkMinHeight": 44,
     "scrollWidth": 320,
-    "viewport": 320,
-    "brand": "QRoque Monsieur"
+    "viewport": 320
   },
   {
     "site": "qroque",
-    "page": "qr.html",
+    "page": "qr",
     "width": 390,
-    "centerDelta": 54,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 54,
+    "brandCenter": 2089.9,
+    "linksCenter": 2143.9,
+    "linkMinHeight": 44,
     "scrollWidth": 390,
-    "viewport": 390,
-    "brand": "QRoque Monsieur"
+    "viewport": 390
   },
   {
     "site": "qroque",
-    "page": "qr.html",
+    "page": "qr",
     "width": 768,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1616.9,
+    "linksCenter": 1616.9,
+    "linkMinHeight": 44,
     "scrollWidth": 768,
-    "viewport": 768,
-    "brand": "QRoque Monsieur"
+    "viewport": 768
   },
   {
     "site": "qroque",
-    "page": "qr.html",
+    "page": "qr",
     "width": 1440,
-    "centerDelta": 0,
-    "brandHeight": 21.59,
-    "linksHeight": 44,
-    "linkTargets": [
-      {
-        "height": 44,
-        "width": 65
-      },
-      {
-        "height": 44,
-        "width": 51
-      }
-    ],
+    "delta": 0,
+    "brandCenter": 1633.6,
+    "linksCenter": 1633.6,
+    "linkMinHeight": 44,
     "scrollWidth": 1440,
-    "viewport": 1440,
-    "brand": "QRoque Monsieur"
+    "viewport": 1440
   }
 ]
