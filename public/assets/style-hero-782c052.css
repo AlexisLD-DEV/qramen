@@ -785,7 +785,7 @@ button.restaurant-switch-button span{min-width:0;flex:0 1 auto;text-align:center
 
 /* Quantité présente dans le panier, au contact du bouton d’ajout de chaque carte. */
 .dish-card-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;min-width:78px}
-.dish-card-actions .dish-card-quantity{display:inline-grid;place-items:center;width:44px;min-width:44px;height:44px;padding:0;border:1px solid var(--color-205);border-radius:50%;background:var(--color-174);color:var(--ink);font-size:14px;font-weight:800;line-height:1}
+.dish-card-actions .dish-card-quantity{display:inline-grid;place-items:center;width:44px;min-width:44px;height:44px;padding:0;border:1px solid #f2d48d;border-radius:50%;background:#f2d48d;color:#35251f;font-size:14px;font-weight:800;line-height:1}
 .dish-card-actions [hidden],.dish-card-actions .add-button[hidden],.dish-card-actions .card-remove-button[hidden]{display:none!important}
 @media(max-width:359px){.dish-grid{grid-template-columns:minmax(0,1fr)}}
 
