@@ -782,3 +782,9 @@ button.restaurant-switch-button span{min-width:0;flex:0 1 auto;text-align:center
 
 .restaurant-filter button[data-concept="all"]{width:auto;min-width:82px;padding:0 14px!important}
 @media(max-width:600px){.restaurant-filter button[data-concept="all"]{flex:1 1 auto;width:auto}}
+
+/* Marque et liens de signature partagent le même axe vertical. */
+.site-footer .footer-brand-row,.landing footer .footer-brand-row{display:grid;grid-template-columns:minmax(0,1fr) 52px max-content;align-items:center;gap:16px}
+.site-footer .signature-links,.landing footer .signature-links{grid-column:3;grid-row:1;align-self:center;justify-self:end;margin:0;min-height:44px}
+@media(max-width:520px){.site-footer .footer-brand-row,.landing footer .footer-brand-row{grid-template-columns:minmax(0,1fr) 48px;row-gap:8px}.site-footer .footer-brand-row .signature-links,.landing footer .footer-brand-row .signature-links{grid-column:1/-1;grid-row:2;justify-self:start}}
+.kitchen-tools #sound-enable{min-height:44px;padding:0 16px}

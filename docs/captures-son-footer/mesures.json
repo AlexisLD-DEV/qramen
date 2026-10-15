@@ -1,0 +1,842 @@
+[
+  {
+    "site": "qramen",
+    "page": "index.html",
+    "width": 320,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 61.609375
+      },
+      {
+        "height": 44,
+        "width": 48.609375
+      }
+    ],
+    "scrollWidth": 320,
+    "viewport": 320,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "index.html",
+    "width": 390,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 61.609375
+      },
+      {
+        "height": 44,
+        "width": 48.609375
+      }
+    ],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "index.html",
+    "width": 768,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 61.609375
+      },
+      {
+        "height": 44,
+        "width": 48.609375
+      }
+    ],
+    "scrollWidth": 768,
+    "viewport": 768,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "index.html",
+    "width": 1440,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 61.609375
+      },
+      {
+        "height": 44,
+        "width": 48.609375
+      }
+    ],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "menu.html",
+    "width": 320,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 320,
+    "viewport": 320,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "menu.html",
+    "width": 390,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "menu.html",
+    "width": 768,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 768,
+    "viewport": 768,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "menu.html",
+    "width": 1440,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "cuisine.html",
+    "width": 320,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 320,
+    "viewport": 320,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "cuisine.html",
+    "width": 390,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "cuisine.html",
+    "width": 768,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 768,
+    "viewport": 768,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "cuisine.html",
+    "width": 1440,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "salle.html",
+    "width": 320,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 320,
+    "viewport": 320,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "salle.html",
+    "width": 390,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "salle.html",
+    "width": 768,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 768,
+    "viewport": 768,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "salle.html",
+    "width": 1440,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "qr.html",
+    "width": 320,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 320,
+    "viewport": 320,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "qr.html",
+    "width": 390,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "qr.html",
+    "width": 768,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 768,
+    "viewport": 768,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qramen",
+    "page": "qr.html",
+    "width": 1440,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qroque",
+    "page": "index.html",
+    "width": 320,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 61.609375
+      },
+      {
+        "height": 44,
+        "width": 48.609375
+      }
+    ],
+    "scrollWidth": 320,
+    "viewport": 320,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "index.html",
+    "width": 390,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 61.609375
+      },
+      {
+        "height": 44,
+        "width": 48.609375
+      }
+    ],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "index.html",
+    "width": 768,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 61.609375
+      },
+      {
+        "height": 44,
+        "width": 48.609375
+      }
+    ],
+    "scrollWidth": 768,
+    "viewport": 768,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "index.html",
+    "width": 1440,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 61.609375
+      },
+      {
+        "height": 44,
+        "width": 48.609375
+      }
+    ],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "menu.html",
+    "width": 320,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 320,
+    "viewport": 320,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "menu.html",
+    "width": 390,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "menu.html",
+    "width": 768,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 768,
+    "viewport": 768,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "menu.html",
+    "width": 1440,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "cuisine.html",
+    "width": 320,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 320,
+    "viewport": 320,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "cuisine.html",
+    "width": 390,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "cuisine.html",
+    "width": 768,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 768,
+    "viewport": 768,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "cuisine.html",
+    "width": 1440,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "salle.html",
+    "width": 320,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 320,
+    "viewport": 320,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qroque",
+    "page": "salle.html",
+    "width": 390,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qroque",
+    "page": "salle.html",
+    "width": 768,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 768,
+    "viewport": 768,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qroque",
+    "page": "salle.html",
+    "width": 1440,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "brand": "Le QRamen"
+  },
+  {
+    "site": "qroque",
+    "page": "qr.html",
+    "width": 320,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 320,
+    "viewport": 320,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "qr.html",
+    "width": 390,
+    "centerDelta": 54,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "qr.html",
+    "width": 768,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 768,
+    "viewport": 768,
+    "brand": "QRoque Monsieur"
+  },
+  {
+    "site": "qroque",
+    "page": "qr.html",
+    "width": 1440,
+    "centerDelta": 0,
+    "brandHeight": 21.59,
+    "linksHeight": 44,
+    "linkTargets": [
+      {
+        "height": 44,
+        "width": 65
+      },
+      {
+        "height": 44,
+        "width": 51
+      }
+    ],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "brand": "QRoque Monsieur"
+  }
+]
