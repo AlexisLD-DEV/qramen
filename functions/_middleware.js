@@ -29,11 +29,16 @@ export async function onRequest({ request, next }) {
     "qr": ["QR des tables — " + brand, "Générez et imprimez les QR codes de table de " + brand + " à Rouen."],
   };
   const [title, description] = pages[page] || pages["index"];
-  const image = siteHost + "/assets/mascottes/" + (qroque ? "croque-2-monsieur.png" : "ramen-1-bol.png?v=20261017-detourage");
+  const image = siteHost + "/assets/og/" + (qroque ? "qroque.jpg" : "qramen.jpg");
   const canonical = siteHost + (page === "index" ? "/" : "/" + page);
-  const metadata = `<meta name="description" content="${description}"><link rel="canonical" href="${canonical}"><meta property="og:type" content="website"><meta property="og:site_name" content="${brand}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">`;
+  const metadata = `<meta name="description" content="${description}"><link rel="canonical" href="${canonical}"><meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="${brand}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">`;
   let html = await response.text();
   if (qroque && page === "index") html = html.replace("ramen-1-bol.webp", "croque-2-monsieur.webp");
+  // Static source files are shared by both custom domains. Remove their brand
+  // metadata first so crawlers only see the host-specific tags injected below.
+  html = html
+    .replace(/<meta\s+(?:name|property)="(?:description|og:[^"]+|twitter:[^"]+)"[^>]*>/gi, "")
+    .replace(/<link\s+rel="canonical"[^>]*>/gi, "");
   const headers = new Headers(response.headers);
   headers.delete("content-length");
   headers.delete("etag");
