@@ -42,6 +42,20 @@ Les PDF complets comprennent une page A4 par table, puis une page A5 par table, 
 
 ![Page de gestion et d’impression des QR de table](docs/captures-refonte/qr-tables-390.png)
 
+## Livrables
+
+### Dossier de soutenance
+
+- [Support de soutenance — version 3](audit/QRamen-Support-Soutenance-v3.pdf)
+- [Fiche sujet — une page](audit/QRamen-Fiche-Sujet-1page.pdf)
+- [Annexe RGPD](audit/QRamen-Annexe-RGPD.pdf)
+- [Annexe idempotence](audit/QRamen-Annexe-Idempotence.pdf)
+- [Audit de marché 2026](audit/QRamen-Audit-Marche-2026.pdf)
+
+### Rapports de construction
+
+Les fichiers `RAPPORT-*.md` à la racine constituent le journal de construction du projet. Parmi les plus récents : [captures et README](RAPPORT-CAPTURES.md), [régénération du bon de cuisine](RAPPORT-BON2.md) et [débordements mobiles à 320 px](RAPPORT-320.md).
+
 ## Fonctionnalités
 
 - Deux cartes et deux parcours clients, adaptés au QRamen et à QRoque Monsieur.
